@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace PhiRobotics.UI.Wizard </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace PhiRobotics.UI.Wizard ">
+    
+    <meta name="description" content="Provides infrastructure for discovering, loading, and executing wizards within the PhiRobotics UI library.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Wizard">
+
+  <h1 id="PhiRobotics_UI_Wizard" data-uid="PhiRobotics.UI.Wizard" class="text-break">Namespace PhiRobotics.UI.Wizard</h1>
+  <div class="markdown level0 summary"><p>Provides infrastructure for discovering, loading, and executing wizards within the
+PhiRobotics UI library.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"><p>The wizard framework enables applications to extend functionality through modular
+wizard plugins. A wizard guides users through a sequence of steps using a structured
+user interface consisting of a welcome page, one or more intermediate pages, and a
+completion page.</p>
+<p>
+Wizards are implemented by consumer code through the <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a> interface
+and are packaged in external assemblies. These assemblies are discovered and loaded
+at runtime by the framework.
+</p>
+<p>
+Each wizard must be exported using the <a class="xref" href="PhiRobotics.UI.Wizard.ExportedWizardAttribute.html">ExportedWizardAttribute</a> assembly
+attribute and identified by a unique identifier using the <a class="xref" href="PhiRobotics.UI.Wizard.WizardIdAttribute.html">WizardIdAttribute</a>.
+During startup, the wizard host scans configured directories for assemblies containing
+exported wizards and registers them for execution.
+</p>
+<p>
+Wizards are executed through the <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> service, which is created by
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardFactory.html">IWizardFactory</a>. The wizard host is responsible for locating wizard
+implementations, creating wizard instances, and displaying the wizard dialog to the user.
+</p>
+<p>
+To improve reliability and stability, wizard implementations are executed in an isolated
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a>. This isolation ensures that wizard assemblies are not loaded into
+the main application domain and that failures inside a wizard do not crash the main
+application. When the wizard host is disposed, the isolated domain can be unloaded,
+allowing all wizard assemblies to be released.
+</p>
+<p>
+The wizard user interface is presented using <a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a>, which manages
+navigation between pages and handles user interactions such as Next, Back, Finish, and
+Cancel.
+</p>
+<p>
+The result of a wizard execution is returned as a <a class="xref" href="PhiRobotics.UI.Wizard.WizardResult.html">WizardResult</a>, which
+contains the dialog result and any data produced by the wizard.
+</p>
+</div>
+    <h3 id="classes">
+Classes
+</h3>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.CompletionPage.html">CompletionPage</a></h4>
+      <section><p>Represents the completion page of a wizard, typically displayed as the final step.</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.ExportedWizardAttribute.html">ExportedWizardAttribute</a></h4>
+      <section><p>Indicates that a wizard type is exported from an assembly.</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.WelcomePage.html">WelcomePage</a></h4>
+      <section><p>Represents the welcome page of a wizard, typically displayed as the first step.</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.WizardIdAttribute.html">WizardIdAttribute</a></h4>
+      <section><p>Specifies the identifier of a wizard class.</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.WizardResult.html">WizardResult</a></h4>
+      <section><p>Represents the result returned after executing a wizard.</p>
+</section>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a></h4>
+      <section><p>Represents a wizard and provides access to its pages and lifecycle methods.</p>
+<p>
+The <b>IWizard</b> interface is intended to be implemented by consumer code.
+The lifetime of the wizard instance is managed by the consumer.
+</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a></h4>
+      <section><p>Represents a dialog used to display and execute a wizard.</p>
+<p>
+The <b>IWizardDialog</b> interface is implemented by the <b>PhiRobotics</b>
+UI library and is not intended to be implemented by consumer code.
+</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizardFactory.html">IWizardFactory</a></h4>
+      <section><p>Factory that provides methods to create instances of <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a>
+used to discover and execute wizards, and to create instances of
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a> used to display wizard dialogs.</p>
+<p>
+The <b>IWizardFactory</b> interface is implemented by the <b>PhiRobotics</b>
+UI library and is not intended to be implemented by consumer code.
+</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a></h4>
+      <section><p>Provides functionality to execute wizards discovered from wizard assemblies.</p>
+<p>
+The <b>IWizardHost</b> interface is implemented by the <b>PhiRobotics</b> UI
+framework and is not intended to be implemented by consumer code.
+</p>
+</section>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a></h4>
+      <section><p>Represents an interior page in a wizard, typically displayed between the
+<a class="xref" href="PhiRobotics.UI.Wizard.WelcomePage.html">WelcomePage</a> and <a class="xref" href="PhiRobotics.UI.Wizard.CompletionPage.html">CompletionPage</a>.</p>
+<p>
+The <b>IWizardPage</b> interface is intended to be implemented by consumer code.
+The lifetime of the page instance is managed by the consumer.
+</p>
+</section>
+    <h3 id="enums">
+Enums
+</h3>
+      <h4><a class="xref" href="PhiRobotics.UI.Wizard.ErrorKind.html">ErrorKind</a></h4>
+      <section><p>Defines the kind or severity of an error associated with a wizard page.</p>
+</section>
+
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

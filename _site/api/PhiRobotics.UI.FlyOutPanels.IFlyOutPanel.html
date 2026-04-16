@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IFlyOutPanel </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IFlyOutPanel ">
+    
+    <meta name="description" content="Represents a fly-out panel that can be attached to a control and displayed dynamically.  The IFlyOutPanel interface is implemented by the PhiRobotics UI library and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel">
+
+
+
+  <h1 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel" class="text-break">Interface IFlyOutPanel</h1>
+  <div class="markdown level0 summary"><p>Represents a fly-out panel that can be attached to a control and displayed dynamically.</p>
+<p>
+The <b>IFlyOutPanel</b> interface is implemented by the <b>PhiRobotics</b>
+UI library and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.endinvoke">ISynchronizeInvoke.EndInvoke(IAsyncResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invoke">ISynchronizeInvoke.Invoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invokerequired">ISynchronizeInvoke.InvokeRequired</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.FlyOutPanels.html">FlyOutPanels</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFlyOutPanel : IDisposable, ISynchronizeInvoke, IWin32Window, IComponent, IDisposable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Instances of <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> are created using the
+<a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_">CreatePanel(Control)</a> or 
+<a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_">CreatePanel(Control, FlyOutPanelOptions)</a> method.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instance is managed by the
+consumer. The consumer is responsible for disposing the panel when it is
+no longer needed.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to create and display a fly-out panel:</p>
+<pre><code class="lang-cs">// Create a new fly-out panel (without initial content)
+IFlyOutPanel flyOutPanel = flyOutPanelFactory.CreatePanel(null);
+<!-- -->
+// Create and assign content
+Control content = new CustomControl();
+content.Size = new Size(250, 100);
+flyOutPanel.Content = content;
+<!-- -->
+// Attach the panel to a host control
+flyOutPanel.AttachTo(flyOutHost);
+<!-- -->
+// Display the panel
+flyOutPanel.ShowPanel();
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_AnchorStyle_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.AnchorStyle*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_AnchorStyle" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.AnchorStyle">AnchorStyle</h4>
+  <div class="markdown level1 summary"><p>Gets or sets how the panel is positioned relative to its host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">AnchorStyles AnchorStyle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Content_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Content*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Content" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Content">Content</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the content displayed inside the fly-out panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Control Content { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_DisposeContent_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.DisposeContent*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_DisposeContent" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.DisposeContent">DisposeContent</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the content is disposed when the panel is closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DisposeContent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_DisposeContentOnChange_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.DisposeContentOnChange*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_DisposeContentOnChange" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.DisposeContentOnChange">DisposeContentOnChange</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the content is disposed when replaced.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DisposeContentOnChange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_EnableIndent_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.EnableIndent*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_EnableIndent" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.EnableIndent">EnableIndent</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether indentation is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool EnableIndent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Host_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Host*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Host" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Host">Host</h4>
+  <div class="markdown level1 summary"><p>Gets the host control to which the panel is attached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Control Host { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IsAttached_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.IsAttached*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IsAttached" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.IsAttached">IsAttached</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the panel is currently attached to
+a host control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAttached { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IsShowing_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.IsShowing*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IsShowing" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.IsShowing">IsShowing</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the panel is currently visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsShowing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Location_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Location*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Location" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Gets the current location of the panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Point Location { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_MaximumSize_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.MaximumSize*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_MaximumSize" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.MaximumSize">MaximumSize</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum allowed size of the panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size MaximumSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_MinimumSize_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.MinimumSize*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_MinimumSize" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.MinimumSize">MinimumSize</h4>
+  <div class="markdown level1 summary"><p>Gets the minimum allowed size of the panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size MinimumSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizeMode_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ResizeMode*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizeMode" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ResizeMode">ResizeMode</h4>
+  <div class="markdown level1 summary"><p>Gets or sets how the panel responds to resize operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ResizeMode ResizeMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Size_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Size*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Size" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Size">Size</h4>
+  <div class="markdown level1 summary"><p>Gets the current size of the panel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size Size { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_AttachTo_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.AttachTo*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_AttachTo_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.AttachTo(System.Windows.Forms.Control)">AttachTo(Control)</h4>
+  <div class="markdown level1 summary"><p>Attaches the panel to the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AttachTo(Control owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The host control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_AttachTo_System_Windows_Forms_Control__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does nothing if the panel is already attached or if <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Content">Content</a>
+is null.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">owner</code>
+is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Detach_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Detach*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_Detach" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.Detach">Detach()</h4>
+  <div class="markdown level1 summary"><p>Detaches the panel from its host control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Detach()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_HidePanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.HidePanel*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_HidePanel" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.HidePanel">HidePanel()</h4>
+  <div class="markdown level1 summary"><p>Hides the panel if it is currently visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void HidePanel()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_HidePanel_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does nothing if the panel is not visible.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IndentPanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.IndentPanel*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IndentPanel_System_Int32_System_Int32_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.IndentPanel(System.Int32,System.Int32)">IndentPanel(int, int)</h4>
+  <div class="markdown level1 summary"><p>Moves the panel by the specified offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IndentPanel(int deltaX, int deltaY)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">deltaX</span></td>
+        <td><p>Horizontal offset. The amount to move the panel
+horizontally towards right or left.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">deltaY</span></td>
+        <td><p>Vertical offset. The amount to move the panel
+vertically towards top or bottom.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IndentPanel_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does nothing if the panel is not attached or if <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_EnableIndent">EnableIndent</a>
+is false.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizePanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ResizePanel*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizePanel_System_Int32_System_Int32_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ResizePanel(System.Int32,System.Int32)">ResizePanel(int, int)</h4>
+  <div class="markdown level1 summary"><p>Resizes the panel by the specified amounts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResizePanel(int deltaW, int deltaH)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">deltaW</span></td>
+        <td><p>Width adjustment. The amount to increase or decrease
+the width of the panel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">deltaH</span></td>
+        <td><p>Height adjustment. The amount to increase or decrease
+the height of the panel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizePanel_System_Int32_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does nothing if the panel is not attached or if <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizeMode">ResizeMode</a> is
+<a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html#PhiRobotics_UI_FlyOutPanels_ResizeMode_None">None</a>.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ShowPanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ShowPanel*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ShowPanel" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ShowPanel">ShowPanel()</h4>
+  <div class="markdown level1 summary"><p>Displays the panel at its current location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ShowPanel()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ShowPanel_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Does nothing if the panel is not attached or already visible.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ShowPanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ShowPanel*"></a>
+  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ShowPanel_System_Drawing_Point_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.ShowPanel(System.Drawing.Point)">ShowPanel(Point)</h4>
+  <div class="markdown level1 summary"><p>Displays the panel at the specified location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Point? ShowPanel(Point location)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></td>
+        <td><span class="parametername">location</span></td>
+        <td><p>The desired location.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a>?</td>
+        <td><p>The actual location used, or <code>null</code> if the panel could not be shown.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ShowPanel_System_Drawing_Point__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns <code>null</code> if:</p>
+<ul><li>The panel is not attached.</li><li>The panel is already visible.</li><li>The specified location is invalid.</li></ul>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

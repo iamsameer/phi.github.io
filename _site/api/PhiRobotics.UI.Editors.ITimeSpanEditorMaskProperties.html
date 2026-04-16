@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ITimeSpanEditorMaskProperties </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ITimeSpanEditorMaskProperties ">
+    
+    <meta name="description" content="Describes properties of a time span editor mask that allows users to enter time intervals.  The ITimeSpanEditorMaskProperties interface is implemented by the UI library  and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties">
+
+
+
+  <h1 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties" class="text-break">Interface ITimeSpanEditorMaskProperties</h1>
+  <div class="markdown level0 summary"><p>Describes properties of a time span editor mask that allows users to enter time intervals.</p>
+<p>
+The <b>ITimeSpanEditorMaskProperties</b> interface is implemented by the UI library 
+and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ISupportCulture.html#PhiRobotics_UI_ISupportCulture_Culture">ISupportCulture.Culture</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_ValueType">ITextEditorMaskProperties.ValueType</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType">ITextEditorMaskProperties.MaskType</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression">ITextEditorMaskProperties.MaskExpression</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITimeSpanEditorMaskProperties : ISupportCulture, ITextEditorMaskProperties</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The <b>ITimeSpanEditorMaskProperties</b> interface extends 
+<a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a> and provides additional settings 
+specific to time interval input.
+</p>
+<p>
+A time span mask enables structured input for duration values such as days, 
+hours, minutes, and seconds. It supports segmented input, allowing users to 
+edit individual parts of a time interval independently.
+</p>
+<p>
+Use this mask to configure behaviors such as segment navigation, caret movement, 
+value propagation between segments, and handling of negative time values.
+</p>
+<p>
+This mask type is supported by both <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html">ITextInputEditor</a> and 
+<a class="xref" href="PhiRobotics.UI.Editors.ITimeSpanEditor.html">ITimeSpanEditor</a> in the UI library.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.html">ITimeSpanEditorMaskProperties</a> instance is 
+managed by the associated editor. Consumers typically do not create or dispose 
+this object directly.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_examples"><strong>Examples</strong></h5>
+  <p>The following examples demonstrate configuring a time span editor mask:</p>
+<pre><code class="lang-cs">// Using a text editor with a time span mask
+ITextInputEditor editor = inputEditorFactory.CreateTextEdit();
+<!-- -->
+editor.Configure(null, EditMaskType.TimeSpan);
+ITimeSpanEditorMaskProperties maskProperties = 
+    (ITimeSpanEditorMaskProperties)editor.MaskProperties;
+<!-- -->
+maskProperties.UseAdvancingCaret = true;
+maskProperties.SpinWithCarry = true;
+maskProperties.MaskExpression = "mm MM, ss SS";
+</code></pre>
+<pre><code class="lang-cs">// Using a dedicated date-time editor
+IDateTimeEditor dateTimeEditor = inputEditorFactory.CreateTimeSpanEditor();
+ITimeSpanEditorMaskProperties maskProperties = dateTimeEditor.MaskProperties;
+<!-- -->
+maskProperties.UseAdvancingCaret = true;
+maskProperties.SpinWithCarry = true;
+maskProperties.MaskExpression = "mm MM, ss SS";
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_AllowNegativeValues_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.AllowNegativeValues*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_AllowNegativeValues" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.AllowNegativeValues">AllowNegativeValues</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether users can enter negative time offsets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowNegativeValues { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if negative values are allowed; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_AllowNegativeValues_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If disabled and a negative value is assigned directly to the
+<a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValue">EditValue</a> property, the value remains negative
+until the user modifies it, after which it is converted to a positive value.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_DefaultPart_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.DefaultPart*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_DefaultPart" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.DefaultPart">DefaultPart</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the default segment selected when the editor receives focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpanMaskPart? DefaultPart { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskPart.html">TimeSpanMaskPart</a>?</td>
+        <td><p>A nullable <a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskPart.html">TimeSpanMaskPart</a> value that specifies the initially
+selected segment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_EnableMnemonics_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.EnableMnemonics*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_EnableMnemonics" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.EnableMnemonics">EnableMnemonics</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether users can use keyboard mnemonics to navigate between segments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool EnableMnemonics { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to enable mnemonics; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_EnableMnemonics_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For example, in the &quot;en-US&quot; culture:</p>
+<ul><li>Press <code>d</code> for days</li><li>Press <code>h</code> for hours</li><li>Press <code>m</code> for minutes</li><li>Press <code>s</code> for seconds</li></ul>
+Users can type <code>h5</code> to set the hours segment regardless of the caret position.
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_HideInsignificantPartsOnly_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.HideInsignificantPartsOnly*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_HideInsignificantPartsOnly" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.HideInsignificantPartsOnly">HideInsignificantPartsOnly</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the editor should hide middle optional segments with zero values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HideInsignificantPartsOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to hide the insignificant parts with zero values; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_InputMode_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.InputMode*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_InputMode" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.InputMode">InputMode</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the input mode for the time span editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TimeSpanMaskInputMode InputMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskInputMode.html">TimeSpanMaskInputMode</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskInputMode.html">TimeSpanMaskInputMode</a> value that specifies how input is handled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_ResetPartsOnSelectAllInput_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.ResetPartsOnSelectAllInput*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_ResetPartsOnSelectAllInput" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.ResetPartsOnSelectAllInput">ResetPartsOnSelectAllInput</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether all segments (except the default segment) reset when the user
+replaces the entire value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ResetPartsOnSelectAllInput { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to reset segments on full input; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_SpinWithCarry_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.SpinWithCarry*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_SpinWithCarry" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.SpinWithCarry">SpinWithCarry</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether adjacent segments are automatically adjusted when spinning values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SpinWithCarry { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to propagate changes to neighboring segments; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_SpinWithCarry_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For example, increasing seconds past their maximum value increments the minutes segment.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_UseAdvancingCaret_" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.UseAdvancingCaret*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITimeSpanEditorMaskProperties_UseAdvancingCaret" data-uid="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.UseAdvancingCaret">UseAdvancingCaret</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the caret automatically moves to the next segment when the
+current one is filled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool UseAdvancingCaret { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to advance the caret automatically; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

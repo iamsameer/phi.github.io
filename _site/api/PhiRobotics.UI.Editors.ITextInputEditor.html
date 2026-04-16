@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ITextInputEditor </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ITextInputEditor ">
+    
+    <meta name="description" content="Describes an interface for a text input editor.  The ITextInputEditor interface is implemented by the UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.ITextInputEditor">
+
+
+
+  <h1 id="PhiRobotics_UI_Editors_ITextInputEditor" data-uid="PhiRobotics.UI.Editors.ITextInputEditor" class="text-break">Interface ITextInputEditor</h1>
+  <div class="markdown level0 summary"><p>Describes an interface for a text input editor.</p>
+<p>
+The <b>ITextInputEditor</b> interface is implemented by the UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanged">IInputEditor.EditValueChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanging">IInputEditor.EditValueChanging</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValue">IInputEditor.EditValue</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ErrorText">IInputEditor.ErrorText</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ErrorIconAlignment">IInputEditor.ErrorIconAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_RichToolTip">IInputEditor.RichToolTip</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ShowToolTips">IInputEditor.ShowToolTips</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ToolTipController">IInputEditor.ToolTipController</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.endinvoke">ISynchronizeInvoke.EndInvoke(IAsyncResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invoke">ISynchronizeInvoke.Invoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invokerequired">ISynchronizeInvoke.InvokeRequired</a>
+    </div>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITextInputEditor : IInputEditor, ISynchronizeInvoke, IDisposable, IComponent, IDisposable, IWin32Window</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The <b>ITextInputEditor</b> interface extends <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a> and 
+provides functionality for editing textual values with optional masking and formatting.
+</p>
+<p>
+This editor supports multiple input modes through mask configuration, allowing you 
+to restrict input, enforce formats, and control how values are displayed and stored.
+</p>
+<p>
+Use the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_Configure_System_Type_PhiRobotics_UI_Editors_EditMaskType_">Configure(Type, EditMaskType)</a> method to define the value type 
+and mask behavior. Depending on the configuration, the editor exposes different 
+<a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_MaskProperties">MaskProperties</a> implementations.
+</p>
+<p>
+Instances of <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html">ITextInputEditor</a> are created using the 
+<a class="xref" href="PhiRobotics.UI.Editors.IInputEditorFactory.html">IInputEditorFactory</a>.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to configure a text editor:</p>
+<pre><code class="lang-cs">ITextInputEditor editor = factory.CreateTextEdit();
+<!-- -->
+editor.NullValuePrompt = "Enter value...";
+editor.NullValuePromptForeColor = Color.LightSkyBlue;
+editor.BeepOnError = true;
+editor.UseMaskAsDisplayFormat = false;
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextInputEditor_BeepOnError_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.BeepOnError*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_BeepOnError" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.BeepOnError">BeepOnError</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the editor plays a system error sound when invalid
+input is entered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool BeepOnError { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to play a system sound on invalid input; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextInputEditor_MaskProperties_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.MaskProperties*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_MaskProperties" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.MaskProperties">MaskProperties</h4>
+  <div class="markdown level1 summary"><p>Gets the mask settings that control user input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITextEditorMaskProperties MaskProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a></td>
+        <td><p>An instance of <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextInputEditor_NullValuePrompt_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.NullValuePrompt*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_NullValuePrompt" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.NullValuePrompt">NullValuePrompt</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the placeholder text displayed when the editor’s value is null or
+empty.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string NullValuePrompt { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that specifies the placeholder text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextInputEditor_NullValuePromptForeColor_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.NullValuePromptForeColor*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_NullValuePromptForeColor" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.NullValuePromptForeColor">NullValuePromptForeColor</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the color of the placeholder text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Color NullValuePromptForeColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a> value that specifies the placeholder text color.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextInputEditor_UseMaskAsDisplayFormat_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.UseMaskAsDisplayFormat*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_UseMaskAsDisplayFormat" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.UseMaskAsDisplayFormat">UseMaskAsDisplayFormat</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the input mask is also used to format the display value
+when the editor is not focused.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool UseMaskAsDisplayFormat { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to use the mask for both display and edit modes; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextInputEditor_Configure_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.Configure*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_Configure_System_Type_PhiRobotics_UI_Editors_EditMaskType_" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.Configure(System.Type,PhiRobotics.UI.Editors.EditMaskType)">Configure(Type, EditMaskType)</h4>
+  <div class="markdown level1 summary"><p>Configures the editor to accept values of the specified <code class="paramref">valueType</code>
+and applies the specified <code class="paramref">mask</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Configure(Type valueType = null, EditMaskType mask = EditMaskType.None)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">valueType</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that specifies the type of values accepted by the editor.
+If <code>null</code>, the editor accepts <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> values.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.EditMaskType.html">EditMaskType</a></td>
+        <td><span class="parametername">mask</span></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.Editors.EditMaskType.html">EditMaskType</a> value that specifies the mask type to apply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_Configure_System_Type_PhiRobotics_UI_Editors_EditMaskType__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+When <code class="paramref">valueType</code> is <code>null</code>, the editor is configured for 
+string input and the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_MaskProperties">MaskProperties</a> instance is initialized based 
+on the specified <code class="paramref">mask</code>.
+</p>
+<p>
+When <code class="paramref">valueType</code> is not <code>null</code>, the editor initializes 
+mask settings appropriate for the specified type (for example, numeric or 
+date/time input).
+</p>
+</div>
+  <h3 id="events">Events
+</h3>
+
+
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_CustomDisplayText" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.CustomDisplayText">CustomDisplayText</h4>
+  <div class="markdown level1 summary"><p>Raised when custom display text is required for the editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;InputCustomDisplayTextEventArgs&gt; CustomDisplayText</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.html">InputCustomDisplayTextEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_CustomDisplayText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The event data is provided by <a class="xref" href="PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.html">InputCustomDisplayTextEventArgs</a>.
+</p>
+<p>
+This event is raised each time the editor loses focus, allowing you to 
+customize how the value is displayed.
+</p>
+</div>
+
+
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_InvalidValue" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.InvalidValue">InvalidValue</h4>
+  <div class="markdown level1 summary"><p>Raised when an invalid value is entered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;InvalidInputExceptionEventArgs&gt; InvalidValue</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.html">InvalidInputExceptionEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_InvalidValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The event data is provided by <a class="xref" href="PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.html">InvalidInputExceptionEventArgs</a>.</p>
+</div>
+
+
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_ParseEditValue" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.ParseEditValue">ParseEditValue</h4>
+  <div class="markdown level1 summary"><p>Raised when the editor converts an input value to its internal representation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;InputConvertEditValueEventArgs&gt; ParseEditValue</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.html">InputConvertEditValueEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_ParseEditValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The event data is provided by <a class="xref" href="PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.html">InputConvertEditValueEventArgs</a>.
+</p>
+<p>
+This event is raised when a user changes the value or when a new value is 
+assigned programmatically, allowing custom conversion logic.
+</p>
+</div>
+
+
+  <h4 id="PhiRobotics_UI_Editors_ITextInputEditor_QueryProcessKey" data-uid="PhiRobotics.UI.Editors.ITextInputEditor.QueryProcessKey">QueryProcessKey</h4>
+  <div class="markdown level1 summary"><p>Raised when a key press is evaluated to determine whether it should be processed
+by the editor or by its container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;QueryInputProcessKeyEventArgs&gt; QueryProcessKey</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.html">QueryInputProcessKeyEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextInputEditor_QueryProcessKey_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The event data is provided by <a class="xref" href="PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.html">QueryInputProcessKeyEventArgs</a>.
+</p>
+<p>
+This event allows you to override default keyboard handling behavior.
+</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

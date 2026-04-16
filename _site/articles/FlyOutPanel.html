@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>PhiRobotics Fly-Out Panel UI </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="PhiRobotics Fly-Out Panel UI ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="phirobotics-fly-out-panel-ui">PhiRobotics Fly-Out Panel UI</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The PhiRobotics Fly-Out Panel provides a flexible way to display contextual UI elements that can be dynamically attached to a host control. A fly-out panel behaves like a lightweight container that can be shown, hidden, repositioned, and resized at runtime.</p>
+<p>This infrastructure is suitable for:</p>
+<ul>
+<li>Contextual tool panels</li>
+<li>Pop-up configuration views</li>
+<li>Assistant or helper panels</li>
+</ul>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<p>The PhiRobotics Fly-Out Panel UI is composed of the following core
+components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a></td>
+<td>Represents the fly-out panel instance.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.html">IFlyOutPanelFactory</a></td>
+<td>Responsible for creating fly-out panel instances.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html">FlyOutPanelOptions</a></td>
+<td>Defines configuration settings used during panel creation.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></td>
+<td>Specifies how the panel is positioned relative to its host control.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></td>
+<td>Specifies how the panel responds to resize operations.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="creating-a-fly-out-panel">Creating a Fly-Out Panel</h2>
+<p>Fly-out panels are created using the <a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.html">IFlyOutPanelFactory</a>, which can be obtained from:</p>
+<pre><code class="lang-csharp">IUIFactoryService.FlyOutPanelFactory
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">// Create a fly-out panel without initial content
+IFlyOutPanel panel = flyOutPanelFactory.CreatePanel(null);
+
+// Create content
+Control content = new CustomControl();
+content.Size = new Size(250, 100);
+
+// Assign content
+panel.Content = content;
+
+// Attach to host control
+panel.AttachTo(hostControl);
+
+// Show panel
+panel.ShowPanel();
+</code></pre>
+<hr>
+<h2 id="using-flyoutpaneloptions">Using FlyOutPanelOptions</h2>
+<p>You can customize panel behavior using <a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html">FlyOutPanelOptions</a>.</p>
+<h3 id="example-1">Example</h3>
+<pre><code class="lang-csharp">FlyOutPanelOptions options = new FlyOutPanelOptions(
+    anchorStyle: AnchorStyles.BottomRight,
+    resizeMode: ResizeMode.Both,
+    disposeContent: true,
+    disposeContentOnChange: true,
+    enableIndent: true);
+
+IFlyOutPanel panel = flyOutPanelFactory.CreatePanel(content, options);
+panel.AttachTo(hostControl);
+panel.ShowPanel();
+</code></pre>
+<hr>
+<h2 id="positioning-anchorstyles">Positioning (AnchorStyles)</h2>
+<p>The <a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a> enum determines how the panel is positioned relative to the host control.</p>
+<ul>
+<li>TopLeft</li>
+<li>TopRight</li>
+<li>BottomRight</li>
+<li>BottomLeft</li>
+</ul>
+<hr>
+<h2 id="resizing-resizemode">Resizing (ResizeMode)</h2>
+<p>The <a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a> enum determines how the panel responds to resize operations.</p>
+<ul>
+<li>None</li>
+<li>Height</li>
+<li>Width</li>
+<li>Both</li>
+</ul>
+<p>Resize is performed using:</p>
+<pre><code class="lang-csharp">panel.ResizePanel(deltaWidth, deltaHeight);
+</code></pre>
+<hr>
+<h2 id="attaching-and-displaying">Attaching and Displaying</h2>
+<p>A panel must be attached before it can be displayed.</p>
+<pre><code class="lang-csharp">panel.AttachTo(hostControl);
+panel.ShowPanel();
+</code></pre>
+<h3 id="showing-at-a-specific-location">Showing at a Specific Location</h3>
+<pre><code class="lang-csharp">Point? actualLocation = panel.ShowPanel(new Point(100, 200));
+</code></pre>
+<hr>
+<h2 id="moving-the-panel">Moving the Panel</h2>
+<p>If enabled, the panel can be repositioned:</p>
+<pre><code class="lang-csharp">panel.IndentPanel(deltaX, deltaY);
+</code></pre>
+<hr>
+<h2 id="visibility-control">Visibility Control</h2>
+<pre><code class="lang-csharp">panel.ShowPanel();
+panel.HidePanel();
+</code></pre>
+<hr>
+<h3 id="disposal-behavior">Disposal Behavior</h3>
+<ul>
+<li><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContent">DisposeContent</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContentOnChange">DisposeContentOnChange</a></li>
+</ul>
+<hr>
+<h2 id="lifecycle">Lifecycle</h2>
+<p>The lifetime of the fly-out panel is managed by the consumer.</p>
+<pre><code class="lang-csharp">panel.Dispose();
+</code></pre>
+<hr>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

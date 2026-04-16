@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IToolTipController </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IToolTipController ">
+    
+    <meta name="description" content="Describes a tooltip controller which provides functionality to manage and display tooltips for controls.  This interface is implemented by the PhiRobotics UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ToolTips.IToolTipController">
+
+
+
+  <h1 id="PhiRobotics_UI_ToolTips_IToolTipController" data-uid="PhiRobotics.UI.ToolTips.IToolTipController" class="text-break">Interface IToolTipController</h1>
+  <div class="markdown level0 summary"><p>Describes a tooltip controller which provides functionality to manage and
+display tooltips for controls.</p>
+<p>
+This interface is implemented by the PhiRobotics UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.ToolTips.html">ToolTips</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IToolTipController : IDisposable, IComponent, IDisposable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <b>IToolTipController</b> allows you to customize the appearance and
+behavior of tooltips displayed for controls and their elements.</p>
+<p>
+You can configure visual aspects as well as behavior (such as display 
+delays, visibility duration, and positioning).
+</p>
+<p>
+The controller supports both regular tooltips and rich tooltips 
+(<a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a>).
+</p>
+<p>
+Controls that support tooltips expose a tooltip controller, which can be 
+used to show, hide, and customize tooltips for those controls.
+</p>
+Consumer code can obtain an instance of <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a> 
+using the <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipFactory.html#PhiRobotics_UI_ToolTips_IToolTipFactory_CreateController">CreateController()</a> method. The 
+lifetime of the tooltip controller instance is managed by the consumer.
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_Active_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.Active*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_Active" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.Active">Active</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the component’s functionality is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Active { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if displaying tooltips is allowed; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_AllowHtmlText_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.AllowHtmlText*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_AllowHtmlText" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.AllowHtmlText">AllowHtmlText</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether HTML formatting tags can be used to format text in tooltips.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowHtmlText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if HTML tags can be used to format text in tooltips; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_AutoPopDelay_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.AutoPopDelay*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_AutoPopDelay" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.AutoPopDelay">AutoPopDelay</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the time, in milliseconds, that a tooltip remains visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AutoPopDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value that specifies the tooltip duration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_CloseOnClick_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.CloseOnClick*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_CloseOnClick" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.CloseOnClick">CloseOnClick</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether a tooltip is closed on a click.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CloseOnClick { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value that specifies whether a click on a tooltip closes
+this tooltip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_InitialDelay_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.InitialDelay*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_InitialDelay" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.InitialDelay">InitialDelay</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the time interval between a visual element being hovered, and its
+tooltip being shown on-screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InitialDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value that specifies the time a visual element needs to
+display its tooltip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_IsIconSizeLarge_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.IsIconSizeLarge*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_IsIconSizeLarge" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.IsIconSizeLarge">IsIconSizeLarge</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the tooltip icon size is large.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsIconSizeLarge { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the displayed icon size is large; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_KeepWhileHovered_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.KeepWhileHovered*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_KeepWhileHovered" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.KeepWhileHovered">KeepWhileHovered</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether a displayed tooltip remains visible while the mouse cursor
+keeps moving (without pauses) towards the tooltip and while it hovers the tooltip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool KeepWhileHovered { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if a tooltip remains displayed while the mouse cursor is over this
+tooltip; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ReshowDelay_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ReshowDelay*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ReshowDelay" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ReshowDelay">ReshowDelay</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the time interval that must pass before another hint is displayed
+if another hint is currently visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ReshowDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value specifying the time interval in milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_RoundRadius_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.RoundRadius*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_RoundRadius" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.RoundRadius">RoundRadius</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the radius of the rounded corners of the tooltip window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int RoundRadius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value that specifies the radius of the rounded corners.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_Rounded_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.Rounded*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_Rounded" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.Rounded">Rounded</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the tooltip’s corners are rounded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Rounded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to display hints with rounded corners; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ShowBeak_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowBeak*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowBeak" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowBeak">ShowBeak</h4>
+  <div class="markdown level1 summary"><p>Specifies whether callout beaks are displayed for hints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShowBeak { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the callout beak is displayed when a hint appears; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ShowShadow_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowShadow*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowShadow" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowShadow">ShowShadow</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the tooltips are shown shadowed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShowShadow { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the tooltips are shown shadowed; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ToolTipAnchor_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ToolTipAnchor*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ToolTipAnchor" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ToolTipAnchor">ToolTipAnchor</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether tooltips are anchored relative to the mouse pointer or
+relative to the owning control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ToolTipAnchor ToolTipAnchor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a> value that specifies whether
+tooltips are anchored relative to the mouse pointer or relative to the owning
+control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ToolTipLocation_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ToolTipLocation*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ToolTipLocation" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ToolTipLocation">ToolTipLocation</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the tooltip location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ToolTipLocation ToolTipLocation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipLocation.html">ToolTipLocation</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipLocation.html">ToolTipLocation</a> value that specifies the
+tooltip location relative to the mouse cursor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ToolTipType_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ToolTipType*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ToolTipType" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ToolTipType">ToolTipType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the type of tooltips displayed by the controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ToolTipTypes ToolTipType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipTypes.html">ToolTipTypes</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipTypes.html">ToolTipTypes</a> value that specifies the
+tooltips displayed by the controller.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_AddClientControl_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.AddClientControl*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_AddClientControl_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IToolTipControlClient_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.AddClientControl(System.Windows.Forms.Control,PhiRobotics.UI.ToolTips.IToolTipControlClient)">AddClientControl(Control, IToolTipControlClient)</h4>
+  <div class="markdown level1 summary"><p>Registers a control to enable tooltip support using the specified client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddClientControl(Control control, IToolTipControlClient client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>The control for which tooltips should be displayed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html">IToolTipControlClient</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html">IToolTipControlClient</a> that provides tooltip information
+for elements within the control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the <code class="paramref">control</code> or <code class="paramref">client</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ContainsClientControl_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ContainsClientControl*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ContainsClientControl_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ContainsClientControl(System.Windows.Forms.Control)">ContainsClientControl(Control)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <code class="paramref">control</code> is contained by this
+controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ContainsClientControl(Control control)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> to evaluate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the specified <code class="paramref">control</code> is contained by this controller;
+otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_GetRichToolTip_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetRichToolTip*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_GetRichToolTip_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetRichToolTip(System.Windows.Forms.Control)">GetRichToolTip(Control)</h4>
+  <div class="markdown level1 summary"><p>Gets the rich tooltip associated with the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRichToolTip GetRichToolTip(Control control)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which the rich tooltip is to be obtained.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> associated with the control, or <code>null</code>
+if no tooltip is assigned.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetRichToolTip_System_Windows_Forms_Control__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method to retrieve the instance of <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> that has been
+associated with the specified <code class="paramref">control</code> using
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetRichToolTip_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IRichToolTip_">SetRichToolTip(Control, IRichToolTip)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified
+<code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetRichToolTip_System_Windows_Forms_Control__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetRichToolTip_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IRichToolTip_">SetRichToolTip(Control, IRichToolTip)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_GetTitle_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetTitle*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_GetTitle_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetTitle(System.Windows.Forms.Control)">GetTitle(Control)</h4>
+  <div class="markdown level1 summary"><p>Gets a regular tooltip’s title displayed within the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetTitle(Control control)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> whose regular tooltip’s title is to be obtained.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representing a regular tooltip’s title for the control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetTitle_System_Windows_Forms_Control__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method to retrieve title text that has been associated with the specified
+<code class="paramref">control</code> using <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetTitle_System_Windows_Forms_Control_System_String_">SetTitle(Control, string)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetTitle_System_Windows_Forms_Control__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetTitle_System_Windows_Forms_Control_System_String_">SetTitle(Control, string)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTip_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetToolTip*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTip_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetToolTip(System.Windows.Forms.Control)">GetToolTip(Control)</h4>
+  <div class="markdown level1 summary"><p>Gets a regular tooltip text for the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetToolTip(Control control)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> whose tooltip text should be obtained.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representing a regular tooltip for the control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTip_System_Windows_Forms_Control__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method to retrieve the regular tooltip text that has been associated with
+the specified <code class="paramref">control</code> using the <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetToolTip_System_Windows_Forms_Control_System_String_">SetToolTip(Control, string)</a>
+method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTip_System_Windows_Forms_Control__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetToolTip_System_Windows_Forms_Control_System_String_">SetToolTip(Control, string)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipAnchor_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetToolTipAnchor*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipAnchor_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetToolTipAnchor(System.Windows.Forms.Control)">GetToolTipAnchor(Control)</h4>
+  <div class="markdown level1 summary"><p>Gets whether the tooltip associated with the specified control is anchored relative
+to the mouse pointer or the owning control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ToolTipAnchor GetToolTipAnchor(Control control)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which to retrieve how the associated
+tooltip is anchored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a> value that specifies how the
+tooltip associated with the specified control is anchored.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipAnchor_System_Windows_Forms_Control__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method to retrieve the <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a>
+value that has been associated with the specified <code class="paramref">control</code> using
+the <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipAnchor_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipAnchor_">SetToolTipAnchor(Control, ToolTipAnchor)</a> value.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipAnchor_System_Windows_Forms_Control__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipAnchor_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipAnchor_">SetToolTipAnchor(Control, ToolTipAnchor)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipIconType_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetToolTipIconType*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipIconType_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.GetToolTipIconType(System.Windows.Forms.Control)">GetToolTipIconType(Control)</h4>
+  <div class="markdown level1 summary"><p>Gets the type of the icon displayed within the specified control’s regular tooltip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ToolTipIconType GetToolTipIconType(Control control)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> whose tooltip’s icon type is to be obtained.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipIconType.html">ToolTipIconType</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipIconType.html">ToolTipIconType</a> value representing the type of the icon displayed
+within the specified control’s regular tooltip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipIconType_System_Windows_Forms_Control__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method to retrieve the <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipIconType.html">ToolTipIconType</a> value that has been
+associated with the specified <code class="paramref">control</code> using the
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipIconType_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipIconType_">SetToolTipIconType(Control, ToolTipIconType)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipIconType_System_Windows_Forms_Control__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipIconType_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipIconType_">SetToolTipIconType(Control, ToolTipIconType)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_HideHint_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.HideHint*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_HideHint" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.HideHint">HideHint()</h4>
+  <div class="markdown level1 summary"><p>Hides the hint if it is being displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void HideHint()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_RemoveClientControl_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.RemoveClientControl*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_RemoveClientControl_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.RemoveClientControl(System.Windows.Forms.Control)">RemoveClientControl(Control)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified <code class="paramref">client</code> so that controller no longer listens
+to its events for displaying tooltips.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveClientControl(Control client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The control to remove from this controller.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the <code class="paramref">client</code> is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ResetAutoPopupDelay_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ResetAutoPopupDelay*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ResetAutoPopupDelay" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ResetAutoPopupDelay">ResetAutoPopupDelay()</h4>
+  <div class="markdown level1 summary"><p>Resets the timer which controls when a tooltip’s window is hidden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ResetAutoPopupDelay()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_ResetAutoPopupDelay_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_AutoPopDelay">AutoPopDelay</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_SetAllowHtmlText_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetAllowHtmlText*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_SetAllowHtmlText_System_Windows_Forms_Control_System_Boolean_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetAllowHtmlText(System.Windows.Forms.Control,System.Boolean)">SetAllowHtmlText(Control, bool)</h4>
+  <div class="markdown level1 summary"><p>Sets whether HTML formatting is enabled in tooltips for the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetAllowHtmlText(Control control, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which the tooltip information is to be
+changed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value that specifies whether HTML formatting is enabled in
+tooltips for the specified <code class="paramref">control</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_SetRichToolTip_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetRichToolTip*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_SetRichToolTip_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IRichToolTip_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetRichToolTip(System.Windows.Forms.Control,PhiRobotics.UI.ToolTips.IRichToolTip)">SetRichToolTip(Control, IRichToolTip)</h4>
+  <div class="markdown level1 summary"><p>Associates the specified rich tooltip <code class="paramref">value</code> object with the
+specified <code class="paramref">control</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetRichToolTip(Control control, IRichToolTip value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> that is to be associated with specified
+rich tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>An instance of <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> to associate with the control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetRichToolTip_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IRichToolTip__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>An instance of <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> that has been associated with the specified
+<code class="paramref">control</code> can be retrieved using <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetRichToolTip_System_Windows_Forms_Control_">GetRichToolTip(Control)</a>
+method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetRichToolTip_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IRichToolTip__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetRichToolTip_System_Windows_Forms_Control_">GetRichToolTip(Control)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_SetTitle_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetTitle*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_SetTitle_System_Windows_Forms_Control_System_String_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetTitle(System.Windows.Forms.Control,System.String)">SetTitle(Control, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a regular tooltip’s title for the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetTitle(Control control, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which to set a regular tooltip’s title.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representing a regular tooltip’s title.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetTitle_System_Windows_Forms_Control_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The title text that has been associated with the specified <code class="paramref">control</code>
+using this method can be retrieved using <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetTitle_System_Windows_Forms_Control_">GetTitle(Control)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetTitle_System_Windows_Forms_Control_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetTitle_System_Windows_Forms_Control_">GetTitle(Control)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTip_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetToolTip*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTip_System_Windows_Forms_Control_System_String_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetToolTip(System.Windows.Forms.Control,System.String)">SetToolTip(Control, string)</h4>
+  <div class="markdown level1 summary"><p>Sets a regular tooltip text for the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetToolTip(Control control, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which to set the tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> representing a regular tooltip’s text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTip_System_Windows_Forms_Control_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A regular tooltip text that has been assigned to specified <code class="paramref">control</code>
+using this method can be retrieved using <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetToolTip_System_Windows_Forms_Control_">GetToolTip(Control)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTip_System_Windows_Forms_Control_System_String__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetToolTip_System_Windows_Forms_Control_">GetToolTip(Control)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipAnchor_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetToolTipAnchor*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipAnchor_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipAnchor_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetToolTipAnchor(System.Windows.Forms.Control,PhiRobotics.UI.ToolTips.ToolTipAnchor)">SetToolTipAnchor(Control, ToolTipAnchor)</h4>
+  <div class="markdown level1 summary"><p>Sets whether the tooltip associated with the specified control is anchored relative
+to the mouse pointer or the owning control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetToolTipAnchor(Control control, ToolTipAnchor value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> from which to set how the tooltip is anchored.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a> value that specifies whether
+the tooltip is anchored relative to the mouse pointer or the owning control.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipAnchor_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipAnchor__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipAnchor.html">ToolTipAnchor</a> value that has been associated
+with the specified <code class="paramref">control</code> using this method can be retrieved using
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipAnchor_System_Windows_Forms_Control_">GetToolTipAnchor(Control)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipAnchor_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipAnchor__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipAnchor_System_Windows_Forms_Control_">GetToolTipAnchor(Control)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipIconType_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetToolTipIconType*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipIconType_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipIconType_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.SetToolTipIconType(System.Windows.Forms.Control,PhiRobotics.UI.ToolTips.ToolTipIconType)">SetToolTipIconType(Control, ToolTipIconType)</h4>
+  <div class="markdown level1 summary"><p>Sets the type of the icon displayed within the specified control’s regular tooltip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetToolTipIconType(Control control, ToolTipIconType value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which the icon type is set.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipIconType.html">ToolTipIconType</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipIconType.html">ToolTipIconType</a> value representing the type of the icon that should
+be displayed within the specified control’s regular tooltip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipIconType_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipIconType__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipIconType.html">ToolTipIconType</a> value that has been associated with the specified
+<code class="paramref">control</code> using this method can be retrieved using
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipIconType_System_Windows_Forms_Control_">GetToolTipIconType(Control)</a> method.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_SetToolTipIconType_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipIconType__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_GetToolTipIconType_System_Windows_Forms_Control_">GetToolTipIconType(Control)</a></div>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_PhiRobotics_UI_ToolTips_IToolTipControlInfo_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint(PhiRobotics.UI.ToolTips.IToolTipControlInfo)">ShowHint(IToolTipControlInfo)</h4>
+  <div class="markdown level1 summary"><p>Displays a hint using the specified tooltip information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ShowHint(IToolTipControlInfo info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html">IToolTipControlInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>An instance of <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html">IToolTipControlInfo</a> that specifies the tooltip
+information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_System_String_System_Drawing_Point_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint(System.String,System.Drawing.Point)">ShowHint(string, Point)</h4>
+  <div class="markdown level1 summary"><p>Displays a hint at the specified position relative to the mouse cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ShowHint(string toolTip, Point cursorPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">toolTip</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that contains text to display as a tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></td>
+        <td><span class="parametername">cursorPosition</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a> relative to which the hint should be displayed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_System_String_System_String_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipLocation_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint(System.String,System.String,System.Windows.Forms.Control,PhiRobotics.UI.ToolTips.ToolTipLocation)">ShowHint(string, string, Control, ToolTipLocation)</h4>
+  <div class="markdown level1 summary"><p>Displays a hint with the specified text and title relative to the specified control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ShowHint(string toolTip, string title, Control control, ToolTipLocation toolTipLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">toolTip</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that contains text to display as a tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that contains text to display as a tooltip's title.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which to display the tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipLocation.html">ToolTipLocation</a></td>
+        <td><span class="parametername">toolTipLocation</span></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipLocation.html">ToolTipLocation</a> that specifies the position
+relative to the specified control at which the tooltip should be displayed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_System_String_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipLocation_" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.ShowHint(System.String,System.Windows.Forms.Control,PhiRobotics.UI.ToolTips.ToolTipLocation)">ShowHint(string, Control, ToolTipLocation)</h4>
+  <div class="markdown level1 summary"><p>Displays a hint relative to a specific control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ShowHint(string toolTip, Control control, ToolTipLocation toolTipLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">toolTip</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that contains text to display as a tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">control</span></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> for which to display the tooltip.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipLocation.html">ToolTipLocation</a></td>
+        <td><span class="parametername">toolTipLocation</span></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipLocation.html">ToolTipLocation</a> that specifies the position
+relative to the specified control at which the tooltip should be displayed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_System_String_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipLocation__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The tooltip is displayed relative to the specified control using the current
+<code>IToolTipController</code> settings.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when the specified <code class="paramref">control</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_ShowHint_System_String_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_ToolTipLocation__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_HideHint">HideHint()</a></div>
+  </div>
+  <h3 id="events">Events
+</h3>
+
+
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_HyperlinkClicked" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.HyperlinkClicked">HyperlinkClicked</h4>
+  <div class="markdown level1 summary"><p>Occurs when a user clicks a hyperlink within a control’s tooltip or rich tooltip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;ToolTipHyperlinkEventArgs&gt; HyperlinkClicked</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipHyperlinkEventArgs.html">ToolTipHyperlinkEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipController_QueryObjectInfo" data-uid="PhiRobotics.UI.ToolTips.IToolTipController.QueryObjectInfo">QueryObjectInfo</h4>
+  <div class="markdown level1 summary"><p>Raised when tooltip information is requested for a control element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;ToolTipControllerQueryInfoEventArgs&gt; QueryObjectInfo</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipControllerQueryInfoEventArgs.html">ToolTipControllerQueryInfoEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipController_QueryObjectInfo_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Handle this event to provide custom tooltip content for elements of a control
+registered via <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_AddClientControl_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IToolTipControlClient_">AddClientControl(Control, IToolTipControlClient)</a>.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

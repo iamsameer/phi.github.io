@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mask Type: Numeric </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Mask Type: Numeric ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="mask-type-numeric">Mask Type: Numeric</h1>
+
+<p>The Numeric mask type allows users to enter numeric values (integer, float, currency, percentage, etc.). This mask type supports the <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings">standard numeric .NET format</a>.</p>
+<hr>
+<h2 id="standard-masks">Standard Masks</h2>
+<p>A standard numeric mask consists of a mask and a precision specifier. The precision specifier ranges from 0 to 99 and sets the number of digits to the left or the right of a decimal point (depending on the mask specifier).</p>
+<p>The table below contains input masks that correspond to the standard patterns. Note that patterns depend on the current culture. For example, the same input mask may specify different patterns in the U.S. and France (the currency symbol, the thousand separator, the precision, etc.). The <a href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.numberformat#system-globalization-cultureinfo-numberformat">CultureInfo.NumberFormat</a> property specifies the culture’s numeric format. Users can change the regional format in the Windows Settings panel.</p>
+<table>
+<thead>
+<tr>
+<th>Specifier</th>
+<th>Description</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C</code> or <br><code>c</code></td>
+<td>Currency. Users cannot edit the currency symbol. Precision specifies the number of digits after the decimal point. If the precision is not set, the editor uses the number stored in the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.currencydecimaldigits#system-globalization-numberformatinfo-currencydecimaldigits">CultureInfo.NumberFormat.CurrencyDecimalDigits</a> property.</td>
+<td>$323.00 (&quot;C&quot;)<br>$323.0 (&quot;C1&quot;)<br>$323 (&quot;C0&quot;)</td>
+</tr>
+<tr>
+<td><code>D</code> or <br><code>d</code></td>
+<td>Whole numbers. The fraction part is automatically discarded. The precision specifies the total number of digits.</td>
+<td>-005 (&quot;d3&quot;)<br>02 (&quot;d2&quot;)<br>1234 (&quot;d&quot; or &quot;d4&quot;)</td>
+</tr>
+<tr>
+<td><code>F</code> or <br><code>f</code><br>G or <br>g</td>
+<td>Real number. The precision specifies the number of digits to the right of a decimal point. If the precision specifier is omitted, the mask uses the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.numberdecimaldigits#system-globalization-numberformatinfo-numberdecimaldigits">CultureInfo.NumberFormat.NumberDecimalDigits</a> property.</td>
+<td>1024.5 (&quot;f&quot;)<br>1024.500 (&quot;f3&quot;)</td>
+</tr>
+<tr>
+<td><code>N</code> or <br><code>n</code></td>
+<td>Real number with thousand separators. The precision specifies the number of digits to the right of a decimal point. If the precision specifier is omitted, the mask uses the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.numberdecimaldigits#system-globalization-numberformatinfo-numberdecimaldigits">CultureInfo.NumberFormat.NumberDecimalDigits</a> property.</td>
+<td>1,024.5 (“n”)<br>1,024.500 (“n3”)</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td>Percentage. Displays the value as is. The precision specifies the number of digits to the right of a decimal point. If the precision specifier is omitted, the mask uses the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentdecimaldigits#system-globalization-numberformatinfo-percentdecimaldigits">CultureInfo.NumberFormat.PercentDecimalDigits</a> property.<br><br>The mask matches the pattern specified by the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentnegativepattern#system-globalization-numberformatinfo-percentnegativepattern">CultureInfo.NumberFormat.PercentNegativePattern</a> and <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentpositivepattern#system-globalization-numberformatinfo-percentpositivepattern">CultureInfo.NumberFormat.PercentPositivePattern</a> properties.</td>
+<td>25.00% (“P” or “P2”, editor value is “25”)<br>25% (“P0”, editor value is “25”)</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>Percentage. Multiplies the value by 100. The precision specifies the number of digits to the right of a decimal point. If the precision specifier is omitted, the mask uses the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentdecimaldigits#system-globalization-numberformatinfo-percentdecimaldigits">CultureInfo.NumberFormat.PercentDecimalDigits</a> property.<br><br>The mask matches the pattern specified by the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentnegativepattern#system-globalization-numberformatinfo-percentnegativepattern">CultureInfo.NumberFormat.PercentNegativePattern</a> and <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentpositivepattern#system-globalization-numberformatinfo-percentpositivepattern">CultureInfo.NumberFormat.PercentPositivePattern</a> properties.</td>
+<td>2500.00% (“p” or “p2”, editor value is “25”)<br>2500% (“p0”, editor value is “25”)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="custom-masks">Custom Masks</h2>
+<p>Use the following placeholders and special characters to build custom numeric masks.</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#</code></td>
+<td>Any digit (0-9). The editor shows nothing for “#” placeholders that have no value.</td>
+<td><empty> (“###”, editor value is 0)<br>1 (“###”, editor value is 1)<br>123 (“###”, editor value is 123)</empty></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Any digit (0-9). The default value is zero. The editor shows zeros for “0” placeholders that have no value.</td>
+<td>0 (“##0”, editor has no value)<br>1 (“##0”, editor value is 1)<br>123 (“##0”, editor value is 123)</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Decimal point. The character used as a decimal point separator is specified by the CultureInfo.NumberFormat.NumberDecimalSeparator property.</td>
+<td>.9 (“#.#”, editor value is 0.9)<br>0.9 (“0.#”, editor value is 0.9)<br>0.900 (“0.000”, editor value is 0.91)<br>123.0 (“##0.0”, editor value is 123)</td>
+</tr>
+<tr>
+<td><code>,</code></td>
+<td>Group (thousand) separator.<br><br>The character used as a group separator is specified by the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.numbergroupseparator#system-globalization-numberformatinfo-numbergroupseparator">NumberGroupSeparator</a> property, and the number of digits in each group - by the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.numbergroupsizes#system-globalization-numberformatinfo-numbergroupsizes">CultureInfo.NumberFormat.NumberGroupSizes</a> property.<br><br>If the mask contains the currency symbol ($), the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.currencygroupseparator#system-globalization-numberformatinfo-currencygroupseparator">CurrencyGroupSeparator</a> and <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.currencygroupsizes#system-globalization-numberformatinfo-currencygroupsizes">CurrencyGroupSizes</a> properties are used instead.<br><br>If the mask contains a percent symbol (%), the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentgroupsizes#system-globalization-numberformatinfo-percentgroupsizes">PercentGroupSizes</a> and <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentgroupseparator#system-globalization-numberformatinfo-percentgroupseparator">PercentGroupSeparator</a> properties are used instead.</td>
+<td>-3080.60 (“#,##0.00”, editor value is -3080.6)<br>10,000 (“##,###”, editor value is 10000)<br>100 (“##,###”, editor value is 100)</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Percentage. Multiplies the editor value by 100. The percent symbol is specified by the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentsymbol#system-globalization-numberformatinfo-percentsymbol">CultureInfo.NumberFormat.PercentSymbol</a> property.</td>
+<td>-31.24% (“#0.00%”, editor value is -0.3124)</td>
+</tr>
+<tr>
+<td><code>%%</code></td>
+<td>Percentage character. Displays the editor value as is. The percent symbol is specified by the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.percentsymbol#system-globalization-numberformatinfo-percentsymbol">CultureInfo.NumberFormat.PercentSymbol</a> property.</td>
+<td>-31.24% (“#0.00%%”, editor value is -31.24)<br>0.31% (“#0.00%%”, editor value is 0.3124)</td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>Escape character. Any character that follows the escape character is inserted into the edit box literally. To display a backslash in the edit box, type the “\” string.</td>
+<td>% complete: 10.25 (“% complete: #0.00”, editor value is 10.25)</td>
+</tr>
+<tr>
+<td><code>;</code></td>
+<td>Allows you to set up different mask expressions for positive (left-hand expression) and negative (right-hand expression) values. If there is no expression after this placeholder, the editor does not allow users to enter negative values.</td>
+<td>The “#,##0.00;&lt;&lt;#,##0.00&gt;&gt;” mask displays positive values as is, and encloses negative values in double angled brackets (“3080.6” or “&lt;&lt;-3,080.6&gt;&gt;)”</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>Currency character. The currency symbol is specified by the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.numberformatinfo.currencysymbol#system-globalization-numberformatinfo-currencysymbol">CultureInfo.NumberFormat.PerceCurrencySymbolntSymbol</a> property.</td>
+<td>30 <span class="math">\((“###0\)</span>”)</td>
+</tr>
+<tr>
+<td>Any other characters.</td>
+<td>Any other characters are displayed in the edit box as is.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

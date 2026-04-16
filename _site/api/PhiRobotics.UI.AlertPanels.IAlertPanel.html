@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IAlertPanel </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IAlertPanel ">
+    
+    <meta name="description" content="Describes an interface for a panel that displays alert windows.  The IAlertPanel interface is implemented by the PhiRobotics UI library and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel">
+
+
+
+  <h1 id="PhiRobotics_UI_AlertPanels_IAlertPanel" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel" class="text-break">Interface IAlertPanel</h1>
+  <div class="markdown level0 summary"><p>Describes an interface for a panel that displays alert windows.</p>
+<p>
+The <b>IAlertPanel</b> interface is implemented by the <b>PhiRobotics</b>
+UI library and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.AlertPanels.html">AlertPanels</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IAlertPanel : IComponent, IDisposable, IDisposable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+The <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html">IAlertPanel</a> interface represents a UI component responsible
+for displaying alert windows to the user.
+</p>
+<p>
+Instances of <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html">IAlertPanel</a> are created using the
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html#PhiRobotics_UI_AlertPanels_IAlertPanelFactory_CreatePanel">CreatePanel()</a> method.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html">IAlertPanel</a> instance is managed by the
+consumer. The consumer is responsible for disposing the panel when it is
+no longer needed.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_examples"><strong>Examples</strong></h5>
+  <p>The following example shows how to create and display an alert panel:</p>
+<pre><code class="lang-cs">IAlertPanel alertPanel = alertPanelFactory.CreatePanel();
+alertPanel.PanelTextClick += AlertPanel_PanelTextClick;
+alertPanel.Show(this, "Main Form", "Learn more...");
+<!-- -->
+private void AlertPanel_PanelTextClick(object sender, AlertPanelTextClickEventArgs e)
+{
+    //...
+}
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHotTrack_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AllowHotTrack*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHotTrack" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AllowHotTrack">AllowHotTrack</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether alert window text is highlighted when hovered with the mouse.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowHotTrack { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHotTrack_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If enabled and the hot-tracked text is clicked, the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_PanelTextClick">PanelTextClick</a> 
+event is raised.
+</p>
+<p>
+If disabled, clicking the alert text will not trigger the 
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_PanelTextClick">PanelTextClick</a> event.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHtmlText_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AllowHtmlText*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHtmlText" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AllowHtmlText">AllowHtmlText</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether HTML tags can be used to format the caption and text
+displayed in alert windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowHtmlText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHtmlText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <b>AllowHtmlText</b> property is enabled, you can use HTML tags to
+format an alert window’s caption and text.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_AutoFormDelay_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AutoFormDelay*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AutoFormDelay" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AutoFormDelay">AutoFormDelay</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the delay, in milliseconds, before an alert window
+automatically closes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int AutoFormDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AutoFormDelay_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the user does not hover over the alert window for the specified time,
+the window is automatically closed.</p>
+<p>
+The user can prevent automatic closing by clicking the Pin button.
+The availability of this button is controlled by the
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ShowPinButton">ShowPinButton</a> property.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_AutoHeight_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AutoHeight*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_AutoHeight" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.AutoHeight">AutoHeight</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the height of alert windows is automatically
+calculated based on their content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AutoHeight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.Buttons*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.Buttons">Buttons</h4>
+  <div class="markdown level1 summary"><p>Gets the collection of custom buttons displayed in alert windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IButtonCollection Buttons { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Custom buttons can be displayed at the bottom of alert windows.
+Add buttons to the <b>Buttons</b> collection to display them.</p>
+<p>
+New buttons can be created using
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html#PhiRobotics_UI_AlertPanels_IAlertPanelFactory_CreateButton_System_String_">CreateButton(string)</a>.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_ControlBoxPositionOnRight_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ControlBoxPositionOnRight*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ControlBoxPositionOnRight" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ControlBoxPositionOnRight">ControlBoxPositionOnRight</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the alert window control box appears on the right side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ControlBoxPositionOnRight { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormDisplaySpeed_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormDisplaySpeed*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormDisplaySpeed" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormDisplaySpeed">FormDisplaySpeed</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the animation speed used when displaying alert windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FormDisplaySpeed FormDisplaySpeed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.FormDisplaySpeed.html">FormDisplaySpeed</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormDisplaySpeed_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Animation effects are defined by the
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_HideAnimationType">HideAnimationType</a> and <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ShowAnimationType">ShowAnimationType</a> properties.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormLocation_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormLocation*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormLocation" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormLocation">FormLocation</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the screen position where alert windows appear.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FormLocation FormLocation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.FormLocation.html">FormLocation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormMaxCount_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormMaxCount*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormMaxCount" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormMaxCount">FormMaxCount</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of alert windows displayed simultaneously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int FormMaxCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormMaxCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Alert windows are displayed using a FIFO queue. If more alerts are generated
+than allowed by this property, the additional alerts are queued and displayed
+once a visible alert window closes.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_HideAnimationType_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.HideAnimationType*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_HideAnimationType" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.HideAnimationType">HideAnimationType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the animation effect used when an alert window is hidden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FormShowingEffect HideAnimationType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.FormShowingEffect.html">FormShowingEffect</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowAnimationType_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowAnimationType*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowAnimationType" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowAnimationType">ShowAnimationType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the animation effect used when an alert window appears.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">FormShowingEffect ShowAnimationType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.FormShowingEffect.html">FormShowingEffect</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowCloseButton_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowCloseButton*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowCloseButton" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowCloseButton">ShowCloseButton</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether a Close button is displayed in alert windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShowCloseButton { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowPinButton_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowPinButton*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowPinButton" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowPinButton">ShowPinButton</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether a Pin button is displayed in alert windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShowPinButton { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowPinButton_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Clicking the Pin button keeps the alert window visible until it is unpinned.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowToolTips_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowToolTips*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowToolTips" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ShowToolTips">ShowToolTips</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether tooltips are enabled for custom alert window buttons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ShowToolTips { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ShowToolTips_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Tooltips can be specified using the <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Hint">Hint</a> property.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_Show_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.Show*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_Show_System_Windows_Forms_Form_PhiRobotics_UI_AlertPanels_IAlertPanelInfo_System_Boolean_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.Show(System.Windows.Forms.Form,PhiRobotics.UI.AlertPanels.IAlertPanelInfo,System.Boolean)">Show(Form, IAlertPanelInfo, bool)</h4>
+  <div class="markdown level1 summary"><p>Displays an alert window displaying information from the specified
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Show(Form owner, IAlertPanelInfo info, bool autoWidth = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>An owner of the window. In a multi-monitor system, if
+the owner is set to <b>null</b>, the window will be displayed on the main
+monitor. Otherwise, the window will be displayed on the same monitor as
+the owner.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a> object that contains
+settings used to initialize the newly created alert window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">autoWidth</span></td>
+        <td><p>Determines whether the width of the alert window
+is automatically adjusted to fit its content. The text will be displayed
+on a single line.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IAlertPanel_Show_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.Show*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_Show_System_Windows_Forms_Form_System_String_System_String_System_Boolean_" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.Show(System.Windows.Forms.Form,System.String,System.String,System.Boolean)">Show(Form, string, string, bool)</h4>
+  <div class="markdown level1 summary"><p>Displays an alert window with the specified caption and text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Show(Form owner, string caption, string text, bool autoWidth = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>An owner of the window. In a multi-monitor system, if
+the owner is set to <b>null</b>, the window will be displayed on the main
+monitor. Otherwise, the window will be displayed on the same monitor as
+the owner.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">caption</span></td>
+        <td><p>A string that specifies the window’s caption.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>A string that specifies the window’s text, displayed
+when the text region is not hovered over.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">autoWidth</span></td>
+        <td><p>Determines whether the width of the alert window is
+automatically adjusted to fit its content. The text will be displayed on a
+single line.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_AlertPanels_IAlertPanel_Show_System_Windows_Forms_Form_System_String_System_String_System_Boolean__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+If the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_AllowHtmlText">AllowHtmlText</a> property is enabled, 
+you can use HTML tags to format an alert panel’s caption and text.
+</p>
+<p>
+You can handle the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_BeforeFormShown">BeforeFormShown</a> event to customize the 
+newly created alert window before its appearance on-screen.
+</p>
+</div>
+  <h3 id="events">Events
+</h3>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_BeforeFormShown" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.BeforeFormShown">BeforeFormShown</h4>
+  <div class="markdown level1 summary"><p>Raised before an alert window is displayed, allowing customization
+of the window position and other settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;PanelFormEventArgs&gt; BeforeFormShown</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormEventArgs.html">PanelFormEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonClicked" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ButtonClicked">ButtonClicked</h4>
+  <div class="markdown level1 summary"><p>Raised when a custom button within an alert window is clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;PanelButtonEventArgs&gt; ButtonClicked</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelButtonEventArgs.html">PanelButtonEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.ButtonDownChanged">ButtonDownChanged</h4>
+  <div class="markdown level1 summary"><p>Raised when the pressed state of a custom check button changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;PanelButtonDownEventArgs&gt; ButtonDownChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.html">PanelButtonDownEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_FormClosing" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.FormClosing">FormClosing</h4>
+  <div class="markdown level1 summary"><p>Raised when an alert window is about to close.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;PanelFormClosingEventArgs&gt; FormClosing</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormClosingEventArgs.html">PanelFormClosingEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_HyperLinkClicked" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.HyperLinkClicked">HyperLinkClicked</h4>
+  <div class="markdown level1 summary"><p>Raised when a hyperlink within the alert window is clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;HyperLinkClickedEventArgs&gt; HyperLinkClicked</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.HyperLinkClickedEventArgs.html">HyperLinkClickedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_PanelFormLoad" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.PanelFormLoad">PanelFormLoad</h4>
+  <div class="markdown level1 summary"><p>Raised after an alert window has been created and allows customization
+of the panel and its buttons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;PanelFormLoadEventArgs&gt; PanelFormLoad</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html">PanelFormLoadEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_PanelTextClick" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.PanelTextClick">PanelTextClick</h4>
+  <div class="markdown level1 summary"><p>Raised when the text within an alert window is clicked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;AlertPanelTextClickEventArgs&gt; PanelTextClick</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs.html">AlertPanelTextClickEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="PhiRobotics_UI_AlertPanels_IAlertPanel_QueryFormWidth" data-uid="PhiRobotics.UI.AlertPanels.IAlertPanel.QueryFormWidth">QueryFormWidth</h4>
+  <div class="markdown level1 summary"><p>Raised when the alert window queries its width.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;PanelFormWidthEventArgs&gt; QueryFormWidth</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormWidthEventArgs.html">PanelFormWidthEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

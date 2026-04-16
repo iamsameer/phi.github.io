@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IDateTimeEditorMaskProperties </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IDateTimeEditorMaskProperties ">
+    
+    <meta name="description" content="Defines properties that control date-time masking behavior for text-based editors.  The IDateTimeEditorMaskProperties interface is implemented by the UI library  and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties">
+
+
+
+  <h1 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties" data-uid="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties" class="text-break">Interface IDateTimeEditorMaskProperties</h1>
+  <div class="markdown level0 summary"><p>Defines properties that control date-time masking behavior for text-based editors.</p>
+<p>
+The <b>IDateTimeEditorMaskProperties</b> interface is implemented by the UI library 
+and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ISupportCulture.html#PhiRobotics_UI_ISupportCulture_Culture">ISupportCulture.Culture</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_ValueType">ITextEditorMaskProperties.ValueType</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType">ITextEditorMaskProperties.MaskType</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression">ITextEditorMaskProperties.MaskExpression</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IDateTimeEditorMaskProperties : ISupportCulture, ITextEditorMaskProperties</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This interface extends <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a> to provide 
+additional functionality specific to date and time input.
+</p>
+<p>
+properties control advanced editing behaviors such as automatic caret 
+movement between segments and value propagation across adjacent segments.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.html">IDateTimeEditorMaskProperties</a> instance is managed 
+by the associated editor. Consumers typically do not create or dispose this 
+object directly.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_examples"><strong>Examples</strong></h5>
+  <p>The following examples demonstrate configuring a date-time editor mask:</p>
+<pre><code class="lang-cs">// Using a text editor with a date-time mask
+ITextInputEditor editor = inputEditorFactory.CreateTextEdit();
+<!-- -->
+editor.Configure(null, EditMaskType.DateTime);
+IDateTimeEditorMaskProperties maskProperties = 
+    (IDateTimeEditorMaskProperties)editor.MaskProperties;
+<!-- -->
+maskProperties.UseAdvancingCaret = true;
+maskProperties.SpinWithCarry = true;
+maskProperties.MaskExpression = "f";
+</code></pre>
+<pre><code class="lang-cs">// Using a dedicated date-time editor
+IDateTimeEditor dateTimeEditor = inputEditorFactory.CreateDateTimeEdit();
+IDateTimeEditorMaskProperties maskProperties = dateTimeEditor.MaskProperties;
+<!-- -->
+maskProperties.UseAdvancingCaret = true;
+maskProperties.SpinWithCarry = true;
+maskProperties.MaskExpression = "f";
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_SpinWithCarry_" data-uid="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.SpinWithCarry*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_SpinWithCarry" data-uid="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.SpinWithCarry">SpinWithCarry</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether a neighboring segment value is automatically adjusted
+when the current segment value is incremented or decremented. (users can spin values
+with editor buttons or keyboard arrow keys)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SpinWithCarry { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to increase or decrease the neighboring segment value when the user
+spins through values of a segment; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_SpinWithCarry_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+For example, consider a mask <code>HH:mm</code> (hours and minutes) with a value of 
+<code>00:59</code>.
+</p>
+<ul><li>
+If this property is <code>false</code>, incrementing minutes results in <code>00:00</code>.
+</li><li>
+If this property is <code>true</code>, incrementing minutes results in <code>01:00</code>.
+</li></ul>
+<p>
+Similarly, decrementing from <code>01:00</code> results in either <code>01:59</code> or 
+<code>00:59</code>, depending on this setting.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_UseAdvancingCaret_" data-uid="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.UseAdvancingCaret*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_UseAdvancingCaret" data-uid="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.UseAdvancingCaret">UseAdvancingCaret</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the caret automatically moves to the next segment
+when the current segment is fully populated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool UseAdvancingCaret { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to advance the caret to the next segment when input is complete;
+otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IDateTimeEditorMaskProperties_UseAdvancingCaret_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This behavior improves data entry efficiency by reducing the need for
+manual navigation between segments.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

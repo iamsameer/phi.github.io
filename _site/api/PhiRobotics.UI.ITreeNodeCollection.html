@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ITreeNodeCollection </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ITreeNodeCollection ">
+    
+    <meta name="description" content="Represents a collection of  instances within an .  The ITreeNodeCollection interface is implemented by the UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ITreeNodeCollection">
+
+
+
+  <h1 id="PhiRobotics_UI_ITreeNodeCollection" data-uid="PhiRobotics.UI.ITreeNodeCollection" class="text-break">Interface ITreeNodeCollection</h1>
+  <div class="markdown level0 summary"><p>Represents a collection of <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> instances within an <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>.</p>
+<p>
+The <b>ITreeNodeCollection</b> interface is implemented by the UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator">IEnumerable&lt;ITreeNode&gt;.GetEnumerator()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection.copyto">ICollection.CopyTo(Array, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection.count">ICollection.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection.syncroot">ICollection.SyncRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection.issynchronized">ICollection.IsSynchronized</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ITreeNodeCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITreeNodeCollection : IEnumerable&lt;ITreeNode&gt;, ICollection, IEnumerable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ITreeNodeCollection_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A node collection manages hierarchical relationships in a tree:</p>
+<ul><li>
+Root-level nodes are accessed through the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_RootNodes">RootNodes</a> property.
+</li><li>
+Each <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> exposes its child nodes through the 
+<a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Nodes">Nodes</a> property.
+</li></ul>
+<p>The collection provides methods to append, remove, and enumerate nodes.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_ITreeNodeCollection_Append_" data-uid="PhiRobotics.UI.ITreeNodeCollection.Append*"></a>
+  <h4 id="PhiRobotics_UI_ITreeNodeCollection_Append_System_String_System_Object_" data-uid="PhiRobotics.UI.ITreeNodeCollection.Append(System.String,System.Object)">Append(string, object)</h4>
+  <div class="markdown level1 summary"><p>Creates a new node and appends it to the end of the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITreeNode Append(string displayText, object data = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">displayText</span></td>
+        <td><p>The text displayed for the newly created node.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Optional user-defined data associated with the node.
+This value is exposed through the node's <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Data">Data</a> property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><p>The newly created <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">displayText</code> is
+<code>null</code> or an empty string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ITreeNodeCollection_Clear_" data-uid="PhiRobotics.UI.ITreeNodeCollection.Clear*"></a>
+  <h4 id="PhiRobotics_UI_ITreeNodeCollection_Clear" data-uid="PhiRobotics.UI.ITreeNodeCollection.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all nodes from the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Clear()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ITreeNodeCollection_Clear_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Use this method to remove all child nodes of a specific node or all root nodes
+of a tree.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITreeNodeCollection_Remove_" data-uid="PhiRobotics.UI.ITreeNodeCollection.Remove*"></a>
+  <h4 id="PhiRobotics_UI_ITreeNodeCollection_Remove_PhiRobotics_UI_ITreeNode_" data-uid="PhiRobotics.UI.ITreeNodeCollection.Remove(PhiRobotics.UI.ITreeNode)">Remove(ITreeNode)</h4>
+  <div class="markdown level1 summary"><p>Removes the specified node from the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Remove(ITreeNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The node to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">node</code> is
+<code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">node</code> does not
+belong to this collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

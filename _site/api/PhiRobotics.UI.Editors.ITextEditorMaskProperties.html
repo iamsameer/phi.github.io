@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ITextEditorMaskProperties </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ITextEditorMaskProperties ">
+    
+    <meta name="description" content="Defines properties that control input masking and formatting behavior for a text-based editor.  The ITextEditorMaskProperties interface is implemented by the UI library  and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties">
+
+
+
+  <h1 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties" class="text-break">Interface ITextEditorMaskProperties</h1>
+  <div class="markdown level0 summary"><p>Defines properties that control input masking and formatting behavior
+for a text-based editor.</p>
+<p>
+The <b>ITextEditorMaskProperties</b> interface is implemented by the UI library 
+and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITextEditorMaskProperties</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This interface provides a way to restrict and format user input using 
+mask expressions and predefined mask types.
+</p>
+<p>
+Masks can be used to enforce input patterns (for example, phone numbers,
+dates, or custom formats) and to control how text is interpreted and displayed.
+</p>
+<p>
+The combination of <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType">MaskType</a> and <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression">MaskExpression</a>
+determines how the input is validated and formatted.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a> instance is managed 
+by the associated editor. Consumers typically do not create or dispose this 
+object directly.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates configuring a text editor mask:</p>
+<pre><code class="lang-cs">ITextInputEditor editor = factory.CreateTextEdit();
+<!-- -->
+editor.MaskProperties.MaskType = EditMaskType.Simple;
+editor.MaskProperties.MaskExpression = @"(\+91)-0000-0000-00"; // phone number format
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression_" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties.MaskExpression*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties.MaskExpression">MaskExpression</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the mask expression used to control input formatting and validation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string MaskExpression { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that defines the mask pattern.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The interpretation of this value depends on <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType">MaskType</a>.
+</p>
+<p>
+Examples:
+<ul><li><code>(000) 000-0000</code> for a phone number</li><li><code>dd-MM-yyyy</code> for a date-like pattern</li></ul>
+
+<p>
+If no mask is required, this property can be <code>null</code> or an empty string.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType_" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties.MaskType*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties.MaskType">MaskType</h4>
+  <div class="markdown level1 summary"><p>Gets the type of mask applied to the editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">EditMaskType MaskType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.EditMaskType.html">EditMaskType</a></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.Editors.EditMaskType.html">EditMaskType</a> value that determines how the mask expression
+is interpreted and applied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The mask type defines the rules used to validate and format user input.
+</p>
+<p>
+Together with <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression">MaskExpression</a>, this property controls how input
+is processed, such as restricting characters, enforcing patterns, or applying
+date/time and numeric formats.
+</p>
+<p>
+The value is typically defined by the editor implementation and may not be
+changeable by consumers.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_ValueType_" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties.ValueType*"></a>
+  <h4 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_ValueType" data-uid="PhiRobotics.UI.Editors.ITextEditorMaskProperties.ValueType">ValueType</h4>
+  <div class="markdown level1 summary"><p>Gets the data type of the value produced by the editor after applying the mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type ValueType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a> that specifies the resulting value type
+(for example, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_ITextEditorMaskProperties_ValueType_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This property indicates how the editor's input should be interpreted
+after mask processing.
+</p>
+<p>
+The value is typically determined by the editor implementation and mask type,
+and is not intended to be modified by consumers.
+</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

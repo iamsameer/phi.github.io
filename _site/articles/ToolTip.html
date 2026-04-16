@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Tooltip </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Tooltip ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="tooltip">Tooltip</h1>
+
+<p>Provides a flexible mechanism to display contextual information when users hover over UI elements. The PhiRobotics UI library supports both <strong>standard text tooltips</strong> and <strong>rich, fully customizable tooltips</strong>.</p>
+<hr>
+<h2 id="overview">Overview</h2>
+<ul>
+<li><strong><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a></strong> – Manages tooltip display and behavior.</li>
+<li><strong><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipControlClient.html">IToolTipControlClient</a></strong> – Supplies tooltip content dynamically for controls.</li>
+<li><strong><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipControlInfo.html">IToolTipControlInfo</a></strong> – Represents standard tooltip data (text, title, type).</li>
+<li><strong><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></strong> – Represents advanced tooltip content with multiple elements.</li>
+<li><strong><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipFactory.html">IToolTipFactory</a></strong> – Creates tooltip-related objects.</li>
+</ul>
+<p>This design allows you to:</p>
+<ul>
+<li>Attach tooltips to multiple controls</li>
+<li>Dynamically generate tooltip content</li>
+<li>Use either simple or rich tooltip formats</li>
+</ul>
+<hr>
+<h2 id="tooltip-types">Tooltip Types</h2>
+<h3 id="standard-tooltip">Standard Tooltip</h3>
+<p>A simple tooltip with:</p>
+<ul>
+<li>Title</li>
+<li>Text content</li>
+</ul>
+<p>Use <code>ToolTipTypes.Standard</code> with <code>IToolTipControlInfo</code>.</p>
+<hr>
+<h3 id="rich-tooltip">Rich Tooltip</h3>
+<p>A structured tooltip that can include:</p>
+<ul>
+<li>Titles</li>
+<li>Text blocks</li>
+<li>Images</li>
+<li>Separators</li>
+</ul>
+<p>Use <strong><a href="RichToolTip.html">IRichToolTip</a></strong> for advanced scenarios.</p>
+<hr>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="creating-and-assigning-a-tooltip-client">Creating and Assigning a Tooltip Client</h3>
+<pre><code class="lang-csharp">IToolTipController controller = toolTipFactory.CreateController();
+
+ToolTipControlClient client = new ToolTipControlClient(toolTipFactory);
+
+// Attach tooltip client to controls
+controller.AddClientControl(button1, client);
+controller.AddClientControl(checkBox1, client);
+</code></pre>
+<hr>
+<h3 id="implementing-itooltipcontrolclient">Implementing <code>IToolTipControlClient</code></h3>
+<pre><code class="lang-csharp">class ToolTipControlClient : IToolTipControlClient
+{
+    private readonly IToolTipControlInfo toolTipInfo;
+
+    public ToolTipControlClient(IToolTipFactory factory)
+    {
+        toolTipInfo = factory.CreateControlInfo();
+        toolTipInfo.Title = &quot;Control&quot;;
+        toolTipInfo.ToolTipType = ToolTipTypes.Standard;
+    }
+
+    public bool ToolTipsEnabled =&gt; true;
+
+    public IToolTipControlInfo GetToolTipInfo(Control clientControl, Point point)
+    {
+        if (clientControl is Button button)
+        {
+            toolTipInfo.Text = &quot;Button: &quot; + button.Text;
+            toolTipInfo.Object = clientControl;
+            return toolTipInfo;
+        }
+        else if (clientControl is CheckBox checkBox)
+        {
+            toolTipInfo.Text = &quot;CheckBox: &quot; + checkBox.Text;
+            toolTipInfo.Object = clientControl;
+            return toolTipInfo;
+        }
+
+        return null;
+    }
+}
+</code></pre>
+<p><img src="../Images/Tooltip_example1.png" alt="Tooltip Example1"></p>
+<p><img src="../Images/Tooltip_example2.png" alt="Tooltip Example2"></p>
+<hr>
+<h3 id="creating-a-rich-tooltip">Creating a Rich Tooltip</h3>
+<pre><code class="lang-csharp">private IRichToolTip CreateToolTip(IToolTipFactory factory)
+{
+    IRichToolTip toolTip = factory.CreateToolTip();
+
+    toolTip.Items.AddTitle(&quot;Open File&quot;);
+
+    var content = toolTip.Items.Add(&quot;Open an existing file from disk.&quot;);
+	content.Image = Resources.OpenFile;
+
+    toolTip.Items.AddSeparator();
+
+    var footer = toolTip.Items.AddTitle(&quot;Press Ctrl+O&quot;);
+	footer.Image = Resources.HelpIcon;
+
+    return toolTip;
+}
+
+</code></pre>
+<h2 id="tooltip-example3"><img src="../Images/Tooltip_example3.png" alt="Tooltip Example3"></h2>
+<h3 id="when-to-use-rich-tooltips">When to Use Rich Tooltips</h3>
+<p>Use <code>IRichToolTip</code> when:</p>
+<ul>
+<li>You need to display images or icons.</li>
+<li>You want structured information (sections, headers).</li>
+<li>You want a more visually engaging tooltip.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

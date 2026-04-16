@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mask Type: DateTime </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Mask Type: DateTime ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="mask-type-datetime">Mask Type: DateTime</h1>
+
+<p>The DateTime mask type allows users to enter date and/or time values in a structured format.</p>
+<blockquote>
+<p>Mask patterns are culture-dependent. The same mask may produce different results depending on the system’s regional settings.</p>
+</blockquote>
+<hr>
+<h2 id="standard-masks">Standard Masks</h2>
+<p>Standard masks provide predefined date and time formats based on .NET format specifiers.</p>
+<table>
+<thead>
+<tr>
+<th>Mask</th>
+<th>Description</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code></td>
+<td>Short “mm/dd/yyyy” date format</td>
+<td>8/24/2020</td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>Long date format</td>
+<td>Monday, August 24, 2020</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>Short “hh:mm AM/PM” time format</td>
+<td>7:51 PM</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>Long “hh:mm:ss AM/PM” time format</td>
+<td>7:51:13 PM</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>Short date + short time</td>
+<td>8/24/2020 7:51 PM</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Short date + long time</td>
+<td>8/24/2020 7:51:13 PM</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>Long date + short time</td>
+<td>Monday, August 24, 2020 7:51 PM</td>
+</tr>
+<tr>
+<td><code>F</code></td>
+<td>Full time format according to the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.fulldatetimepattern#system-globalization-datetimeformatinfo-fulldatetimepattern">FullDateTimePattern</a> property value. In the “en-US” culture, this specifier combines long date and long time masks</td>
+<td>August 24, 2020 7:51:13 PM</td>
+</tr>
+<tr>
+<td><code>R</code> or <code>r</code></td>
+<td>Date-time in the RFC1123 format</td>
+<td>Sun, 16 Aug 2020 16:08:00 GMT</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>ISO8601 sortable format</td>
+<td>2020-08-16T16:08:00</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Universal sortable format</td>
+<td>2020-08-16 16:08:00Z</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Month name and day</td>
+<td>August 24</td>
+</tr>
+<tr>
+<td><code>Y</code></td>
+<td>Month name and year</td>
+<td>August 2020</td>
+</tr>
+</tbody>
+</table>
+<p>Standard masks cannot be combined within a single expression.<br>
+To create custom combinations, use custom mask specifiers.</p>
+<hr>
+<h2 id="custom-masks">Custom Masks</h2>
+<p>Custom masks allow you to build flexible date-time formats by combining specifiers.</p>
+<p>For example:</p>
+<pre><code class="lang-csharp">mask.MaskExpression = &quot;MMMM d, h:mm tt&quot;;
+</code></pre>
+<p>This produces:</p>
+<pre><code class="lang-code">August 24, 7:51 PM
+</code></pre>
+<hr>
+<h3 id="custom-specifiers">Custom Specifiers</h3>
+<p>The following table lists commonly used custom specifiers.</p>
+<table>
+<thead>
+<tr>
+<th>Specifier or placeholder</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code> (<code>%d</code>, if used alone)</td>
+<td>Day of month</td>
+<td>1, 2, 3 … 31</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Day with leading zero</td>
+<td>01, 02, 03 … 31</td>
+</tr>
+<tr>
+<td><code>ddd</code></td>
+<td>Read-only abbreviated day of the week.<br>Abbreviated day names are specified by the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.abbreviateddaynames">AbbreviatedDayNames</a> property.</td>
+<td>Mon, Tue, Sat</td>
+</tr>
+<tr>
+<td><code>dddd</code></td>
+<td>Read-only full day of the week.<br>Full day names are specified by the culture’s <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.daynames">DayNames</a> property.</td>
+<td>Monday, Tuesday, Saturday</td>
+</tr>
+<tr>
+<td><code>F</code> or <code>f</code> (<code>%F</code> or <code>%f</code>, if used alone)</td>
+<td>One fraction of a second. You can repeat this specifier up to seven times. Masks that have 4 or more “f” (“F”) specifiers are read-only.</td>
+<td>1 to 9 (f or F)<br>01 to 99 (ff or FF)<br>0000001 to 9999999 (fffffff or FFFFFFF)</td>
+</tr>
+<tr>
+<td><code>s</code> (<code>%s</code>, if used alone)</td>
+<td>Second</td>
+<td>1, 2, 3 … 59</td>
+</tr>
+<tr>
+<td><code>ss</code></td>
+<td>Second, with a leading zero for single-digit values</td>
+<td>01, 02, 03 … 59</td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td>Hour in 12-hour format</td>
+<td>1, 2, 3 … 12</td>
+</tr>
+<tr>
+<td><code>hh</code></td>
+<td>Hour in 12-hour format, with a leading zero for single-digit values</td>
+<td>01, 02, 03 … 12</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Hour in 24-hour format</td>
+<td>0, 1, 2 … 23</td>
+</tr>
+<tr>
+<td><code>HH</code></td>
+<td>Hour in 24-hour format, with a leading zero for single-digit values</td>
+<td>00, 01, 02 … 23</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td>Minute</td>
+<td>0, 1, 2 … 59</td>
+</tr>
+<tr>
+<td><code>mm</code></td>
+<td>Minute, with a leading zero for single-digit values</td>
+<td>00, 01, 02 … 59</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Month number</td>
+<td>1, 2, 3 … 12</td>
+</tr>
+<tr>
+<td><code>MM</code></td>
+<td>Month number, with a leading zero for single-digit values</td>
+<td>01, 02, 03 … 12</td>
+</tr>
+<tr>
+<td><code>MMM</code></td>
+<td>Abbreviated month name according to the culture (the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.abbreviatedmonthnames">AbbreviatedMonthNames</a> property)</td>
+<td>Jan, Feb, Mar</td>
+</tr>
+<tr>
+<td><code>MMMM</code></td>
+<td>Full month name according to the culture (the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.monthnames">MonthNames</a> property)</td>
+<td>January, February, March</td>
+</tr>
+<tr>
+<td><code>y</code> (<code>%y</code>, if used alone)</td>
+<td>Last two digits of a year</td>
+<td>1 for 2001, 20 for 2020</td>
+</tr>
+<tr>
+<td><code>yy</code></td>
+<td>Last two digits of a year with a leading zero for single-digit values</td>
+<td>01 for 2001, 20 for 2020</td>
+</tr>
+<tr>
+<td><code>yyyy</code></td>
+<td>Four-digit year</td>
+<td>0001 - 9999</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>Read-only era</td>
+<td>AD or BC</td>
+</tr>
+<tr>
+<td><code>tt</code></td>
+<td>Time designator</td>
+<td>AM or PM</td>
+</tr>
+<tr>
+<td><code>t</code> (<code>%t</code>, if used alone)</td>
+<td>First letter of the time designator</td>
+<td>A or P</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Hours offset from UTC, with no leading zeros. Read-only.</td>
+<td>-1, +5</td>
+</tr>
+<tr>
+<td><code>zz</code></td>
+<td>Hours offset from UTC, with a leading zero for single-digit values. Read-only.</td>
+<td>-01, +05</td>
+</tr>
+<tr>
+<td><code>zzzz</code></td>
+<td>Hours and minutes offset from UTC. Read-only.</td>
+<td>-01:00, +05:00</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="special-characters">Special Characters</h3>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:</code></td>
+<td>Time separator according to the culture (the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.timeseparator">TimeSeparator</a> property).</td>
+<td></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Date separator according to the culture (the <a href="https://learn.microsoft.com/dotnet/api/system.globalization.datetimeformatinfo.dateseparator">DateSeparator</a> property).</td>
+<td></td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>Tells the editor to treat the following symbol as a regular character, not a date-time specifier. For instance, the “zz” sequence defines a two-digit time zone mask, and the “\z\z” sequence displays static “zz” text.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>'</code> or <code>&quot;</code></td>
+<td>Allows you to add static (read-only) strings</td>
+<td>‘Current time:’ HH:mm</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="example-1">Example 1</h4>
+<p><code>yyyy-MM-dd</code> - a four-digit year at the first position, a month number at the second position, and a day number at the third position. The ‘-‘ character is the date separator.</p>
+<p><img src="../Images/Mask_DateTime_custom_yyyy-MM-dd.png" alt="Mask_DateTime_custom_yyyy-MM-dd"></p>
+<h4 id="example-2">Example 2</h4>
+<p><code>yyyy-MMM-dd dddd</code> - the same mask, but month names are abbreviated. A read-only day name is also displayed.</p>
+<p><img src="../Images/Mask_DateTime_custom_yyyy-MMM-dd-dddd.png" alt="Mask_DateTime_custom_yyyy-MMM-dd dddd"></p>
+<h4 id="example-3">Example 3</h4>
+<p><code>HH:mm:ss</code> - the 24-hour time format.</p>
+<p><img src="../Images/Mask_DateTime_custom_H_mm_ss.png" alt="Mask_DateTime_custom_H_mm_ss"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

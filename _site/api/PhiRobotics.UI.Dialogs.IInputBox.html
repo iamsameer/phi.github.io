@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IInputBox </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IInputBox ">
+    
+    <meta name="description" content="Represents a modal dialog that allows the user to enter a value using a single editor.  The IInputBox interface is implemented by the UI library and is not intended  to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Dialogs.IInputBox">
+
+
+
+  <h1 id="PhiRobotics_UI_Dialogs_IInputBox" data-uid="PhiRobotics.UI.Dialogs.IInputBox" class="text-break">Interface IInputBox</h1>
+  <div class="markdown level0 summary"><p>Represents a modal dialog that allows the user to enter a value using a single editor.</p>
+<p>
+The <b>IInputBox</b> interface is implemented by the UI library and is not intended 
+to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.endinvoke">ISynchronizeInvoke.EndInvoke(IAsyncResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invoke">ISynchronizeInvoke.Invoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invokerequired">ISynchronizeInvoke.InvokeRequired</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Dialogs.html">Dialogs</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Dialogs_IInputBox_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IInputBox : IDisposable, IComponent, IDisposable, ISynchronizeInvoke, IWin32Window</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Dialogs_IInputBox_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Instances of <a class="xref" href="PhiRobotics.UI.Dialogs.IInputBox.html">IInputBox</a> are created using
+<a class="xref" href="PhiRobotics.UI.Dialogs.ICommonDialogFactory.html#PhiRobotics_UI_Dialogs_ICommonDialogFactory_CreateInputBox_PhiRobotics_UI_Dialogs_IInputBoxArgs_">CreateInputBox(IInputBoxArgs)</a>.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Dialogs.IInputBox.html">IInputBox</a> instance is managed by the consumer. 
+The consumer is responsible for disposing the dialog when it is no longer needed.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Dialogs_IInputBox_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to create and display an input box
+that accepts a string value from the user.</p>
+<pre><code class="lang-cs">// Obtain factory service
+IUIFactoryService uiFactoryService = new UIFactoryService();
+<!-- -->
+// Get required factories
+ICommonDialogFactory commonDialogFactory = uiFactoryService.CommonDialogFactory;
+IInputEditorFactory inputEditorFactory = uiFactoryService.InputEditorFactory;
+<!-- -->
+// Create and configure editor
+ITextInputEditor textEditor = inputEditorFactory.CreateTextEdit();
+textEditor.Configure(typeof(string));
+<!-- -->
+// Create input box arguments
+IInputBoxArgs inputBoxArgs = commonDialogFactory.CreateInputBoxArguments(textEditor);
+inputBoxArgs.Caption = "Input";
+inputBoxArgs.Prompt = "Enter a value";
+<!-- -->
+// Create and show input box
+using (IInputBox inputBox = commonDialogFactory.CreateInputBox(inputBoxArgs))
+{
+    if (inputBox.Show(this) == System.Windows.Forms.DialogResult.OK)
+    {
+        object value = inputBox.InputResult;
+        // Process value
+    }
+}
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IInputBox_Editor_" data-uid="PhiRobotics.UI.Dialogs.IInputBox.Editor*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IInputBox_Editor" data-uid="PhiRobotics.UI.Dialogs.IInputBox.Editor">Editor</h4>
+  <div class="markdown level1 summary"><p>Gets the editor displayed within the input box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IInputEditor Editor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a></td>
+        <td><p>An instance of <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IInputBox_InputResult_" data-uid="PhiRobotics.UI.Dialogs.IInputBox.InputResult*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IInputBox_InputResult" data-uid="PhiRobotics.UI.Dialogs.IInputBox.InputResult">InputResult</h4>
+  <div class="markdown level1 summary"><p>Gets the value entered by the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object InputResult { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the entered value, or <code>null</code> if
+no value was provided.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IInputBox_Show_" data-uid="PhiRobotics.UI.Dialogs.IInputBox.Show*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IInputBox_Show_System_Windows_Forms_IWin32Window_" data-uid="PhiRobotics.UI.Dialogs.IInputBox.Show(System.Windows.Forms.IWin32Window)">Show(IWin32Window)</h4>
+  <div class="markdown level1 summary"><p>Displays the input box as a modal dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DialogResult Show(IWin32Window owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window">IWin32Window</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The window that owns this dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a> indicating which button the user clicked.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></td>
+        <td><p>Thrown if the input box has already
+been disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

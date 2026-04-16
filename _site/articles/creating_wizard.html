@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Creating a Wizard </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Creating a Wizard ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="creating-a-wizard">Creating a Wizard</h1>
+
+<p>This guide explains how to create and deploy a wizard for the
+<strong>PhiRobotics Wizard Framework</strong>.</p>
+<p>A wizard allows developers to extend the application by adding
+guided workflows implemented in external assemblies. The wizard
+framework automatically discovers and registers these wizards at
+runtime.</p>
+<hr>
+<h1 id="overview">Overview</h1>
+<p>A wizard typically consists of:</p>
+<ul>
+<li><strong>Welcome Page</strong> -- Introduces the wizard and describes its purpose.</li>
+<li><strong>Interior Pages</strong> -- One or more pages that guide the user through
+a process.</li>
+<li><strong>Completion Page</strong> -- Confirms that the wizard finished
+successfully.</li>
+</ul>
+<p>To create a wizard you must:</p>
+<ol>
+<li>Implement <code>IWizard</code></li>
+<li>Assign a unique ID using <code>WizardIdAttribute</code></li>
+<li>Export the wizard using <code>ExportedWizardAttribute</code></li>
+<li>Deploy the compiled assembly to the wizard directory</li>
+</ol>
+<hr>
+<h1 id="step-1-implement-the-wizard">Step 1: Implement the Wizard</h1>
+<p>Create a class that implements the <code>IWizard</code> interface.</p>
+<p>Example:</p>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_BirtdayWizard" role="tab" aria-controls="tabpanel_1_BirtdayWizard" data-tab="BirtdayWizard" tabindex="0" aria-selected="true">BirtdayWizard.cs</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_BirthdayWish" role="tab" aria-controls="tabpanel_1_BirthdayWish" data-tab="BirthdayWish" tabindex="-1">BirthdayWish.cs</a>
+</li>
+</ul>
+<section id="tabpanel_1_BirtdayWizard" role="tabpanel" data-tab="BirtdayWizard">
+
+<pre><code class="lang-csharp">using PhiRobotics.UI.Wizard;
+using System;
+using System.Collections.Generic;
+
+namespace PhiRobotics.Usage
+{
+
+    [WizardId(&quot;AF750DAF-ABFD-427C-9F0B-9ECCC210C95C&quot;)]
+    public class BirtdayWizard : IWizard
+    {
+        private readonly WelcomePage welcomePage;
+        private readonly CompletionPage completionPage;
+
+        private readonly Dictionary&lt;string, IWizardPage&gt; pages;
+        private BirthdayWish birthdayWish;
+
+        public BirtdayWizard()
+        {
+
+            welcomePage = new WelcomePage(&quot;Welcome to PhiRobotics Wizard Demo&quot;,
+                &quot;Thank you for evaluating Wizard! This demo application will generate a birthday&quot; +
+                &quot; card for you, all the while showing off many features of our wizard control.&quot;);
+            completionPage = new CompletionPage(&quot;Congratulations - You have passed all the way through!!!&quot;,
+                &quot;Thank you for completing this wizard feature tour!&quot;);
+
+            birthdayWish = new BirthdayWish();
+            pages = new Dictionary&lt;string, IWizardPage&gt;();
+
+            pages.Add(&quot;RecipientDataPage&quot;, new RecipientDataPage(birthdayWish));
+            pages.Add(&quot;CardTemplatePage&quot;, new CardTemplatePage(birthdayWish));
+            pages.Add(&quot;SignaturePage&quot;, new SignaturePage(birthdayWish));
+            pages.Add(&quot;PreviewPage&quot;, new PreviewPage(birthdayWish));
+        }
+
+        public WelcomePage WelcomePage
+        {
+            get { return welcomePage; }
+        }
+
+        public CompletionPage CompletionPage
+        {
+            get { return completionPage; }
+        }
+
+        public IReadOnlyDictionary&lt;string, IWizardPage&gt; Pages
+        {
+            get { return pages; }
+        }
+
+        public void Activated(IWizardPage page)
+        {
+
+        }
+
+        public void Cancel()
+        {
+            birthdayWish.RecipientName = string.Empty;
+            birthdayWish.RecipientEmail = string.Empty;
+            birthdayWish.Wishes = string.Empty;
+            birthdayWish.IncludeSignature = false;
+            birthdayWish.Signature = string.Empty;
+            birthdayWish.From = string.Empty;
+        }
+
+        public object Complete()
+        {
+            return birthdayWish;
+        }
+
+        public void Initialize(object data)
+        {
+            birthdayWish.RecipientName = string.Empty;
+            birthdayWish.RecipientEmail = string.Empty;
+            birthdayWish.Wishes = string.Empty;
+            birthdayWish.IncludeSignature = true;
+            birthdayWish.Signature = string.Empty;
+            birthdayWish.From = string.Empty;
+        }
+    }
+}
+</code></pre>
+</section>
+<section id="tabpanel_1_BirthdayWish" role="tabpanel" data-tab="BirthdayWish" aria-hidden="true" hidden="hidden">
+
+<pre><code class="lang-csharp">using System;
+
+namespace PhiRobotics.Usage
+{
+    [Serializable]
+    public class BirthdayWish : MarshalByRefObject
+    {
+        public string RecipientName { get; set; }
+
+        public string RecipientEmail { get; set; }
+
+        public string Wishes { get; set; }
+
+        public bool IncludeSignature { get; set; }
+
+        public string Signature { get; set; }
+        public string From { get; set; }
+
+
+        public string GetWishes()
+        {
+            string text;
+
+            text = string.Format(&quot;Happy birthday, {0}!!!\r\n{1}&quot;, RecipientName,
+                Wishes);
+            if (IncludeSignature)
+                text += string.Format(&quot;\r\n\r\n{0}, {1}&quot;, Signature, From);
+            return text;
+        }
+
+        public override string ToString()
+        {
+            return GetWishes();
+        }
+    }
+}
+</code></pre>
+</section>
+</div>
+<hr>
+<h1 id="step-2-create-wizard-pages">Step 2: Create Wizard Pages</h1>
+<p>Wizard pages represent individual steps in the wizard.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">using PhiRobotics.UI.Wizard;
+using System;
+using System.Windows.Forms;
+
+namespace PhiRobotics.Usage
+{
+    class RecipientDataPage : IWizardPage
+    {
+        private bool allowBack = true;
+        private bool allowNext = true;
+        private RecipientDataPageControl control = null;
+        private BirthdayWish birthdayWish;
+
+        public RecipientDataPage(BirthdayWish birthdayWish)
+        {
+            this.birthdayWish = birthdayWish;
+            control = new RecipientDataPageControl(this);
+            control.CurrentErrorKind = ErrorKind.None;
+            control.CurrentError = string.Empty;
+        }
+
+        #region IWizardPage
+        public event EventHandler AllowBackChanged;
+        public event EventHandler AllowNextChanged;
+
+        public bool AllowBack
+        {
+            get { return allowBack; }
+            set
+            {
+                if (allowBack != value)
+                {
+                    allowBack = value;
+                    AllowBackChanged?.Invoke(this, EventArgs.Empty);
+                }
+            }
+        }
+        public bool AllowNext
+        {
+            get { return allowNext; }
+            set
+            {
+                if (allowNext != value)
+                {
+                    allowNext = value;
+                    AllowNextChanged?.Invoke(this, EventArgs.Empty);
+                }
+            }
+        }
+        public string HeaderText
+        {
+            get { return &quot;Recipient&quot;; }
+        }
+        public ErrorKind CurrentErrorKind
+        {
+            get { return control.CurrentErrorKind; }
+        }
+        public string CurrentError
+        {
+            get { return control.CurrentError; }
+        }
+        public string DescriptionText
+        {
+            get { return &quot;Recipient Name and Address&quot;; }
+        }
+        public Control Control
+        {
+            get { return control; }
+        }
+        public bool HasHelp
+        {
+            get { return true; }
+        }
+
+        public void Activating()
+        {
+            control.RecipientName = birthdayWish.RecipientName;
+            control.EmailAddress = birthdayWish.RecipientEmail;
+        }
+        public bool Commit()
+        {
+            if (string.IsNullOrWhiteSpace(control.RecipientName))
+            {
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(control.EmailAddress))
+            {
+                return false;
+            }
+            birthdayWish.RecipientName = control.RecipientName;
+            birthdayWish.RecipientEmail = control.EmailAddress;
+            return true;
+        }
+        public string GetNextPage()
+        {
+            return &quot;CardTemplatePage&quot;;
+        }
+        public string GetPreviousPage()
+        {
+            return null;
+        }
+        public void ShowHelp()
+        {
+            MessageBox.Show(&quot;This is recipient page of wizard.&quot;, &quot;Wizard Page&quot;,
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+        #endregion
+    }
+}
+</code></pre>
+<p>Multiple pages can be added to the wizard.</p>
+<hr>
+<h1 id="step-3-export-the-wizard">Step 3: Export the Wizard</h1>
+<p>To allow the wizard host to discover your wizard, export it at the
+<strong>assembly level</strong>.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">[assembly: ExportedWizard(typeof(PhiRobotics.Usage.BirtdayWizard))]
+</code></pre>
+<p>An assembly can export multiple wizards:</p>
+<pre><code class="lang-csharp">[assembly: ExportedWizard(typeof(PhiRobotics.Usage.BirtdayWizard))]
+[assembly: ExportedWizard(typeof(PhiRobotics.Usage.ProjectWizard))]
+</code></pre>
+<hr>
+<h1 id="step-4-deploy-the-wizard">Step 4: Deploy the Wizard</h1>
+<p>Compile the project into a DLL and place the DLL in the wizard directory
+used by the application.</p>
+<p>Example directory structure:</p>
+<pre><code>Application
+ ├─ Wizards
+ │   ├─ BirtdayWizard.dll
+ │   └─ ProjectWizard.dll
+</code></pre>
+<p>When the application starts, the wizard host scans this directory and
+registers all exported wizards.</p>
+<hr>
+<h1 id="running-a-wizard">Running a Wizard</h1>
+<p>Once the wizard is registered, it can be executed using <code>IWizardHost</code>.
+Refer to  the <a class="xref" href="../api/PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> for more  information.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">WizardResult result = wizardHost.Show(
+    wizardId,
+    &quot;Birtday Card Wizard&quot;,
+    null,
+    initArgs
+);
+
+if (result.DialogResult == DialogResult.OK)
+{
+    var data = result.Data;
+}
+</code></pre>
+<h1 id="output-of-wizard">Output of Wizard</h1>
+<ol>
+<li><p>Welcome Page
+<img src="../Images/WizardDemoImage1.png" alt="WelcomePage"></p>
+</li>
+<li><p>Interior Page
+<img src="../Images/WizardDemoImage2.png" alt="InteriorPage"></p>
+</li>
+<li><p>Completion Page
+<img src="../Images/WizardDemoImage3.png" alt="InteriorPage"></p>
+</li>
+</ol>
+<p>The wizard host performs the following steps:</p>
+<ol>
+<li>Locates the wizard type using the wizard ID</li>
+<li>Creates the wizard instance</li>
+<li>Initializes the wizard</li>
+<li>Displays the wizard dialog</li>
+<li>Returns the result when the wizard finishes</li>
+</ol>
+<hr>
+<h1 id="summary">Summary</h1>
+<p>Creating a wizard involves:</p>
+<ol>
+<li>Implementing <code>IWizard</code></li>
+<li>Assigning a unique <code>WizardIdAttribute</code></li>
+<li>Exporting the wizard using <code>ExportedWizardAttribute</code></li>
+<li>Deploying the assembly to the wizard directory</li>
+</ol>
+<p>Once deployed, the wizard framework automatically discovers and
+registers the wizard.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

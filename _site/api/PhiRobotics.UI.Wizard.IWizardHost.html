@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IWizardHost </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IWizardHost ">
+    
+    <meta name="description" content="Provides functionality to execute wizards discovered from wizard assemblies.  The IWizardHost interface is implemented by the PhiRobotics UI framework and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Wizard.IWizardHost">
+
+
+
+  <h1 id="PhiRobotics_UI_Wizard_IWizardHost" data-uid="PhiRobotics.UI.Wizard.IWizardHost" class="text-break">Interface IWizardHost</h1>
+  <div class="markdown level0 summary"><p>Provides functionality to execute wizards discovered from wizard assemblies.</p>
+<p>
+The <b>IWizardHost</b> interface is implemented by the <b>PhiRobotics</b> UI
+framework and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Wizard.html">Wizard</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardHost_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWizardHost : IDisposable, IDisposable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardHost_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> is responsible for locating and executing
+wizard implementations that are registered with the host.</p>
+<p>
+Implementations typically load wizard assemblies from a configured directory
+and create wizard instances when requested.
+</p>
+<p>
+Wizards are created and executed in a separate <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.appdomain">AppDomain</a> to
+isolate them from the main application. As a result, wizard assemblies are
+loaded into the isolated domain rather than the primary application domain.
+</p>
+<p>
+Running wizards in an isolated application domain improves reliability and
+stability. If a wizard throws an unhandled exception or fails during
+execution, the failure is contained within the isolated domain and does not
+crash the main application.
+</p>
+<p>
+This isolation also allows wizard assemblies to be unloaded when the
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> instance is disposed.
+</p>
+<p>
+Consumer code obtains an instance of <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> using the
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardFactory.html#PhiRobotics_UI_Wizard_IWizardFactory_CreateHost_System_String_PhiRobotics_Services_ILoggingService_">CreateHost(string, ILoggingService)</a>
+method. The lifetime of the host instance is managed by the consumer.
+</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardHost_Show_" data-uid="PhiRobotics.UI.Wizard.IWizardHost.Show*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardHost_Show_System_Guid_System_String_System_Drawing_Image_System_Object_" data-uid="PhiRobotics.UI.Wizard.IWizardHost.Show(System.Guid,System.String,System.Drawing.Image,System.Object)">Show(Guid, string, Image, object)</h4>
+  <div class="markdown level1 summary"><p>Runs the wizard identified by the specified wizard identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WizardResult Show(Guid wizardId, string dialogCaption = null, Image dialogIcon = null, object initArgs = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">wizardId</span></td>
+        <td><p>The unique identifier of the wizard to execute. This
+identifier must match the identifier of a wizard registered with the wizard
+host.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">dialogCaption</span></td>
+        <td><p>Optional caption text displayed in the wizard
+dialog title bar. If <code>null</code> or empty, a default caption may be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
+        <td><span class="parametername">dialogIcon</span></td>
+        <td><p>Optional icon displayed in the wizard dialog. If
+<code>null</code>, a default icon may be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">initArgs</span></td>
+        <td><p>Optional initialization data passed to the wizard
+through <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Initialize_System_Object_">Initialize(object)</a> before the wizard is
+displayed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.WizardResult.html">WizardResult</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.Wizard.WizardResult.html">WizardResult</a> containing the dialog result and any
+data produced by the wizard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardHost_Show_System_Guid_System_String_System_Drawing_Image_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method displays the wizard dialog to the user, manages navigation between
+wizard pages, and handles user interactions such as <b>Next</b>, <b>Back</b>,
+<b>Finish</b>, and <b>Cancel</b>.</p>
+<p>
+If the wizard host is unable to create an <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a> instance using
+the registered wizard information, if the <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a> property
+returns no pages, or if any method or property of the <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a>
+throws an exception during execution, the wizard dialog is not displayed.
+In such cases, the wizard is marked as having an error and will not be executed
+again during the lifetime of the host.
+</p>
+<p>
+The returned <a class="xref" href="PhiRobotics.UI.Wizard.WizardResult.html">WizardResult</a> indicates how the wizard dialog was 
+closed. When the wizard completes successfully (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult#system-windows-forms-dialogresult-ok">OK</a>), 
+the <a class="xref" href="PhiRobotics.UI.Wizard.WizardResult.html#PhiRobotics_UI_Wizard_WizardResult_Data">Data</a> property may contain the data produced by
+the wizard. For other dialog results, this value is <code>null</code>.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">wizardId</code> is
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid.empty">Empty</a>, or does not correspond to a registered wizard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.Wizard.IWizardFactory.html">IWizardFactory</a></div>
+      <div><a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a></div>
+      <div><a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a></div>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>PhiRobotics Alert Panel UI </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="PhiRobotics Alert Panel UI ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="phirobotics-alert-panel-ui">PhiRobotics Alert Panel UI</h1>
+
+<p>The PhiRobotics Alert Panel provides a flexible and extensible way to
+display non-intrusive notification windows (alerts) in your application.
+These alerts can include text, images, and interactive elements such as
+buttons and hyperlinks.</p>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>An alert panel is a UI component responsible for displaying temporary
+notification windows to the user. It supports:</p>
+<ul>
+<li>Customizable content (caption, text, images)</li>
+<li>Interactive elements (buttons, hyperlinks)</li>
+<li>Animation and positioning</li>
+<li>Event-driven customization</li>
+<li>Multiple concurrent alerts with queuing</li>
+</ul>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<p>The PhiRobotics Alert Panel UI is composed of the following core
+components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html">IAlertPanel</a></td>
+<td>Main interface used to display and manage alert windows</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html">IAlertPanelFactory</a></td>
+<td>Factory for creating alert panels, buttons, and panel info</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a></td>
+<td>Defines the content and metadata of an alert</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a></td>
+<td>Represents an individual alert window instance</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IButton.html">IButton</a></td>
+<td>Represents a button within an alert window</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a></td>
+<td>Collection of buttons associated with an alert panel</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="creating-and-displaying-alerts">Creating and Displaying Alerts</h2>
+<pre><code class="lang-csharp">IAlertPanel alertPanel = alertPanelFactory.CreatePanel();
+alertPanel.Show(this, &quot;Update Available&quot;, &quot;Click to install.&quot;);
+</code></pre>
+<p><img src="../Images/AlertPanel_example1.png" alt="AlertPanel_example1"></p>
+<hr>
+<h2 id="using-alertpanelinfo">Using AlertPanelInfo</h2>
+<pre><code class="lang-csharp">IAlertPanelInfo info = alertPanelFactory.CreatePanelInfo(&quot;Download Complete&quot;, &quot;Click to open file&quot;);
+info.Image = Properties.Resources.SuccessIcon;
+info.Tag = filePath;
+
+alertPanel.Show(this, info);
+</code></pre>
+<p><img src="../Images/AlertPanel_example2.png" alt="AlertPanel_example2"></p>
+<hr>
+<h2 id="custom-buttons">Custom Buttons</h2>
+<pre><code class="lang-csharp">IButton openButton = alertPanelFactory.CreateButton(&quot;open&quot;);
+openButton.Hint = &quot;Open file&quot;;
+openButton.Image = Properties.Resources.OpenFileIcon;
+
+IButton toggleButton = alertPanelFactory.CreateButton(&quot;toggle&quot;);
+toggleButton.IsCheckStyle = true;
+toggleButton.Down = true;
+toggleButton.Image = Properties.Resources.ToggleIcon;
+
+alertPanel.Buttons.Add(openButton);
+alertPanel.Buttons.Add(toggleButton);
+</code></pre>
+<p><img src="../Images/AlertPanel_example3.png" alt="AlertPanel_example3"></p>
+<hr>
+<h2 id="handling-button-events">Handling Button Events</h2>
+<pre><code class="lang-csharp">alertPanel.ButtonClicked += (s, e) =&gt;
+{
+    if (e.ButtonName == &quot;open&quot;)
+    {
+        // Handle open action
+    }
+};
+
+alertPanel.ButtonDownChanged += (s, e) =&gt;
+{
+    if (e.ButtonName == &quot;toggle&quot;)
+    {
+        bool isEnabled = e.Down;
+    }
+};
+</code></pre>
+<hr>
+<p>The <code>IAlertPanel</code> interface exposes several events for customization:</p>
+<ul>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_BeforeFormShown">BeforeFormShown</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_PanelFormLoad">PanelFormLoad</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_PanelTextClick">PanelTextClick</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_FormClosing">FormClosing</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonClicked">ButtonClicked</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged">ButtonDownChanged</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_HyperLinkClicked">HyperLinkClicked</a></li>
+<li><a class="xref" href="../api/PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_QueryFormWidth">QueryFormWidth</a></li>
+</ul>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>The PhiRobotics Alert Panel UI provides:</p>
+<ul>
+<li>Lightweight notification system</li>
+<li>Rich customization options</li>
+<li>Interactive UI elements</li>
+<li>Event-driven extensibility</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

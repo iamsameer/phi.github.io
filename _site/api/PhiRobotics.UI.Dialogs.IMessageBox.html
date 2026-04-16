@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IMessageBox </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IMessageBox ">
+    
+    <meta name="description" content="Represents a dialog used to display informational, warning, or confirmation messages.  The IMessageBox interface is implemented by the UI library and is not intended  to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Dialogs.IMessageBox">
+
+
+
+  <h1 id="PhiRobotics_UI_Dialogs_IMessageBox" data-uid="PhiRobotics.UI.Dialogs.IMessageBox" class="text-break">Interface IMessageBox</h1>
+  <div class="markdown level0 summary"><p>Represents a dialog used to display informational, warning, or confirmation messages.</p>
+<p>
+The <b>IMessageBox</b> interface is implemented by the UI library and is not intended 
+to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.icontainercontrol.activatecontrol">IContainerControl.ActivateControl(Control)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.icontainercontrol.activecontrol">IContainerControl.ActiveControl</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.endinvoke">ISynchronizeInvoke.EndInvoke(IAsyncResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invoke">ISynchronizeInvoke.Invoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invokerequired">ISynchronizeInvoke.InvokeRequired</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Dialogs.html">Dialogs</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBox_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMessageBox : IContainerControl, IComponent, IDisposable, IDisposable, ISynchronizeInvoke, IWin32Window</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBox_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Instances of <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBox.html">IMessageBox</a> are created using 
+<a class="xref" href="PhiRobotics.UI.Dialogs.ICommonDialogFactory.html#PhiRobotics_UI_Dialogs_ICommonDialogFactory_CreateMessageBox">CreateMessageBox()</a>.
+</p>
+<p>
+The message box can be displayed using overloads of the <code>Show</code> method,either 
+by passing simple parameters or a fully configured <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html">IMessageBoxArgs</a>
+instance.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBox.html">IMessageBox</a> instance is managed by the consumer. 
+The consumer is responsible for disposing the dialog when it is no longer needed.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBox_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to create and display a message box using
+arguments.</p>
+<pre><code class="lang-cs">// Obtain factory service
+IUIFactoryService uiFactoryService = new UIFactoryService();
+<!-- -->
+// Get common dialog factory
+ICommonDialogFactory commonDialogFactory = uiFactoryService.CommonDialogFactory;
+<!-- -->
+// Create message box arguments
+IMessageBoxArgs args = commonDialogFactory.CreateMessageBoxArguments();
+args.Caption = "Information";
+args.Content = "Operation completed successfully.";
+args.Buttons = new[] { System.Windows.Forms.DialogResult.OK };
+args.MessageBoxIcon = System.Windows.Forms.MessageBoxIcon.Information;
+<!-- -->
+// Create and show message box
+using (IMessageBox messageBox = commonDialogFactory.CreateMessageBox())
+{
+    messageBox.Show(args);
+}
+</code></pre>
+
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBox_Show_" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.Show*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBox_Show_PhiRobotics_UI_Dialogs_IMessageBoxArgs_" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.Show(PhiRobotics.UI.Dialogs.IMessageBoxArgs)">Show(IMessageBoxArgs)</h4>
+  <div class="markdown level1 summary"><p>Displays the message box dialog using the specified arguments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DialogResult Show(IMessageBoxArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html">IMessageBoxArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>An instance of <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html">IMessageBoxArgs</a>
+that defines the configuration of the message box.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a> value that indicates which
+button the user clicked to dismiss the dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">args</code>
+is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">args</code>
+contains invalid configuration, such as:</p>
+<ul><li><a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Owner">Owner</a> is <code>null</code>.
+</li><li><a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Buttons">Buttons</a> is <code>null</code> 
+or empty.</li><li><a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_DefaultButtonIndex">DefaultButtonIndex</a> is 
+out of range.</li><li><a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Caption">Caption</a> or 
+<a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Content">Content</a> is invalid.</li></ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></td>
+        <td><p>Thrown if the current instance
+has already been disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBox_Show_" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.Show*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBox_Show_System_Windows_Forms_IWin32Window_System_String_System_String_" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String)">Show(IWin32Window, string, string)</h4>
+  <div class="markdown level1 summary"><p>Displays the message box dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DialogResult Show(IWin32Window owner, string caption, string content)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window">IWin32Window</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The window that owns this message box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">caption</span></td>
+        <td><p>A string that specifies the caption (title)
+of the message box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">content</span></td>
+        <td><p>A string that specifies the message text
+displayed in the dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a> value that indicates which
+button the user clicked to dismiss the dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown, If specified
+<code class="paramref">owner</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">caption</code>
+or <code class="paramref">content</code> is <code>null</code>, empty, or contains only
+white-space characters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></td>
+        <td><p>Thrown if the current
+instance has already been disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBox_Show_" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.Show*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBox_Show_System_Windows_Forms_IWin32Window_System_String_System_String_System_Windows_Forms_DialogResult___System_Windows_Forms_MessageBoxIcon_System_Int32_" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.DialogResult[],System.Windows.Forms.MessageBoxIcon,System.Int32)">Show(IWin32Window, string, string, DialogResult[], MessageBoxIcon, int)</h4>
+  <div class="markdown level1 summary"><p>Displays the message box dialog with configuration parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DialogResult Show(IWin32Window owner, string caption, string content, DialogResult[] buttons, MessageBoxIcon icon = MessageBoxIcon.None, int defaultButton = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window">IWin32Window</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The window that owns this message box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">caption</span></td>
+        <td><p>A string that specifies the caption (title) of the
+message box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">content</span></td>
+        <td><p>A string that specifies the message text displayed
+in the dialog.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a>[]</td>
+        <td><span class="parametername">buttons</span></td>
+        <td><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a> values that
+defines the buttons displayed in the message box.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.messageboxicon">MessageBoxIcon</a></td>
+        <td><span class="parametername">icon</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.messageboxicon">MessageBoxIcon</a> value that specifies
+the icon to display.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">defaultButton</span></td>
+        <td><p>The zero-based index of the default button
+in the <code class="paramref">buttons</code> array.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a> value that indicates which button
+the user clicked to dismiss the dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">owner</code>
+or <code class="paramref">buttons</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if:</p>
+<ul><li><code class="paramref">caption</code> or <code class="paramref">content</code> 
+is <code>null</code>, empty, or whitespace.</li><li><code class="paramref">buttons</code> contains no elements.
+</li></ul>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>Thrown if
+<code class="paramref">defaultButton</code> is less than zero or greater than or equal
+to the length of <code class="paramref">buttons</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></td>
+        <td><p>Thrown if the current instance has
+already been disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+</h3>
+
+
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBox_HyperLinkClicked" data-uid="PhiRobotics.UI.Dialogs.IMessageBox.HyperLinkClicked">HyperLinkClicked</h4>
+  <div class="markdown level1 summary"><p>Raised when a hyperlink is clicked in the message box content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;HyperLinkClickedEventArgs&gt; HyperLinkClicked</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.HyperLinkClickedEventArgs.html">HyperLinkClickedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBox_HyperLinkClicked_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This event is raised only when <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowHtmlText">AllowHtmlText</a> is
+enabled and the content contains clickable links.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

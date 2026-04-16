@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IWizard </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IWizard ">
+    
+    <meta name="description" content="Represents a wizard and provides access to its pages and lifecycle methods.  The IWizard interface is intended to be implemented by consumer code. The lifetime of the wizard instance is managed by the consumer.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Wizard.IWizard">
+
+
+
+  <h1 id="PhiRobotics_UI_Wizard_IWizard" data-uid="PhiRobotics.UI.Wizard.IWizard" class="text-break">Interface IWizard</h1>
+  <div class="markdown level0 summary"><p>Represents a wizard and provides access to its pages and lifecycle methods.</p>
+<p>
+The <b>IWizard</b> interface is intended to be implemented by consumer code.
+The lifetime of the wizard instance is managed by the consumer.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Wizard.html">Wizard</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWizard</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a> interface defines the structure and behavior of a
+wizard process, including its welcome page, completion page, and intermediate
+pages. It also provides lifecycle methods that allow the wizard to be
+initialized, cancelled, or completed.</p>
+<p>
+A wizard consists of a sequence of pages that guide the user through a task 
+step-by-step. The wizard host is responsible for displaying these pages and 
+managing navigation between them.
+</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_CompletionPage_" data-uid="PhiRobotics.UI.Wizard.IWizard.CompletionPage*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_CompletionPage" data-uid="PhiRobotics.UI.Wizard.IWizard.CompletionPage">CompletionPage</h4>
+  <div class="markdown level1 summary"><p>Gets the completion page of the wizard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CompletionPage CompletionPage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.CompletionPage.html">CompletionPage</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_CompletionPage">CompletionPage</a> instance that provides feedback and
+instructions when the wizard completes successfully.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_Pages_" data-uid="PhiRobotics.UI.Wizard.IWizard.Pages*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_Pages" data-uid="PhiRobotics.UI.Wizard.IWizard.Pages">Pages</h4>
+  <div class="markdown level1 summary"><p>Gets a collection of all interior pages in the wizard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyDictionary&lt;string, IWizardPage&gt; Pages { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a>&gt;</td>
+        <td><p>A read-only dictionary that maps page names (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>)
+to their corresponding <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a> instances.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_Pages_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This collection excludes the welcome and completion pages and typically
+contains the intermediate steps that guide the user through the wizard
+process.</p>
+<p>
+This property should not be accessed before calling
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Initialize_System_Object_">Initialize(object)</a>. Prior to initialization, the collection
+may be empty or contain incomplete page definitions.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_WelcomePage_" data-uid="PhiRobotics.UI.Wizard.IWizard.WelcomePage*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_WelcomePage" data-uid="PhiRobotics.UI.Wizard.IWizard.WelcomePage">WelcomePage</h4>
+  <div class="markdown level1 summary"><p>Gets the welcome page of the wizard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WelcomePage WelcomePage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.WelcomePage.html">WelcomePage</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_WelcomePage">WelcomePage</a> instance that introduces the wizard and
+describes its purpose.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_Activated_" data-uid="PhiRobotics.UI.Wizard.IWizard.Activated*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_Activated_PhiRobotics_UI_Wizard_IWizardPage_" data-uid="PhiRobotics.UI.Wizard.IWizard.Activated(PhiRobotics.UI.Wizard.IWizardPage)">Activated(IWizardPage)</h4>
+  <div class="markdown level1 summary"><p>Notifies the wizard that a page has been activated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Activated(IWizardPage page)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a></td>
+        <td><span class="parametername">page</span></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a> instance that has
+become active.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_Activated_PhiRobotics_UI_Wizard_IWizardPage__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called whenever a wizard page becomes active in the wizard dialog.
+Implementations can use this notification to update shared state,
+validate data, or perform logic based on the currently displayed page.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_Cancel_" data-uid="PhiRobotics.UI.Wizard.IWizard.Cancel*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_Cancel" data-uid="PhiRobotics.UI.Wizard.IWizard.Cancel">Cancel()</h4>
+  <div class="markdown level1 summary"><p>Cancels the wizard process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Cancel()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_Cancel_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called by the <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> when the user cancels or closes
+the wizard before completion.</p>
+<p>
+Implementations should use this method to discard any changes made during
+the wizard process and release resources that were allocated during
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Initialize_System_Object_">Initialize(object)</a>.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_Complete_" data-uid="PhiRobotics.UI.Wizard.IWizard.Complete*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_Complete" data-uid="PhiRobotics.UI.Wizard.IWizard.Complete">Complete()</h4>
+  <div class="markdown level1 summary"><p>Completes the wizard process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Complete()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the data produced by
+the wizard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_Complete_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Called by the <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> when the user successfully
+completes the wizard.</p>
+<p>
+Implementations should finalize any data produced by the wizard and
+release resources allocated during <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Initialize_System_Object_">Initialize(object)</a>.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizard_Initialize_" data-uid="PhiRobotics.UI.Wizard.IWizard.Initialize*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizard_Initialize_System_Object_" data-uid="PhiRobotics.UI.Wizard.IWizard.Initialize(System.Object)">Initialize(object)</h4>
+  <div class="markdown level1 summary"><p>Initializes the wizard and its pages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Initialize(object data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>Initialization data used to configure the wizard instance
+and its pages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizard_Initialize_System_Object__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is called by
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html#PhiRobotics_UI_Wizard_IWizardHost_Show_System_Guid_System_String_System_Drawing_Image_System_Object_">Show(Guid, string, Image, object)</a>
+before displaying the wizard dialog. Implementations should use this
+method to prepare resources, initialize page data, or perform any setup
+logic required by the wizard.</p>
+<p>
+The <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a> property can be safely accessed only after
+initialization has completed.
+</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

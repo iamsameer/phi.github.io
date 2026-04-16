@@ -1,0 +1,2360 @@
+{
+  "source_base_path": "D:/RND/NEW/Refactor/Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.AlertPanelEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.AlertPanelEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.AlertPanelEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.AlertPanelEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the various <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel\" data-throw-if-not-resolved=\"false\"></xref>'s events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.PanelTextClick\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.ButtonState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.ButtonState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.ButtonState",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.ButtonState.yml\" sourcestartlinenumber=\"1\">Enumerates the states of an <xref href=\"PhiRobotics.UI.AlertPanels.IButton\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.FormCloseReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.FormCloseReason.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.FormCloseReason",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.FormCloseReason.yml\" sourcestartlinenumber=\"1\">Enumerates values that specify the reason why <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel\" data-throw-if-not-resolved=\"false\"></xref> might be closing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.FormDisplaySpeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.FormDisplaySpeed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.FormDisplaySpeed",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.FormDisplaySpeed.yml\" sourcestartlinenumber=\"1\">Enumerates values that specify the appearance speed of <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.FormLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.FormLocation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.FormLocation",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.FormLocation.yml\" sourcestartlinenumber=\"1\">Enumerates values that specify the position on screen at which <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel\" data-throw-if-not-resolved=\"false\"></xref>s are displayed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.FormShowingEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.FormShowingEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.FormShowingEffect",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.FormShowingEffect.yml\" sourcestartlinenumber=\"1\">Enumerates alert window animation effects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertForm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.IAlertForm",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IAlertForm.yml\" sourcestartlinenumber=\"1\">Represent an alert window.</p>\n<p>\nThe <b>IAlertForm</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertPanel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertPanel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.IAlertPanel",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IAlertPanel.yml\" sourcestartlinenumber=\"1\">Describes an interface for a panel that displays alert windows.</p>\n<p>\nThe <b>IAlertPanel</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertPanelFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.IAlertPanelFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IAlertPanelFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating alert panels and related components.</p>\n<p>\nThe <b>IAlertPanelFactory</b> interface is implemented by the <b>PhiRobotics</b> \nui framework and is not intended for consumer implementation.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertPanelInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.IAlertPanelInfo",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IAlertPanelInfo.yml\" sourcestartlinenumber=\"1\">Contains information to be displayed in an alert window.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.IButton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.IButton.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.IButton",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IButton.yml\" sourcestartlinenumber=\"1\">Represents a button within an alert window.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.IButtonCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.IButtonCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.IButtonCollection",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IButtonCollection.yml\" sourcestartlinenumber=\"1\">Represents a collection of buttons displayed within alert windows.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.ButtonDownChanged\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.PanelButtonEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.PanelButtonEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.PanelButtonEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelButtonEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.ButtonClicked\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormClosingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormClosingEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.PanelFormClosingEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelFormClosingEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.FormClosing\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.PanelFormEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelFormEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.BeforeFormShown\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.PanelFormLoad\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormWidthEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.PanelFormWidthEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels.PanelFormWidthEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelFormWidthEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.QueryFormWidth\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.AlertPanels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.AlertPanels.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.AlertPanels",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.BeforeExpandNodeEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.BeforeExpandNodeEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.BeforeExpandNodeEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.BeforeExpandNodeEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnBeforeExpandNode(PhiRobotics.UI.ITree%2cPhiRobotics.UI.BeforeExpandNodeEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.ButtonAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.ButtonAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.ButtonAlignment",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.ButtonAlignment.yml\" sourcestartlinenumber=\"1\">Specifies the horizontal alignment of an button control within a container control.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.ICommonDialogFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.ICommonDialogFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.ICommonDialogFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.ICommonDialogFactory.yml\" sourcestartlinenumber=\"1\">Provides factory methods for creating common dialog components such as\nmessage boxes, input boxes, and login dialogs.</p>\n<p>\nThe <b>ICommonDialogFactory</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.IInputBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.IInputBox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.IInputBox",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.IInputBox.yml\" sourcestartlinenumber=\"1\">Represents a modal dialog that allows the user to enter a value using a single editor.</p>\n<p>\nThe <b>IInputBox</b> interface is implemented by the UI library and is not intended \nto be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.IInputBoxArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.IInputBoxArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.IInputBoxArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.IInputBoxArgs.yml\" sourcestartlinenumber=\"1\">Represents configuration settings for an <xref href=\"PhiRobotics.UI.Dialogs.IInputBox\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.ILoginDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.ILoginDialog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.ILoginDialog",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.ILoginDialog.yml\" sourcestartlinenumber=\"1\">Represents a user interface contract for a login dialog, providing support\nfor credential input and dialog behavior.</p>\n<p>\nThe <b>ILoginDialog</b> interface is implemented by the UI library and is \nnot intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.IMessageBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.IMessageBox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.IMessageBox",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.IMessageBox.yml\" sourcestartlinenumber=\"1\">Represents a dialog used to display informational, warning, or confirmation messages.</p>\n<p>\nThe <b>IMessageBox</b> interface is implemented by the UI library and is not intended \nto be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.IMessageBoxArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.IMessageBoxArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.IMessageBoxArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.IMessageBoxArgs.yml\" sourcestartlinenumber=\"1\">Represents configuration settings for an <xref href=\"PhiRobotics.UI.Dialogs.IMessageBox\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.MessageBeepSound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.MessageBeepSound.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs.MessageBeepSound",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Dialogs.MessageBeepSound.yml\" sourcestartlinenumber=\"1\">Specifies system sounds that can be played when displaying dialogs.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Dialogs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Dialogs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Dialogs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.CheckBoxStyle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.CheckBoxStyle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.CheckBoxStyle",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.CheckBoxStyle.yml\" sourcestartlinenumber=\"1\">Specifies the visual style used to render a boolean editor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.EditMaskType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.EditMaskType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.EditMaskType",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.EditMaskType.yml\" sourcestartlinenumber=\"1\">Specifies the type of input mask applied to an editor.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ExceptionMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ExceptionMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ExceptionMode",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ExceptionMode.yml\" sourcestartlinenumber=\"1\">Specifies how an exception should be handled.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IBooleanEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IBooleanEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IBooleanEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IBooleanEditor.yml\" sourcestartlinenumber=\"1\">Describes an interface which defines an editor that is used to view and edit\nboolean values.</p>\n<p>\nThe <b>IBooleanEditor</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IColourEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IColourEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IColourEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IColourEditor.yml\" sourcestartlinenumber=\"1\">Represents an editor used to view and modify <xref href=\"System.Drawing.Color\" data-throw-if-not-resolved=\"false\"></xref>\nvalues.</p>\n<p>\nThe <b>IColourEditor</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IDateTimeEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IDateTimeEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IDateTimeEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IDateTimeEditor.yml\" sourcestartlinenumber=\"1\">Describes an interface for a date-time input editor.</p>\n<p>\nThe <b>IDateTimeEditor</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Defines properties that control date-time masking behavior for text-based editors.</p>\n<p>\nThe <b>IDateTimeEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IInputEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IInputEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IInputEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IInputEditor.yml\" sourcestartlinenumber=\"1\">Describes a base interface for input editors.</p>\n<p>\nThe <b>IInputEditor</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IInputEditorFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IInputEditorFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IInputEditorFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IInputEditorFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory responsible for creating input editor instances.</p>\n<p>\nThe <b>IInputEditorFactory</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ImageLayoutMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ImageLayoutMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ImageLayoutMode",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ImageLayoutMode.yml\" sourcestartlinenumber=\"1\">Specifies how an image can be aligned within another object.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.InputChangingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.InputChangingEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.InputChangingEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.InputChangingEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.Editors.IInputEditor.EditValueChanging\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.InputConvertEditValueEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.Editors.ITextInputEditor.ParseEditValue\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.Editors.ITextInputEditor.CustomDisplayText\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.InputEditorId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.InputEditorId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.InputEditorId",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.InputEditorId.yml\" sourcestartlinenumber=\"1\">Represents a logical identifier for an input editor type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.INumericEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.INumericEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.INumericEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.INumericEditor.yml\" sourcestartlinenumber=\"1\">Describes an interface which defines an editor that is used to view and edit\nnumeric values.</p>\n<p>\nThe <b>INumericEditor</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.INumericEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.INumericEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.INumericEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.INumericEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Defines properties that control numeric masking behavior for text-based editors.</p>\n<p>\nThe <b>INumericEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.Editors.ITextInputEditor.InvalidValue\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IRegexEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IRegexEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IRegexEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IRegexEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Defines properties that control regular expression-based masking behavior\nfor text-based editors.</p>\n<p>\nThe <b>IRegexEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.IRegularEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.IRegularEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.IRegularEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.IRegularEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Defines properties that control simplified regular expression masking behavior\nfor text-based editors.</p>\n<p>\nThe <b>IRegularEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ISimpleEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ISimpleEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ISimpleEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ISimpleEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Defines properties that control simple masking behavior for text-based editors.</p>\n<p>\nThe <b>ISimpleEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ITextEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ITextEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ITextEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ITextEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Defines properties that control input masking and formatting behavior\nfor a text-based editor.</p>\n<p>\nThe <b>ITextEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ITextInputEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ITextInputEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ITextInputEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ITextInputEditor.yml\" sourcestartlinenumber=\"1\">Describes an interface for a text input editor.</p>\n<p>\nThe <b>ITextInputEditor</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ITimeSpanEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ITimeSpanEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ITimeSpanEditor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ITimeSpanEditor.yml\" sourcestartlinenumber=\"1\">Describes an interface for a time span input editor.</p>\n<p>\nThe <b>ITimeSpanEditor</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.yml\" sourcestartlinenumber=\"1\">Describes properties of a time span editor mask that allows users to enter time intervals.</p>\n<p>\nThe <b>ITimeSpanEditorMaskProperties</b> interface is implemented by the UI library \nand is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.Editors.ITextInputEditor.QueryProcessKey\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.TimeSpanMaskInputMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.TimeSpanMaskInputMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.TimeSpanMaskInputMode",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.TimeSpanMaskInputMode.yml\" sourcestartlinenumber=\"1\">Lists the input modes of time span edit mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.TimeSpanMaskPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.TimeSpanMaskPart.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors.TimeSpanMaskPart",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Editors.TimeSpanMaskPart.yml\" sourcestartlinenumber=\"1\">Lists the parts/segments of time span mask.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Editors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Editors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Editors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FlyOutPanels.AnchorStyles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FlyOutPanels.AnchorStyles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FlyOutPanels.AnchorStyles",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.FlyOutPanels.AnchorStyles.yml\" sourcestartlinenumber=\"1\">Specifies the anchor styles of a fly-out panel, which determines how the fly-out panel is positioned\nrelative to its host control.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.yml\" sourcestartlinenumber=\"1\">Represents a set of configuration options used to initialize an <xref href=\"PhiRobotics.UI.FlyOutPanels.IFlyOutPanel\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FlyOutPanels.IFlyOutPanel",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.yml\" sourcestartlinenumber=\"1\">Represents a fly-out panel that can be attached to a control and displayed dynamically.</p>\n<p>\nThe <b>IFlyOutPanel</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.yml\" sourcestartlinenumber=\"1\">Provides factory methods for creating <xref href=\"PhiRobotics.UI.FlyOutPanels.IFlyOutPanel\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n<p>\nThe <b>IFlyOutPanelFactory</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended for consumer implementation.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FlyOutPanels.ResizeMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FlyOutPanels.ResizeMode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FlyOutPanels.ResizeMode",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.FlyOutPanels.ResizeMode.yml\" sourcestartlinenumber=\"1\">Specifies how the fly-out panel responds to resize operations.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FlyOutPanels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FlyOutPanels.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FlyOutPanels",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.FocusedNodeChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.FocusedNodeChangedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.FocusedNodeChangedEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.FocusedNodeChangedEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnFocusNodeChanged(PhiRobotics.UI.ITree%2cPhiRobotics.UI.FocusedNodeChangedEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.HyperLinkClickedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.HyperLinkClickedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.HyperLinkClickedEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.HyperLinkClickedEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the 'Click' event of a hyperlink on any UI element.</p>\n<p>\nIt generalizes the way that <code>PhiRobotics.UI</code> library is used to raise \n<code>HyperLinkClick</code> event.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.IImageCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.IImageCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.IImageCollection",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IImageCollection.yml\" sourcestartlinenumber=\"1\">Represents a collection that stores images and allows them to be retrieved using\nunique keys.</p>\n<p>\nThe <b>IImageCollection</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.IOverlayWaitScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.IOverlayWaitScreen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.IOverlayWaitScreen",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IOverlayWaitScreen.yml\" sourcestartlinenumber=\"1\">Describes an interface which is used to provide a semi-transparent splash screen that can overlaps\nprovided a control or form.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ISplashScreen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ISplashScreen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ISplashScreen",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISplashScreen.yml\" sourcestartlinenumber=\"1\">Describes an interface which is used to provide splash screen for the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ISplashScreenFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ISplashScreenFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ISplashScreenFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISplashScreenFactory.yml\" sourcestartlinenumber=\"1\">Describes an interface which allows you to create and show splash screens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ISupportCulture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ISupportCulture.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ISupportCulture",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISupportCulture.yml\" sourcestartlinenumber=\"1\">Describes an interface for objects that support culture.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ISVGFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ISVGFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ISVGFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISVGFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating instances of <xref href=\"PhiRobotics.UI.ISVGImage\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>\nThe <b>ISVGFactory</b> interface is implemented by the <b>PhiRobotics</b> ui \nframework and is not intended for consumer implementation.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ISVGImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ISVGImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ISVGImage",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISVGImage.yml\" sourcestartlinenumber=\"1\">Defines a contract for Scalable Vector Graphics (SVG) images.</p>\n<p>\nThe <b>ISVGImage</b> interface is implemented by the <b>PhiRobotics</b> ui framework \nand is not intended for consumer implementation.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITree.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITree",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITree.yml\" sourcestartlinenumber=\"1\">Represents a control that displays a hierarchical list of tree nodes.</p>\n<p>\nThe <b>ITree</b> interface is implemented by the UI library and is not intended \nto be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeEventHandlers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeEventHandlers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeEventHandlers",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeEventHandlers.yml\" sourcestartlinenumber=\"1\">Defines handlers for tree-related events raised by an <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeFactory.yml\" sourcestartlinenumber=\"1\">Provides a factory for creating <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n<p>\nThe <b>ITreeFactory</b> interface is implemented by the ui framework and \nis not intended for consumer implementation.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeHitTestLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeHitTestLocation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeHitTestLocation",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeHitTestLocation.yml\" sourcestartlinenumber=\"1\">Represents different logical regions within an <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref> that can be\nidentified during a hit test operation.</p>\n<p>\nThe <b>ITreeHitTestLocation</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeNode",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeNode.yml\" sourcestartlinenumber=\"1\">Represents a node within a <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref> control.</p>\n<p>\nThe <b>ITreeNode</b> interface is implemented by the UI library and is not intended \nto be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeNodeCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeNodeCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeNodeCollection",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeNodeCollection.yml\" sourcestartlinenumber=\"1\">Represents a collection of <xref href=\"PhiRobotics.UI.ITreeNode\" data-throw-if-not-resolved=\"false\"></xref> instances within an <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>\nThe <b>ITreeNodeCollection</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeNodeSearchCondition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeNodeSearchCondition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeNodeSearchCondition",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeNodeSearchCondition.yml\" sourcestartlinenumber=\"1\">Represents a condition used to determine whether a tree node matches\nspecific search criteria.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ITreeNodeSelection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ITreeNodeSelection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ITreeNodeSelection",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeNodeSelection.yml\" sourcestartlinenumber=\"1\">Represents the current selection within an <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>\nThe <b>ITreeNodeSelection</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.IUIFactoryService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.IUIFactoryService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.IUIFactoryService",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IUIFactoryService.yml\" sourcestartlinenumber=\"1\">Defines a service for accessing UI-related factories.</p>\n<p>\nThe <b>IUIFactoryService</b> interface is implemented by the <b>PhiRobotics</b> ui framework \nand is not intended for consumer implementation.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.IWaitForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.IWaitForm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.IWaitForm",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IWaitForm.yml\" sourcestartlinenumber=\"1\">Describes an interface of a small form, designed to display the progress of a lengthy operation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.IWaitFormFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.IWaitFormFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.IWaitFormFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IWaitFormFactory.yml\" sourcestartlinenumber=\"1\">Describes an interface which allows you to create wait forms and wait screen which also shows progress.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.LoadingIndicatorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.LoadingIndicatorType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.LoadingIndicatorType",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.LoadingIndicatorType.yml\" sourcestartlinenumber=\"1\">Enumerates splash screen loading indicator kind.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.NodeEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.NodeEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.NodeEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.NodeEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnBeforeExpandNode(PhiRobotics.UI.ITree%2cPhiRobotics.UI.BeforeExpandNodeEventArgs)\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnFocusNodeChanged(PhiRobotics.UI.ITree%2cPhiRobotics.UI.FocusedNodeChangedEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.NodeImageEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.NodeImageEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.NodeImageEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.NodeImageEventArgs.yml\" sourcestartlinenumber=\"1\">Provides event data containing information about a requested node image.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.OverlayWaitIndicatorType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.OverlayWaitIndicatorType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.OverlayWaitIndicatorType",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.OverlayWaitIndicatorType.yml\" sourcestartlinenumber=\"1\">Enumerates values that specify the wait indicator in <xref href=\"PhiRobotics.UI.IOverlayWaitScreen\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.OverlayWaitScreenProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.OverlayWaitScreenProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.OverlayWaitScreenProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.OverlayWaitScreenProperties.yml\" sourcestartlinenumber=\"1\">Provided properties which are required to create <xref href=\"PhiRobotics.UI.IOverlayWaitScreen\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.SplashScreenProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.SplashScreenProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.SplashScreenProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.SplashScreenProperties.yml\" sourcestartlinenumber=\"1\">Provided properties which are required to show <xref href=\"PhiRobotics.UI.ISplashScreen\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ForcedShowKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ForcedShowKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ForcedShowKind",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ForcedShowKind.yml\" sourcestartlinenumber=\"1\">Lists the values that specify whether the tooltip should be forcibly shown.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IBaseRichToolTipItem",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.yml\" sourcestartlinenumber=\"1\">Defines the base contract for all rich tooltip items.</p>\n<p>\nThis interface provides common properties and functionality shared by all \ntooltip item types, such as text items, separators, and title/footer items.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTip.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTip.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IRichToolTip",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IRichToolTip.yml\" sourcestartlinenumber=\"1\">Represents a rich tooltip that can display multiple content regions,\nsuch as text, images, titles, separators, and footers.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI Library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTipItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTipItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IRichToolTipItem",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IRichToolTipItem.yml\" sourcestartlinenumber=\"1\">Represents a tooltip item that displays text and optional visual content\n(such as images or icons) within a rich tooltip.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.yml\" sourcestartlinenumber=\"1\">Represents a visual separator item within a rich tooltip.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IRichToolTipTitleItem",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.yml\" sourcestartlinenumber=\"1\">Represents a tooltip item used as a title or footer in a rich tooltip.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipControlClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipControlClient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IToolTipControlClient",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IToolTipControlClient.yml\" sourcestartlinenumber=\"1\">Describes an interface for controls that provide custom tooltip information\nfor their visual elements and child controls.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipControlInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipControlInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IToolTipControlInfo",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IToolTipControlInfo.yml\" sourcestartlinenumber=\"1\">Provides tooltip information used by the tooltip controller to display a hint.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI Library and should not be \nimplemented by user code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IToolTipController",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IToolTipController.yml\" sourcestartlinenumber=\"1\">Describes a tooltip controller which provides functionality to manage and\ndisplay tooltips for controls.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipControllerQueryData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipControllerQueryData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IToolTipControllerQueryData",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IToolTipControllerQueryData.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ToolTips.IToolTipController.QueryObjectInfo\" data-throw-if-not-resolved=\"false\"></xref> event.\nevent.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IToolTipFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IToolTipFactory.yml\" sourcestartlinenumber=\"1\">Provides methods to create tooltip-related objects and access the default\ntooltip controller used across the application.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipItemCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.IToolTipItemCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.IToolTipItemCollection",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.IToolTipItemCollection.yml\" sourcestartlinenumber=\"1\">Represents a collection of items that define the content regions of a rich tooltip.</p>\n<p>\nThis interface is implemented by the PhiRobotics UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipAnchor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipAnchor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipAnchor",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipAnchor.yml\" sourcestartlinenumber=\"1\">Lists the values that specify whether tooltips are anchored relative to the mouse\npointer or relative to the owning control.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipControllerQueryInfoEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipControllerQueryInfoEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipControllerQueryInfoEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipControllerQueryInfoEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ToolTips.IToolTipController.QueryObjectInfo\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipHyperlinkEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipHyperlinkEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipHyperlinkEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipHyperlinkEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ToolTips.IToolTipController.HyperlinkClicked\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipIconType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipIconType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipIconType",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipIconType.yml\" sourcestartlinenumber=\"1\">Enumerates values that specify icon types to be displayed within tooltips.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipImageAlignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipImageAlignment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipImageAlignment",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipImageAlignment.yml\" sourcestartlinenumber=\"1\">Specifies the alignment of an image within a tooltip.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipLocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipLocation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipLocation",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipLocation.yml\" sourcestartlinenumber=\"1\">Specifies the location where a tooltip is displayed in relation to the mouse cursor\nposition.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.ToolTipTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips.ToolTipTypes",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ToolTips.ToolTipTypes.yml\" sourcestartlinenumber=\"1\">Enumerates tooltip types that are supported by controls.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ToolTips.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ToolTips.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ToolTips",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.TreeDragCompletedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.TreeDragCompletedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.TreeDragCompletedEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.TreeDragCompletedEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnDragCompleted(PhiRobotics.UI.ITree%2cPhiRobotics.UI.TreeDragCompletedEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.TreeDragDropEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.TreeDragDropEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.TreeDragDropEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.TreeDragDropEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnDragDrop(PhiRobotics.UI.ITree%2cPhiRobotics.UI.TreeDragDropEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.TreeDragOverEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.TreeDragOverEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.TreeDragOverEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.TreeDragOverEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnDragOver(PhiRobotics.UI.ITree%2cPhiRobotics.UI.TreeDragOverEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.TreeDragStartedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.TreeDragStartedEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.TreeDragStartedEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.TreeDragStartedEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnDragStarting(PhiRobotics.UI.ITree%2cPhiRobotics.UI.TreeDragStartedEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.TreeHitTestData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.TreeHitTestData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.TreeHitTestData",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.TreeHitTestData.yml\" sourcestartlinenumber=\"1\">Contains information about which element of an <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref> is located\nat a specific position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.ValidateNodeTextEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.ValidateNodeTextEventArgs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.ValidateNodeTextEventArgs",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ValidateNodeTextEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.ITreeEventHandlers.OnValidateNodeText(PhiRobotics.UI.ITree%2cPhiRobotics.UI.ValidateNodeTextEventArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.WaitFormProperties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.WaitFormProperties.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.WaitFormProperties",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.WaitFormProperties.yml\" sourcestartlinenumber=\"1\">Provided properties which are required to create <xref href=\"PhiRobotics.UI.IWaitForm\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.CompletionPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.CompletionPage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.CompletionPage",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.CompletionPage.yml\" sourcestartlinenumber=\"1\">Represents the completion page of a wizard, typically displayed as the final step.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.ErrorKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.ErrorKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.ErrorKind",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.ErrorKind.yml\" sourcestartlinenumber=\"1\">Defines the kind or severity of an error associated with a wizard page.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.ExportedWizardAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.ExportedWizardAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.ExportedWizardAttribute",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.ExportedWizardAttribute.yml\" sourcestartlinenumber=\"1\">Indicates that a wizard type is exported from an assembly.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.IWizard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.IWizard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.IWizard",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizard.yml\" sourcestartlinenumber=\"1\">Represents a wizard and provides access to its pages and lifecycle methods.</p>\n<p>\nThe <b>IWizard</b> interface is intended to be implemented by consumer code.\nThe lifetime of the wizard instance is managed by the consumer.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.IWizardDialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.IWizardDialog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.IWizardDialog",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizardDialog.yml\" sourcestartlinenumber=\"1\">Represents a dialog used to display and execute a wizard.</p>\n<p>\nThe <b>IWizardDialog</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.IWizardFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.IWizardFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.IWizardFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizardFactory.yml\" sourcestartlinenumber=\"1\">Factory that provides methods to create instances of <xref href=\"PhiRobotics.UI.Wizard.IWizardHost\" data-throw-if-not-resolved=\"false\"></xref>\nused to discover and execute wizards, and to create instances of\n<xref href=\"PhiRobotics.UI.Wizard.IWizardDialog\" data-throw-if-not-resolved=\"false\"></xref> used to display wizard dialogs.</p>\n<p>\nThe <b>IWizardFactory</b> interface is implemented by the <b>PhiRobotics</b>\nUI library and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.IWizardHost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.IWizardHost.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.IWizardHost",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizardHost.yml\" sourcestartlinenumber=\"1\">Provides functionality to execute wizards discovered from wizard assemblies.</p>\n<p>\nThe <b>IWizardHost</b> interface is implemented by the <b>PhiRobotics</b> UI\nframework and is not intended to be implemented by consumer code.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.IWizardPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.IWizardPage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.IWizardPage",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizardPage.yml\" sourcestartlinenumber=\"1\">Represents an interior page in a wizard, typically displayed between the\n<xref href=\"PhiRobotics.UI.Wizard.WelcomePage\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"PhiRobotics.UI.Wizard.CompletionPage\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>\nThe <b>IWizardPage</b> interface is intended to be implemented by consumer code.\nThe lifetime of the page instance is managed by the consumer.\n</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.WelcomePage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.WelcomePage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.WelcomePage",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.WelcomePage.yml\" sourcestartlinenumber=\"1\">Represents the welcome page of a wizard, typically displayed as the first step.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.WizardIdAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.WizardIdAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.WizardIdAttribute",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.WizardIdAttribute.yml\" sourcestartlinenumber=\"1\">Specifies the identifier of a wizard class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.WizardResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.WizardResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard.WizardResult",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.WizardResult.yml\" sourcestartlinenumber=\"1\">Represents the result returned after executing a wizard.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.Wizard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.Wizard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI.Wizard",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.yml\" sourcestartlinenumber=\"1\">Provides infrastructure for discovering, loading, and executing wizards within the\nPhiRobotics UI library.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PhiRobotics.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PhiRobotics.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "PhiRobotics.UI",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/AlertPanel.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/AlertPanel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/common-dialogs.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/common-dialogs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/creating_wizard.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/creating_wizard.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/datetime-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/datetime-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/extended-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/extended-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/FlyOutPanel.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/FlyOutPanel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/input-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/input-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/numeric-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/numeric-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/regular-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/regular-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/RichToolTip.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/RichToolTip.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/simple-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/simple-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/timespan-mask.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/timespan-mask.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ToolTip.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ToolTip.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/tree-control.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/tree-control.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/working-with-input-editors.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/working-with-input-editors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AlertPanel_example1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AlertPanel_example1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AlertPanel_example2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AlertPanel_example2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AlertPanel_example3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AlertPanel_example3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/AlertPanelButtons_Example.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/AlertPanelButtons_Example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/InputBox_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/InputBox_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/LoginBox_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/LoginBox_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_DateTime_custom_H_mm_ss.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_DateTime_custom_H_mm_ss.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_DateTime_custom_yyyy-MM-dd.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_DateTime_custom_yyyy-MM-dd.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_DateTime_custom_yyyy-MMM-dd-dddd.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_DateTime_custom_yyyy-MMM-dd-dddd.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_RegEx_example1_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_RegEx_example1_1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_RegEx_example1_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_RegEx_example1_2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Regular_hex_invalid.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Regular_hex_invalid.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Regular_hex.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Regular_hex.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Regular_number2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Regular_number2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Simple_alpha_empty.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Simple_alpha_empty.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Simple_alpha.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Simple_alpha.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Simple_phone_empty.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Simple_phone_empty.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_Simple_phone.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_Simple_phone.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_TimeSpan_custom_d-DD-left.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_TimeSpan_custom_d-DD-left.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Mask_TimeSpan_custom_d-hh-mm-ss.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Mask_TimeSpan_custom_d-hh-mm-ss.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/MaskOverview_Simple_phone.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/MaskOverview_Simple_phone.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/masks-sample1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/masks-sample1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/MessageBox_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/MessageBox_example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/RichToolTip_Example.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/RichToolTip_Example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Tooltip_example1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Tooltip_example1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Tooltip_example2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Tooltip_example2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/Tooltip_example3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/Tooltip_example3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/TreeList_example1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TreeList_example1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/TreeList_example2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/TreeList_example2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WizardDemoImage1.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WizardDemoImage1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WizardDemoImage2.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WizardDemoImage2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Images/WizardDemoImage3.png",
+      "output": {
+        "resource": {
+          "relative_path": "Images/WizardDemoImage3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

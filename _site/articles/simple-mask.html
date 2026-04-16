@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mask Type: Simple </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Mask Type: Simple ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="mask-type-simple">Mask Type: Simple</h1>
+
+<p>The Simple mask type allows users to enter alphabetic, numeric or alphanumeric characters at
+specific positions. For example, phone numbers, zip codes, and social security numbers.</p>
+<hr>
+<h2 id="metacharacters">Metacharacters</h2>
+<p>A metacharacter specifies a range of characters that users can enter. The following table lists
+the available metacharacters.</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>L</code></td>
+<td>A mandatory alphabetic character. For example, A-Z, a-z for the U.S.</td>
+</tr>
+<tr>
+<td><code>l</code></td>
+<td>An optional alphabetic character.</td>
+</tr>
+<tr>
+<td><code>A</code></td>
+<td>A mandatory alphanumeric character. For example, A-Z, a-z, 0-9 for the U.S.</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>An optional alphanumeric character.</td>
+</tr>
+<tr>
+<td><code>C</code></td>
+<td>A mandatory arbitrary character.</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>An optional arbitrary character.</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>A mandatory numeric character.</td>
+</tr>
+<tr>
+<td><code>9</code></td>
+<td>An optional numeric character.</td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>An optional numeric character, the plus or minus sign.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="special-characters">Special Characters</h2>
+<p>Special characters convert to uppercase/lowercase, add date/time separators, etc. The following
+table lists the available special characters.</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>Converts subsequent characters to uppercase.</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Converts subsequent characters to lowercase.</td>
+</tr>
+<tr>
+<td><code>&lt;&gt;</code></td>
+<td>Discards case conversion for subsequent characters.</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Separates months, days, and years. The culture’s DateSeparator property specifies the actual character.</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>Separates hours, minutes, and seconds. The culture’s TimeSeparator property specifies the actual character.</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>Inserts the currency symbol. The culture’s CurrencySymbol property specifies the actual character.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="literal-characters">Literal Characters</h2>
+<p>Literal characters are arbitrary read-only characters in the editor. If you add a character
+that is not a meta or special character into a mask expression, the character is displayed in
+the editor as is. To display a meta or special character as a literal, precede it with a
+backslash.</p>
+<hr>
+<h2 id="examples">Examples</h2>
+<h4 id="example-1">Example 1</h4>
+<p><code>(000)000-00-00</code> - a mask that allows users to enter a phone number. Each '0' metacharacter
+requires a user to enter a digit. Dashes and brackets are literals.</p>
+<p>Value is not entered:</p>
+<p><img src="../Images/Mask_Simple_phone_empty.png" alt="Mask_Simple_phone_empty"></p>
+<p>Value is entered:</p>
+<p><img src="../Images/Mask_Simple_phone.png" alt="Mask_Simple_phone"></p>
+<h4 id="example-2">Example 2</h4>
+<p><code>(999)000-00-00</code> - a phone number with an optional area code. Each '9' metacharacter allows
+users to omit a digit.</p>
+<p>Value is a valid phone number without a code part:</p>
+<p><img src="../Images/MaskOverview_Simple_phone.png" alt="MaskOverview_Simple_phone"></p>
+<h4 id="example-3">Example 3</h4>
+<p><code>\A&gt;LL-00</code> - a mask to enter two upper-case letters and two numbers separated by a dash and
+preceded with the 'A' literal. A backslash precedes the literal to distinguish it from a
+metacharacter.</p>
+<p>Value is not entered:</p>
+<p><img src="../Images/Mask_Simple_alpha_empty.png" alt="Mask_Simple_alpha_empty"></p>
+<p>Value is entered:</p>
+<p><img src="../Images/CD_Mask_Simple_alpha.png" alt="CD_Mask_Simple_alpha"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

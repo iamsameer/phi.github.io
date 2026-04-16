@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Mask Type: TimeSpan </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Mask Type: TimeSpan ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="mask-type-timespan">Mask Type: TimeSpan</h1>
+
+<h2 id="overview">Overview</h2>
+<p>The TimeSpan mask type allows users to enter time intervals. This type supports the <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings">standard time span .NET format</a>.</p>
+<hr>
+<h2 id="standard-masks">Standard Masks</h2>
+<p>The table below contains input masks that correspond to the standard patterns. These patterns do not depend on culture settings.</p>
+<table>
+<thead>
+<tr>
+<th>Mask</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>c</code></td>
+<td>Constant Format</td>
+<td>Matches the [-][d'.']hh':'mm':'ss['.'fffffff] pattern.</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>General Short Format</td>
+<td>Matches the [-][d':']h':'mm':'ss[.FFFFFFF] pattern.</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>General Long Format</td>
+<td>Matches the [-]d':'hh':'mm':'ss.fffffff pattern.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="custom-masks">Custom Masks</h2>
+<p>Mask specifiers and modifiers in the table below allow you to create custom time span input masks.</p>
+<table>
+<thead>
+<tr>
+<th>Specifier/Placeholder</th>
+<th>Description</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>d</code></td>
+<td>Number of whole days.</td>
+<td>Allows a user to enter days. Any number of digits, with no leading zeros.</td>
+</tr>
+<tr>
+<td><code>dd</code>-<code>dddddddd</code></td>
+<td>Number of whole days.</td>
+<td>Allows a user to enter days. The number of d characters specifies the minimum number of digits. The value is padded with leading zeros as needed. Does not limit the maximum number of digits and does not limit the entered value.</td>
+</tr>
+<tr>
+<td><code>D</code></td>
+<td>Short caption for days.</td>
+<td>'d' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>DD</code></td>
+<td>Long caption for days.</td>
+<td>'day' or 'days' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td>Number of whole hours.</td>
+<td>Displays a single digit in the first ten-day interval (1-9).</td>
+</tr>
+<tr>
+<td><code>hh</code></td>
+<td>Number of whole hours.</td>
+<td>Displays two digits in the first-ten interval (01-09).</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>Short caption for hours.</td>
+<td>'h' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>HH</code></td>
+<td>Long caption for hours.</td>
+<td>'hour' or 'hours' in the English (U.S.) locale</td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td>Number of whole minutes.</td>
+<td>Displays a single digit in the first ten-day interval (1-9).</td>
+</tr>
+<tr>
+<td><code>mm</code></td>
+<td>Number of whole minutes.</td>
+<td>Displays two digits in the first-ten interval (01-09).</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Short caption for minutes.</td>
+<td>'m' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>MM</code></td>
+<td>Long caption for minutes.</td>
+<td>'minute' or 'minutes' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>Number of whole seconds.</td>
+<td>Displays a single digit in the first-ten interval (1-9).</td>
+</tr>
+<tr>
+<td><code>ss</code></td>
+<td>Number of whole seconds.</td>
+<td>Displays two digits in the first-ten interval (01-09).</td>
+</tr>
+<tr>
+<td><code>S</code></td>
+<td>Short caption for seconds.</td>
+<td>'s' in the English (U.S.) locale</td>
+</tr>
+<tr>
+<td><code>SS</code></td>
+<td>Long caption for seconds.</td>
+<td>'second' or 'seconds' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Number of whole milliseconds.</td>
+<td>Displays a single digit in the first-ten interval (1-9).</td>
+</tr>
+<tr>
+<td><code>nn</code></td>
+<td>Number of whole milliseconds.</td>
+<td>Displays two digits in the first-ten interval (01-09).</td>
+</tr>
+<tr>
+<td><code>nnn</code></td>
+<td>Number of whole milliseconds.</td>
+<td>Displays leading zeros.</td>
+</tr>
+<tr>
+<td><code>N</code></td>
+<td>Short caption for milliseconds.</td>
+<td>'ms' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>NN</code></td>
+<td>Long caption for milliseconds.</td>
+<td>'milliseconds' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>f</code>-<code>fffffff</code></td>
+<td>Number of second fractions.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>F</code>-<code>FFFFFFF</code></td>
+<td>Number of second fractions.</td>
+<td>Any fractional trailing zeros are not included.</td>
+</tr>
+<tr>
+<td><code>F1</code>-<code>F7</code></td>
+<td>Number of second fractions.</td>
+<td>An editor displays zeros for empty placeholders.</td>
+</tr>
+<tr>
+<td><code>Z</code></td>
+<td>Short caption for fractional part of seconds.</td>
+<td>'f' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>ZZ</code></td>
+<td>Long caption for fractional part of seconds.</td>
+<td>'fractional' in the English (U.S.) locale.</td>
+</tr>
+<tr>
+<td><code>[</code>,<code>]</code></td>
+<td>Elements in square brackets are optional.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>Time separator.</td>
+<td>Does not depend on the current culture.</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Decimal separator.</td>
+<td>Depends on the current culture.</td>
+</tr>
+<tr>
+<td><code>%&lt;specifier&gt;</code></td>
+<td>The '%' modifier that precedes a mask specifier distinguishes the specifier from the same standard mask pattern (see above).</td>
+<td>If a mask specifier is used without other specifiers, it can be interpreted as a standard pattern. For example, the 'd' specifier is interpreted as the standard short date pattern, but not a month day. Precede the specifier with the '%' modifier to interpret it as a placeholder.</td>
+</tr>
+<tr>
+<td><code>\&lt;character&gt;</code></td>
+<td>The backslash modifier is the escape character.</td>
+<td>Precede a specifier with the backslash modifier to display the specifier as a character in the edit box.</td>
+</tr>
+<tr>
+<td></td>
+<td>Any other characters.</td>
+<td>Any other characters are displayed in the edit box literally.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="example-1">Example 1</h4>
+<p><code>d'.'hh':'mm':'ss</code> - allows users to input days, hours, minutes, and seconds. The ‘.‘ and ‘:‘ characters are separators.</p>
+<p><img src="../Images/Mask_TimeSpan_custom_d-hh-mm-ss.png" alt="Mask TimeSpan custom d'.'hh':'mm':'ss"></p>
+<h4 id="example-2">Example 2</h4>
+<p><code>d DD 'left'</code> - allows users to input days. Displays custom text and the ‘days‘ caption according to the culture.</p>
+<p><img src="../Images/Mask_TimeSpan_custom_d-DD-left.png" alt="Mask TimeSpan custom d DD 'left'"></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

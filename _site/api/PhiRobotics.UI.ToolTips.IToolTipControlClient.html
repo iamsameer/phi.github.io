@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IToolTipControlClient </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IToolTipControlClient ">
+    
+    <meta name="description" content="Describes an interface for controls that provide custom tooltip information for their visual elements and child controls.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ToolTips.IToolTipControlClient">
+
+
+
+  <h1 id="PhiRobotics_UI_ToolTips_IToolTipControlClient" data-uid="PhiRobotics.UI.ToolTips.IToolTipControlClient" class="text-break">Interface IToolTipControlClient</h1>
+  <div class="markdown level0 summary"><p>Describes an interface for controls that provide custom tooltip information
+for their visual elements and child controls.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.ToolTips.html">ToolTips</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IToolTipControlClient</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+After a control is registered via 
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_AddClientControl_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IToolTipControlClient_">AddClientControl(Control, IToolTipControlClient)</a>,
+the <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a> monitors mouse activity over that control 
+and invokes <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html#PhiRobotics_UI_ToolTips_IToolTipControlClient_GetToolTipInfo_System_Windows_Forms_Control_System_Drawing_Point_">GetToolTipInfo(Control, Point)</a> as needed.
+</p>
+<p>
+The <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html#PhiRobotics_UI_ToolTips_IToolTipControlClient_GetToolTipInfo_System_Windows_Forms_Control_System_Drawing_Point_">GetToolTipInfo(Control, Point)</a> method is invoked only when 
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html#PhiRobotics_UI_ToolTips_IToolTipControlClient_ToolTipsEnabled">ToolTipsEnabled</a> is <code>true</code>.
+</p>
+<div class="NOTE"><h5>note</h5><p>
+This interface is intended to be implemented by custom or third-party controls 
+that wish to integrate with the PhiRobotics tooltip infrastructure.
+</p></div>
+</div>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to implement the
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html">IToolTipControlClient</a> interface and associate it
+with multiple controls to provide context-sensitive tooltips.</p>
+<p>In this example, a single tooltip client is shared between a
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.button">Button</a> and a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.checkbox">CheckBox</a>.
+The tooltip text is dynamically updated based on the control
+currently under the cursor.</p>
+<pre><code class="lang-cs">private void ToolTipControlClientExample(IToolTipFactory toolTipFactory)
+{
+    ToolTipControlClient controlClient = new ToolTipControlClient(toolTipFactory);
+<!-- -->
+    // Register controls with the tooltip controller
+    controller.AddClientControl(button1, controlClient);
+    controller.AddClientControl(checkBox1, controlClient);
+}
+<!-- -->
+class ToolTipControlClient : IToolTipControlClient
+{
+    private readonly IToolTipControlInfo toolTipInfo;
+<!-- -->
+    public ToolTipControlClient(IToolTipFactory factory)
+    {
+        // Create and initialize tooltip info
+        toolTipInfo = factory.CreateControlInfo();
+        toolTipInfo.Title = "Control";
+        toolTipInfo.ToolTipType = ToolTipTypes.Standard;
+    }
+<!-- -->
+    public bool ToolTipsEnabled
+    {
+        get { return true; }
+    }
+<!-- -->
+    public IToolTipControlInfo GetToolTipInfo(Control clientControl, Point point)
+    {
+        // Update tooltip content based on the control type
+        if (clientControl is Button button)
+        {
+            toolTipInfo.Text = "Button: " + button.Text;
+            toolTipInfo.Object = clientControl;
+            return toolTipInfo;
+        }
+        else if (clientControl is System.Windows.Forms.CheckBox checkBox)
+        {
+            toolTipInfo.Text = "CheckBox: " + checkBox.Text;
+            toolTipInfo.Object = clientControl;
+            return toolTipInfo;
+        }
+<!-- -->
+        // No tooltip for other controls
+        return null;
+    }
+}
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipControlClient_ToolTipsEnabled_" data-uid="PhiRobotics.UI.ToolTips.IToolTipControlClient.ToolTipsEnabled*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_ToolTipsEnabled" data-uid="PhiRobotics.UI.ToolTips.IToolTipControlClient.ToolTipsEnabled">ToolTipsEnabled</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether tooltips are enabled for this control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ToolTipsEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if tooltips are enabled; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_ToolTipsEnabled_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If this property is <code>false</code>,
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlClient.html#PhiRobotics_UI_ToolTips_IToolTipControlClient_GetToolTipInfo_System_Windows_Forms_Control_System_Drawing_Point_">GetToolTipInfo(Control, Point)</a> is not invoked by the
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a>.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipControlClient_GetToolTipInfo_" data-uid="PhiRobotics.UI.ToolTips.IToolTipControlClient.GetToolTipInfo*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_GetToolTipInfo_System_Windows_Forms_Control_System_Drawing_Point_" data-uid="PhiRobotics.UI.ToolTips.IToolTipControlClient.GetToolTipInfo(System.Windows.Forms.Control,System.Drawing.Point)">GetToolTipInfo(Control, Point)</h4>
+  <div class="markdown level1 summary"><p>Returns tooltip information for the specified control at the given cursor
+position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IToolTipControlInfo GetToolTipInfo(Control clientControl, Point point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><span class="parametername">clientControl</span></td>
+        <td><p>The control for which the tooltip is requested.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a> specifying the cursor position
+in client coordinates relative to <code class="paramref">clientControl</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html">IToolTipControlInfo</a></td>
+        <td><p>An instance of <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html">IToolTipControlInfo</a> containing tooltip
+data, or <code>null</code> if no tooltip should be displayed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipControlClient_GetToolTipInfo_System_Windows_Forms_Control_System_Drawing_Point__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is invoked by the <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a> when the instance of
+this interface is added to it via
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html#PhiRobotics_UI_ToolTips_IToolTipController_AddClientControl_System_Windows_Forms_Control_PhiRobotics_UI_ToolTips_IToolTipControlClient_">AddClientControl(Control, IToolTipControlClient)</a> and
+when the mouse moves/hovers over the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a> that has been added along with
+this instance.</p>
+<p>
+Use <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipFactory.html#PhiRobotics_UI_ToolTips_IToolTipFactory_CreateControlInfo">CreateControlInfo()</a> to create the returned object.
+Ensure that the returned instance has its 
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html#PhiRobotics_UI_ToolTips_IToolTipControlInfo_Object">Object</a> property set and at least one of 
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html#PhiRobotics_UI_ToolTips_IToolTipControlInfo_Title">Title</a> or 
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipControlInfo.html#PhiRobotics_UI_ToolTips_IToolTipControlInfo_Text">Text</a> assigned; otherwise, the tooltip 
+will not be displayed.
+</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

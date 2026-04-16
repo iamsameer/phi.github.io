@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Tree Control </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Tree Control ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="tree-control">Tree Control</h1>
+
+<h3 id="overview">Overview</h3>
+<p>The Tree Control <a class="xref" href="../api/PhiRobotics.UI.ITree.html">ITree</a> is a hierarchical UI component used to represent structured data in a parent-child relationship. It allows users to navigate, select, edit, and manipulate nodes efficiently within a single unified interface.</p>
+<p>The control supports:</p>
+<ul>
+<li>Hierarchical node structures</li>
+<li>Multi-selection</li>
+<li>Node searching</li>
+<li>Hit testing</li>
+<li>Dynamic loading</li>
+<li>Sorting and visibility management</li>
+</ul>
+<hr>
+<h3 id="architecture">Architecture</h3>
+<p>The Tree Control is composed of the following core components:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITree.html">ITree</a></td>
+<td>Main control interface</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+<td>Represents an individual node</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNodeCollection.html">ITreeNodeCollection</a></td>
+<td>Contains child nodes</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNodeSelection.html">ITreeNodeSelection</a></td>
+<td>Represents selected nodes</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.TreeHitTestData.html">TreeHitTestData</a></td>
+<td>Result of hit testing</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeHitTestLocation.html">ITreeHitTestLocation</a></td>
+<td>Describes UI region</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNodeSearchCondition.html">ITreeNodeSearchCondition</a></td>
+<td>Defines search logic</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="creating-a-tree">Creating a Tree</h3>
+<pre><code class="lang-csharp">ITree tree = treeFactory.Create(eventHandlers);
+</code></pre>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>Always create instances using ITreeFactory</li>
+<li>The caller is responsible for disposal</li>
+<li>Event handlers define interaction behavior</li>
+</ul>
+<hr>
+<h3 id="working-with-nodes">Working with Nodes</h3>
+<h4 id="creating-nodes">Creating Nodes</h4>
+<pre><code class="lang-csharp">ITreeNode root = tree.RootNodes.Append(&quot;Root&quot;);
+
+ITreeNode child = root.Nodes.Append(&quot;Child Node&quot;, dataObject);
+</code></pre>
+<p><img src="../Images/TreeList_example1.png" alt="TreeList Example1"></p>
+<h4 id="node-properties">Node Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Text">Text</a></td>
+<td>Display text</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Data">Data</a></td>
+<td>Associated data object (read-only)</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Tag">Tag</a></td>
+<td>Custom runtime metadata</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Visible">Visible</a></td>
+<td>Determines visibility</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_ImageKey">ImageKey</a></td>
+<td>Icon key</td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_ExpandedImageKey">ExpandedImageKey</a></td>
+<td>Icon when expanded</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="node-hierarchy">Node Hierarchy</h3>
+<pre><code class="lang-csharp">ITreeNode parent = tree.RootNodes.Append(&quot;Parent&quot;);
+parent.Nodes.Append(&quot;Child 1&quot;);
+parent.Nodes.Append(&quot;Child 2&quot;);
+</code></pre>
+<p><img src="../Images/TreeList_example2.png" alt="TreeList Example2"></p>
+<ul>
+<li>Nodes can contain unlimited child nodes</li>
+<li>Structure forms a recursive hierarchy</li>
+</ul>
+<hr>
+<h3 id="selection">Selection</h3>
+<h4 id="access-selection">Access Selection</h4>
+<pre><code class="lang-csharp">foreach (ITreeNode node in tree.NodeSelection)
+{
+    Console.WriteLine(node.Text);
+}
+</code></pre>
+<h4 id="check-selection">Check Selection</h4>
+<pre><code class="lang-csharp">if (tree.NodeSelection.Contains(node))
+{
+    Console.WriteLine(&quot;Node is selected&quot;);
+}
+</code></pre>
+<h4 id="key-notes">Key Notes</h4>
+<ul>
+<li>Selection is read-only</li>
+<li>Managed internally by the tree</li>
+<li>Used for:
+<ul>
+<li>Drag &amp; drop</li>
+<li>Clipboard operations</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="focus-management">Focus Management</h3>
+<pre><code class="lang-csharp">tree.FocusedNode = node;
+</code></pre>
+<ul>
+<li>Gets or sets the currently focused node</li>
+<li>Must belong to the same tree instance</li>
+</ul>
+<hr>
+<h3 id="hit-testing">Hit Testing</h3>
+<p>Hit testing determines what part of the tree is under a given point.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-csharp">TreeHitTestData hit = tree.HitTest(mousePoint);
+
+if (hit.Node != null)
+{
+    if (hit.Location.IsText)
+        Console.WriteLine($&quot;Text clicked: {hit.Node.Text}&quot;);
+
+    if (hit.Location.IsExpandButton)
+        Console.WriteLine(&quot;Expand button clicked&quot;);
+}
+</code></pre>
+<h4 id="hit-test-result">Hit Test Result</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Node</code></td>
+<td>Node at location (may be null)</td>
+</tr>
+<tr>
+<td><code>Location</code></td>
+<td>UI region information</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="searching-nodes">Searching Nodes</h3>
+<h4 id="custom-search-condition">Custom Search Condition</h4>
+<pre><code class="lang-csharp">public class TextSearchCondition : ITreeNodeSearchCondition
+{
+    private readonly string text;
+
+    public TextSearchCondition(string text)
+    {
+        this.text = text;
+    }
+
+    public bool IsMatch(ITreeNode node)
+    {
+        return node.Text.Contains(text, StringComparison.OrdinalIgnoreCase);
+    }
+}
+</code></pre>
+<h4 id="usage">Usage</h4>
+<pre><code class="lang-csharp">var results = tree.Find(new TextSearchCondition(&quot;Item&quot;), true);
+</code></pre>
+<hr>
+<h3 id="batch-updates">Batch Updates</h3>
+<h4 id="using-beginload--endload">Using BeginLoad / EndLoad</h4>
+<pre><code class="lang-csharp">tree.BeginLoad();
+try
+{
+    // Bulk node creation
+}
+finally
+{
+    tree.EndLoad();
+}
+</code></pre>
+<h4 id="benefits">Benefits</h4>
+<ul>
+<li>Prevents UI refresh overhead</li>
+<li>Improves performance significantly</li>
+</ul>
+<hr>
+<h3 id="manual-updates">Manual Updates</h3>
+<pre><code class="lang-csharp">tree.BeginUpdate();
+try
+{
+    // Modify nodes
+}
+finally
+{
+    tree.EndUpdate();
+}
+</code></pre>
+<hr>
+<h3 id="visibility-control">Visibility Control</h3>
+<h4 id="check-visibility">Check Visibility</h4>
+<pre><code class="lang-csharp">bool visible = tree.IsNodeVisible(node);
+</code></pre>
+<h4 id="ensure-visibility">Ensure Visibility</h4>
+<pre><code class="lang-csharp">tree.MakeNodeVisible(node);
+</code></pre>
+<hr>
+<h3 id="clearing-data">Clearing Data</h3>
+<pre><code class="lang-csharp">tree.ClearNodes();
+tree.ClearSelection();
+</code></pre>
+<hr>
+<h3 id="sorting">Sorting</h3>
+<pre><code class="lang-csharp">tree.CustomSort = new CustomComparer();
+</code></pre>
+<ul>
+<li>Allows custom node ordering</li>
+<li>Applies across the tree</li>
+</ul>
+<hr>
+<h3 id="dynamic-loading-lazy-loading">Dynamic Loading (Lazy Loading)</h3>
+<p>Used when loading large datasets.</p>
+<pre><code class="lang-csharp">node.HasChildren = true;
+</code></pre>
+<h4 id="load-on-demand">Load on Demand</h4>
+<pre><code class="lang-csharp">void OnBeforeExpandNode(ITreeNode node)
+{
+    if (!node.Nodes.Any())
+    {
+        node.Nodes.Append(&quot;Loaded dynamically&quot;);
+    }
+}
+</code></pre>
+<hr>
+<h3 id="drag-and-drop">Drag and Drop</h3>
+<p>Selection plays a key role in drag-and-drop operations.</p>
+<p>Typical workflow:</p>
+<ol>
+<li>Get selected nodes</li>
+<li>Start drag operation</li>
+<li>Use hit testing to determine drop target</li>
+</ol>
+<hr>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Input Mask </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Input Mask ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="input-mask">Input Mask</h1>
+
+<p>Input masks restrict user input and help ensure that values are entered in a valid format.<br>
+They guide users by enforcing a predefined structure while typing.</p>
+<p>For example, you can apply a phone number mask such as <code>(000)000-00-00</code>, ensuring that only digits are entered in the required format.</p>
+<p><img src="../Images/masks-sample1.png" alt="Input Mask Example"></p>
+<p>Input masks are applied only when an editor is focused.<br>
+Masks are supported by all <a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a> implementations.</p>
+<hr>
+<h2 id="mask-types">Mask Types</h2>
+<p>Editors support multiple mask types. Each type defines how user input is validated and formatted.<br>
+You can use predefined mask expressions or create custom ones.</p>
+<h3 id="datetime">DateTime</h3>
+<p>Allows you to define masks for date and time values.</p>
+<ul>
+<li>Uses standard .NET date and time format strings</li>
+<li>Supports formatted input like full date/time, short date, etc.</li>
+</ul>
+<p>Learn more:<br>
+<a href="https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings">https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings</a></p>
+<hr>
+<h3 id="numeric">Numeric</h3>
+<p>Restricts input to numeric values.</p>
+<ul>
+<li>Supports integers, floating-point numbers, currency, and percentages</li>
+<li>Provides built-in formatting and validation</li>
+</ul>
+<hr>
+<h3 id="extended-regular-expressions">Extended Regular Expressions</h3>
+<p>Provides advanced pattern-based input validation.</p>
+<p>Use this mask type when you need to:</p>
+<ul>
+<li>Accept specific characters at fixed positions (for example, license keys)</li>
+<li>Support variable-length input (for example, email addresses)</li>
+<li>Allow multiple valid formats</li>
+<li>Enable auto-completion scenarios</li>
+</ul>
+<hr>
+<h3 id="simple">Simple</h3>
+<p>Defines fixed-format input without alternatives.</p>
+<ul>
+<li>Best suited for structured values like phone numbers or ZIP codes</li>
+<li>Easy to configure and use</li>
+</ul>
+<hr>
+<h3 id="timespan">TimeSpan</h3>
+<p>Allows users to enter time interval values.</p>
+<ul>
+<li>Supports input for days, hours, minutes, seconds, and fractions</li>
+<li>Enables structured time duration entry</li>
+</ul>
+<hr>
+<h3 id="simplified-regular-expressions">Simplified Regular Expressions</h3>
+<p>A simplified version of Extended Regular Expressions.</p>
+<ul>
+<li>Provides backward compatibility</li>
+<li>Easier to use for basic pattern scenarios</li>
+<li>Recommended only when full regex support is not required</li>
+</ul>
+<hr>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Input masks enforce structured and valid input</li>
+<li>Multiple mask types are available for different scenarios</li>
+<li>Use simple masks for fixed formats and regex for complex validation</li>
+<li>Apply masks through editor-specific mask properties</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

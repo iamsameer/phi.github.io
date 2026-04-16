@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IToolTipItemCollection </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IToolTipItemCollection ">
+    
+    <meta name="description" content="Represents a collection of items that define the content regions of a rich tooltip.  This interface is implemented by the PhiRobotics UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection">
+
+
+
+  <h1 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection" class="text-break">Interface IToolTipItemCollection</h1>
+  <div class="markdown level0 summary"><p>Represents a collection of items that define the content regions of a rich tooltip.</p>
+<p>
+This interface is implemented by the PhiRobotics UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator">IEnumerable.GetEnumerator()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.ToolTips.html">ToolTips</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IToolTipItemCollection : IEnumerable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html#PhiRobotics_UI_ToolTips_IRichToolTip_Items">Items</a> property provides access to this collection.</p>
+<p>
+Each item in the collection represents a visual region (such as title, content, 
+or separator) within the tooltip.
+</p>
+<p>
+Items are displayed vertically in the tooltip, in the same order in which they 
+are added to the collection.
+</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Count_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Count*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Count" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Count">Count</h4>
+  <div class="markdown level1 summary"><p>Gets the number of items in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>The total number of items contained in the collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Item_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Item*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Item_System_Int32_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Item(System.Int32)">this[int]</h4>
+  <div class="markdown level1 summary"><p>Gets the item at the specified <code class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBaseRichToolTipItem this[int index] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The zero-based index of the item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html">IBaseRichToolTipItem</a></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html">IBaseRichToolTipItem</a> at the specified index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>Thrown when
+<code class="paramref">index</code> is less than 0 or greater than or equal to
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipItemCollection.html#PhiRobotics_UI_ToolTips_IToolTipItemCollection_Count">Count</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_RichToolTip_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.RichToolTip*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_RichToolTip" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.RichToolTip">RichToolTip</h4>
+  <div class="markdown level1 summary"><p>Gets the rich tooltip that owns this collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRichToolTip RichToolTip { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> instance that contains this collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Add_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Add*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Add_System_String_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Add(System.String)">Add(string)</h4>
+  <div class="markdown level1 summary"><p>Creates a new text item with the specified <code class="paramref">text</code> and adds it
+to the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRichToolTipItem Add(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The text to assign to the item's
+<a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipItem.html#PhiRobotics_UI_ToolTips_IRichToolTipItem_Text">Text</a> property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipItem.html">IRichToolTipItem</a></td>
+        <td><p>The created <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipItem.html">IRichToolTipItem</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Add_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is typically used to add descriptive content to the tooltip body.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddSeparator_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.AddSeparator*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddSeparator" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.AddSeparator">AddSeparator()</h4>
+  <div class="markdown level1 summary"><p>Creates a new separator item and adds it to the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRichToolTipSeparatorItem AddSeparator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.html">IRichToolTipSeparatorItem</a></td>
+        <td><p>The created <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.html">IRichToolTipSeparatorItem</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddSeparator_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>A separator visually divides content into logical sections.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddTitle_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.AddTitle*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddTitle_System_String_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.AddTitle(System.String)">AddTitle(string)</h4>
+  <div class="markdown level1 summary"><p>Creates a new title item with the specified <code class="paramref">text</code> and adds it
+to the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IRichToolTipTitleItem AddTitle(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>The title text.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.html">IRichToolTipTitleItem</a></td>
+        <td><p>The created <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.html">IRichToolTipTitleItem</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddTitle_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Title items are typically displayed with emphasized styling and are used as
+headers or section titles.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Clear_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Clear*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Clear" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all items from the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Clear()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Contains_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Contains*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_Contains_PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.Contains(PhiRobotics.UI.ToolTips.IBaseRichToolTipItem)">Contains(IBaseRichToolTipItem)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified <code class="paramref">item</code> exists in the
+collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(IBaseRichToolTipItem item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html">IBaseRichToolTipItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html">IBaseRichToolTipItem</a> to locate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the item exists in the collection; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown when
+<code class="paramref">item</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_RemoveAt_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.RemoveAt*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IToolTipItemCollection_RemoveAt_System_Int32_" data-uid="PhiRobotics.UI.ToolTips.IToolTipItemCollection.RemoveAt(System.Int32)">RemoveAt(int)</h4>
+  <div class="markdown level1 summary"><p>Removes the item at the specified <code class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The zero-based index of the item to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p>Thrown when
+<code class="paramref">index</code> is less than 0 or greater than or equal to
+<a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipItemCollection.html#PhiRobotics_UI_ToolTips_IToolTipItemCollection_Count">Count</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

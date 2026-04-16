@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IUIFactoryService </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IUIFactoryService ">
+    
+    <meta name="description" content="Defines a service for accessing UI-related factories.  The IUIFactoryService interface is implemented by the PhiRobotics ui framework  and is not intended for consumer implementation.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.IUIFactoryService">
+
+
+
+  <h1 id="PhiRobotics_UI_IUIFactoryService" data-uid="PhiRobotics.UI.IUIFactoryService" class="text-break">Interface IUIFactoryService</h1>
+  <div class="markdown level0 summary"><p>Defines a service for accessing UI-related factories.</p>
+<p>
+The <b>IUIFactoryService</b> interface is implemented by the <b>PhiRobotics</b> ui framework 
+and is not intended for consumer implementation.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_IUIFactoryService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IUIFactoryService</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_IUIFactoryService_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This service acts as a centralized entry point for obtaining factory instances used to
+create UI components and resources, such as alert panels and SVG images.</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_AlertPanelFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.AlertPanelFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_AlertPanelFactory" data-uid="PhiRobotics.UI.IUIFactoryService.AlertPanelFactory">AlertPanelFactory</h4>
+  <div class="markdown level1 summary"><p>Gets the factory for creating alert panels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IAlertPanelFactory AlertPanelFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html">IAlertPanelFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_CommonDialogFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.CommonDialogFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_CommonDialogFactory" data-uid="PhiRobotics.UI.IUIFactoryService.CommonDialogFactory">CommonDialogFactory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ICommonDialogFactory CommonDialogFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Dialogs.ICommonDialogFactory.html">ICommonDialogFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_FlyOutPanelFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.FlyOutPanelFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_FlyOutPanelFactory" data-uid="PhiRobotics.UI.IUIFactoryService.FlyOutPanelFactory">FlyOutPanelFactory</h4>
+  <div class="markdown level1 summary"><p>Gets the factory for ctrating flyout panels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFlyOutPanelFactory FlyOutPanelFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.html">IFlyOutPanelFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_InputEditorFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.InputEditorFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_InputEditorFactory" data-uid="PhiRobotics.UI.IUIFactoryService.InputEditorFactory">InputEditorFactory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IInputEditorFactory InputEditorFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.IInputEditorFactory.html">IInputEditorFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_SVGFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.SVGFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_SVGFactory" data-uid="PhiRobotics.UI.IUIFactoryService.SVGFactory">SVGFactory</h4>
+  <div class="markdown level1 summary"><p>Gets the factory for creating SVG images.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISVGFactory SVGFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ISVGFactory.html">ISVGFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_SplashScreenFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.SplashScreenFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_SplashScreenFactory" data-uid="PhiRobotics.UI.IUIFactoryService.SplashScreenFactory">SplashScreenFactory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISplashScreenFactory SplashScreenFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ISplashScreenFactory.html">ISplashScreenFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_ToolTipFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.ToolTipFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_ToolTipFactory" data-uid="PhiRobotics.UI.IUIFactoryService.ToolTipFactory">ToolTipFactory</h4>
+  <div class="markdown level1 summary"><p>Gets the manager which gives a factory to create Tooltips.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IToolTipFactory ToolTipFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipFactory.html">IToolTipFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_TreeFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.TreeFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_TreeFactory" data-uid="PhiRobotics.UI.IUIFactoryService.TreeFactory">TreeFactory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITreeFactory TreeFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeFactory.html">ITreeFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_WaitFormFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.WaitFormFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_WaitFormFactory" data-uid="PhiRobotics.UI.IUIFactoryService.WaitFormFactory">WaitFormFactory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWaitFormFactory WaitFormFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.IWaitFormFactory.html">IWaitFormFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_IUIFactoryService_WizardFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.WizardFactory*"></a>
+  <h4 id="PhiRobotics_UI_IUIFactoryService_WizardFactory" data-uid="PhiRobotics.UI.IUIFactoryService.WizardFactory">WizardFactory</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWizardFactory WizardFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.IWizardFactory.html">IWizardFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

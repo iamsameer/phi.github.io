@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ITreeNodeSelection </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ITreeNodeSelection ">
+    
+    <meta name="description" content="Represents the current selection within an .  The ITreeNodeSelection interface is implemented by the UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ITreeNodeSelection">
+
+
+
+  <h1 id="PhiRobotics_UI_ITreeNodeSelection" data-uid="PhiRobotics.UI.ITreeNodeSelection" class="text-break">Interface ITreeNodeSelection</h1>
+  <div class="markdown level0 summary"><p>Represents the current selection within an <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>.</p>
+<p>
+The <b>ITreeNodeSelection</b> interface is implemented by the UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1.count">IReadOnlyCollection&lt;ITreeNode&gt;.Count</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator">IEnumerable&lt;ITreeNode&gt;.GetEnumerator()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ITreeNodeSelection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITreeNodeSelection : IReadOnlyCollection&lt;ITreeNode&gt;, IEnumerable&lt;ITreeNode&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ITreeNodeSelection_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Provides a read-only collection of selected <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> instances.</p>
+<p>
+The selection acts as the primary source for:
+</p>
+<ul><li>Drag-and-drop operations</li><li>Cut, Copy, and Paste operations</li></ul>
+<p>
+The collection reflects the current selection state of the tree and cannot be 
+modified directly. Selection is managed by the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> implementation.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_ITreeNodeSelection_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to iterate through the currently
+selected nodes in the tree and how to check whether a specific node
+is part of the current selection.</p>
+<pre><code class="lang-cs">foreach (ITreeNode node in tree.NodeSelection)
+{
+    Console.WriteLine(node.Text);
+}
+<!-- -->
+if (tree.NodeSelection.Contains(someNode))
+{
+    Console.WriteLine("The node is selected.");
+}
+</code></pre>
+
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_ITreeNodeSelection_Contains_" data-uid="PhiRobotics.UI.ITreeNodeSelection.Contains*"></a>
+  <h4 id="PhiRobotics_UI_ITreeNodeSelection_Contains_PhiRobotics_UI_ITreeNode_" data-uid="PhiRobotics.UI.ITreeNodeSelection.Contains(PhiRobotics.UI.ITreeNode)">Contains(ITreeNode)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the specified node is currently selected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(ITreeNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The node to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the node is selected; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

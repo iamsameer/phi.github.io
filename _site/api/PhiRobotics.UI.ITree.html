@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ITree </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ITree ">
+    
+    <meta name="description" content="Represents a control that displays a hierarchical list of tree nodes.  The ITree interface is implemented by the UI library and is not intended  to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ITree">
+
+
+
+  <h1 id="PhiRobotics_UI_ITree" data-uid="PhiRobotics.UI.ITree" class="text-break">Interface ITree</h1>
+  <div class="markdown level0 summary"><p>Represents a control that displays a hierarchical list of tree nodes.</p>
+<p>
+The <b>ITree</b> interface is implemented by the UI library and is not intended 
+to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.endinvoke">ISynchronizeInvoke.EndInvoke(IAsyncResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invoke">ISynchronizeInvoke.Invoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invokerequired">ISynchronizeInvoke.InvokeRequired</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ITree_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ITree : ISynchronizeInvoke, IWin32Window, IComponent, IDisposable, IDisposable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ITree_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Instances of <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> are created using
+<a class="xref" href="PhiRobotics.UI.ITreeFactory.html#PhiRobotics_UI_ITreeFactory_Create_PhiRobotics_UI_ITreeEventHandlers_">Create(ITreeEventHandlers)</a>.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> instance is managed by the consumer. 
+The consumer is responsible for disposing the tree when it is no longer needed.
+</p>
+<p>
+The tree displays data using nodes. Use the 
+<a class="xref" href="PhiRobotics.UI.ITreeNodeCollection.html#PhiRobotics_UI_ITreeNodeCollection_Append_System_String_System_Object_">Append(string, object)</a> method to add a new node 
+to the tree.
+</p>
+<p>
+The <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_RootNodes">RootNodes</a> property provides access to nodes at the 
+tree’s root level. Each node has an <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Nodes">Nodes</a> collection 
+that stores its child nodes.
+</p>
+<p>
+The following API can be used to retrieve nodes within the tree:
+<ul><li><a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_FocusedNode">FocusedNode</a> – Gets or sets the currently focused node.</li><li><a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_NodeSelection">NodeSelection</a> – Gets the collection of selected nodes.</li></ul>
+
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_ITree_CustomSort_" data-uid="PhiRobotics.UI.ITree.CustomSort*"></a>
+  <h4 id="PhiRobotics_UI_ITree_CustomSort" data-uid="PhiRobotics.UI.ITree.CustomSort">CustomSort</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a custom comparer used to sort <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IComparer&lt;ITreeNode&gt; CustomSort { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer</a>&lt;<a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_CustomSort_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Assign an implementation of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icomparer-1">IComparer&lt;T&gt;</a> to define
+custom node sorting logic.</p>
+<example>
+<pre><code class="lang-cs">public class CustomNodeComparer : IComparer&lt;ITreeNode&gt;
+{
+    public int Compare(ITreeNode x, ITreeNode y)
+    {
+        return string.Compare(x.Text, y.Text);
+    }
+}
+<!-- -->
+tree.CustomSort = new CustomNodeComparer();
+</code></pre>
+</example>
+<p>Assign <code>null</code> to restore the default sorting behavior.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITree_FocusedNode_" data-uid="PhiRobotics.UI.ITree.FocusedNode*"></a>
+  <h4 id="PhiRobotics_UI_ITree_FocusedNode" data-uid="PhiRobotics.UI.ITree.FocusedNode">FocusedNode</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the node that currently has input focus within the tree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITreeNode FocusedNode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_FocusedNode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <b>FocusedNode</b> property allows you to retrieve or change the node
+that currently has focus. When the focused node changes, the corresponding
+focus-change notification is raised.</p>
+<p>If an invisible node (see <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Visible">Visible</a>) is assigned to
+this property, the value is reset to <code>null</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if the specified node does not belong to this tree.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ITree_ImageCollection_" data-uid="PhiRobotics.UI.ITree.ImageCollection*"></a>
+  <h4 id="PhiRobotics_UI_ITree_ImageCollection" data-uid="PhiRobotics.UI.ITree.ImageCollection">ImageCollection</h4>
+  <div class="markdown level1 summary"><p>Gets the collection used to resolve images based on image keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IImageCollection ImageCollection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.IImageCollection.html">IImageCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_ImageCollection_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <b>ImageCollection</b> property represents a storage used to resolve images
+based on the keys specified in <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_ImageKey">ImageKey</a> or
+<a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_ExpandedImageKey">ExpandedImageKey</a>.</p>
+<p>When a node's image needs to be displayed, the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> control
+retrieves the image corresponding to the specified key from this collection.</p>
+<p>This allows centralized management of images used by nodes in the tree.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITree_NodeSelection_" data-uid="PhiRobotics.UI.ITree.NodeSelection*"></a>
+  <h4 id="PhiRobotics_UI_ITree_NodeSelection" data-uid="PhiRobotics.UI.ITree.NodeSelection">NodeSelection</h4>
+  <div class="markdown level1 summary"><p>Gets the collection representing the currently selected nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITreeNodeSelection NodeSelection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNodeSelection.html">ITreeNodeSelection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ITree_RootNodes_" data-uid="PhiRobotics.UI.ITree.RootNodes*"></a>
+  <h4 id="PhiRobotics_UI_ITree_RootNodes" data-uid="PhiRobotics.UI.ITree.RootNodes">RootNodes</h4>
+  <div class="markdown level1 summary"><p>Gets access to the collection of the tree's root nodes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITreeNodeCollection RootNodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNodeCollection.html">ITreeNodeCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_RootNodes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <b>RootNodes</b> property returns a collection of root-level nodes.
+Each node in the collection may contain child nodes accessible through the
+<a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Nodes">Nodes</a> property. Child nodes reference their parent
+through the <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_ParentNode">ParentNode</a> property.</p>
+<p><b>Tree Traversal</b></p>
+<p>
+You can enumerate nodes recursively by starting with a root node and then 
+traversing its child nodes.
+</p>
+<ul><li><a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_RootNodes">RootNodes</a> – Provides access to root nodes.</li><li>
+<a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Nodes">Nodes</a> – Provides access to a node’s child nodes. 
+Use <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_HasChildren">HasChildren</a> to determine whether a node has children.
+</li><li><a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_ParentNode">ParentNode</a> – Provides access to a node’s parent.</li></ul>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_ITree_BeginLoad_" data-uid="PhiRobotics.UI.ITree.BeginLoad*"></a>
+  <h4 id="PhiRobotics_UI_ITree_BeginLoad" data-uid="PhiRobotics.UI.ITree.BeginLoad">BeginLoad()</h4>
+  <div class="markdown level1 summary"><p>Prevents updates to the tree structure caused by adding, deleting, or modifying nodes
+until the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_EndLoad">EndLoad()</a> method is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BeginLoad()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ITree_BeginLoad_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <b>BeginLoad</b> and <b>EndLoad</b> methods internally call
+<a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_BeginUpdate">BeginUpdate()</a> and <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_EndUpdate">EndUpdate()</a>.
+Therefore, there is no need to call these methods explicitly when using
+<b>BeginLoad</b> and <b>EndLoad</b>.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITree_BeginUpdate_" data-uid="PhiRobotics.UI.ITree.BeginUpdate*"></a>
+  <h4 id="PhiRobotics_UI_ITree_BeginUpdate" data-uid="PhiRobotics.UI.ITree.BeginUpdate">BeginUpdate()</h4>
+  <div class="markdown level1 summary"><p>Locks the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>, preventing visual updates of the object and its elements until
+the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_EndUpdate">EndUpdate()</a> or <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_CancelUpdate">CancelUpdate()</a> method is called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BeginUpdate()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ITree_BeginUpdate_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Each call to <b>BeginUpdate</b> must be paired with a call to <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_EndUpdate">EndUpdate()</a> or
+<a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_CancelUpdate">CancelUpdate()</a>. To ensure that <b>EndUpdate</b>/<b>CancelUpdate</b> is always called
+even if an exception occurs, use the try…finally statement.</p>
+<p>
+To prevent excessive updates when the node structure is changed, use <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_BeginLoad">BeginLoad()</a> 
+and <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_EndLoad">EndLoad()</a>methods.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITree_CancelUpdate_" data-uid="PhiRobotics.UI.ITree.CancelUpdate*"></a>
+  <h4 id="PhiRobotics_UI_ITree_CancelUpdate" data-uid="PhiRobotics.UI.ITree.CancelUpdate">CancelUpdate()</h4>
+  <div class="markdown level1 summary"><p>Unlocks the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> object after it has been locked by the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_BeginUpdate">BeginUpdate()</a>
+method, without causing an immediate visual update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CancelUpdate()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ITree_ClearNodes_" data-uid="PhiRobotics.UI.ITree.ClearNodes*"></a>
+  <h4 id="PhiRobotics_UI_ITree_ClearNodes" data-uid="PhiRobotics.UI.ITree.ClearNodes">ClearNodes()</h4>
+  <div class="markdown level1 summary"><p>Removes all nodes from the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearNodes()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ITree_ClearSelection_" data-uid="PhiRobotics.UI.ITree.ClearSelection*"></a>
+  <h4 id="PhiRobotics_UI_ITree_ClearSelection" data-uid="PhiRobotics.UI.ITree.ClearSelection">ClearSelection()</h4>
+  <div class="markdown level1 summary"><p>Unselects all nodes, and removes them from the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_NodeSelection">NodeSelection</a> collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ClearSelection()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ITree_EndLoad_" data-uid="PhiRobotics.UI.ITree.EndLoad*"></a>
+  <h4 id="PhiRobotics_UI_ITree_EndLoad" data-uid="PhiRobotics.UI.ITree.EndLoad">EndLoad()</h4>
+  <div class="markdown level1 summary"><p>Forces the control to update itself after the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_BeginLoad">BeginLoad()</a> method has
+been called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void EndLoad()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ITree_EndUpdate_" data-uid="PhiRobotics.UI.ITree.EndUpdate*"></a>
+  <h4 id="PhiRobotics_UI_ITree_EndUpdate" data-uid="PhiRobotics.UI.ITree.EndUpdate">EndUpdate()</h4>
+  <div class="markdown level1 summary"><p>Unlocks the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> object after a call to the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_BeginUpdate">BeginUpdate()</a> method and
+causes an immediate visual update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void EndUpdate()</code></pre>
+  </div>
+
+
+  <a id="PhiRobotics_UI_ITree_Find_" data-uid="PhiRobotics.UI.ITree.Find*"></a>
+  <h4 id="PhiRobotics_UI_ITree_Find_PhiRobotics_UI_ITreeNodeSearchCondition_PhiRobotics_UI_ITreeNode_System_Boolean_" data-uid="PhiRobotics.UI.ITree.Find(PhiRobotics.UI.ITreeNodeSearchCondition,PhiRobotics.UI.ITreeNode,System.Boolean)">Find(ITreeNodeSearchCondition, ITreeNode, bool)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns nodes that match the specified search condition, starting from a pivot node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;ITreeNode&gt; Find(ITreeNodeSearchCondition condition, ITreeNode pivot, bool recurse = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNodeSearchCondition.html">ITreeNodeSearchCondition</a></td>
+        <td><span class="parametername">condition</span></td>
+        <td><p>The search condition to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><span class="parametername">pivot</span></td>
+        <td><p>The node from which the search begins.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">recurse</span></td>
+        <td><p>If <code>true</code>, child nodes are searched recursively.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a>&gt;</td>
+        <td><p>A read-only collection of matching nodes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">condition</code> or
+<code class="paramref">pivot</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">pivot</code> does not belong
+to this tree.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ITree_Find_" data-uid="PhiRobotics.UI.ITree.Find*"></a>
+  <h4 id="PhiRobotics_UI_ITree_Find_PhiRobotics_UI_ITreeNodeSearchCondition_System_Boolean_" data-uid="PhiRobotics.UI.ITree.Find(PhiRobotics.UI.ITreeNodeSearchCondition,System.Boolean)">Find(ITreeNodeSearchCondition, bool)</h4>
+  <div class="markdown level1 summary"><p>Finds and returns nodes that match the specified search condition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;ITreeNode&gt; Find(ITreeNodeSearchCondition condition, bool recurse = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNodeSearchCondition.html">ITreeNodeSearchCondition</a></td>
+        <td><span class="parametername">condition</span></td>
+        <td><p>The search condition to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">recurse</span></td>
+        <td><p>If <code>true</code>, child nodes are searched recursively;
+otherwise, only root nodes are evaluated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a>&gt;</td>
+        <td><p>A read-only collection of matching nodes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">condition</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ITree_HitTest_" data-uid="PhiRobotics.UI.ITree.HitTest*"></a>
+  <h4 id="PhiRobotics_UI_ITree_HitTest_System_Drawing_Point_" data-uid="PhiRobotics.UI.ITree.HitTest(System.Drawing.Point)">HitTest(Point)</h4>
+  <div class="markdown level1 summary"><p>Determines what element of the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> is located at the specified point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TreeHitTestData HitTest(Point point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The location to test, specified in client coordinates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.TreeHitTestData.html">TreeHitTestData</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.TreeHitTestData.html">TreeHitTestData</a> object that contains:</p>
+<ul><li>
+The <a class="xref" href="PhiRobotics.UI.TreeHitTestData.html#PhiRobotics_UI_TreeHitTestData_Node">Node</a> associated with the specified point, 
+if a node exists at that location.
+</li><li>
+The <a class="xref" href="PhiRobotics.UI.TreeHitTestData.html#PhiRobotics_UI_TreeHitTestData_Location">Location</a> describing the exact part of the 
+tree control at that position (for example, node content, expand button, 
+or empty area).
+</li></ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_HitTest_System_Drawing_Point__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is typically used during mouse operations such as
+drag-and-drop to determine which node or tree element is located
+under a specific cursor position.</p>
+<p>If the specified point does not correspond to a node, the returned
+<a class="xref" href="PhiRobotics.UI.TreeHitTestData.html#PhiRobotics_UI_TreeHitTestData_Node">Node</a> may be <code>null</code>, while
+<a class="xref" href="PhiRobotics.UI.TreeHitTestData.html#PhiRobotics_UI_TreeHitTestData_Location">Location</a> still describes the hit area.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITree_IsNodeVisible_" data-uid="PhiRobotics.UI.ITree.IsNodeVisible*"></a>
+  <h4 id="PhiRobotics_UI_ITree_IsNodeVisible_PhiRobotics_UI_ITreeNode_" data-uid="PhiRobotics.UI.ITree.IsNodeVisible(PhiRobotics.UI.ITreeNode)">IsNodeVisible(ITreeNode)</h4>
+  <div class="markdown level1 summary"><p>Checks whether a specific <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> is currently visible within the
+<a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsNodeVisible(ITreeNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> to inspect for visibility.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>true if the node is currently displayed on the screen within the control; otherwise,
+false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_IsNodeVisible_PhiRobotics_UI_ITreeNode__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method determines whether the specified node is currently visible on the screen within
+the control. It considers the actual visibility of the node, taking into account scrolling
+and a large number of nodes that may extend beyond the control's visible area.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ITree_MakeNodeVisible_" data-uid="PhiRobotics.UI.ITree.MakeNodeVisible*"></a>
+  <h4 id="PhiRobotics_UI_ITree_MakeNodeVisible_PhiRobotics_UI_ITreeNode_" data-uid="PhiRobotics.UI.ITree.MakeNodeVisible(PhiRobotics.UI.ITreeNode)">MakeNodeVisible(ITreeNode)</h4>
+  <div class="markdown level1 summary"><p>Ensures that a specific <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> is made visible within the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>
+control.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool MakeNodeVisible(ITreeNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> to be made visible.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>true if the node was successfully made visible; otherwise, false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ITree_MakeNodeVisible_PhiRobotics_UI_ITreeNode__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method ensures that the specified node is made visible within the control's visible area.
+If the node is already visible, the method does nothing.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

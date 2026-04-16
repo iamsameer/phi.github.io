@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class TreeDragOverEventArgs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class TreeDragOverEventArgs ">
+    
+    <meta name="description" content="Provides data for the .">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.TreeDragOverEventArgs">
+
+
+
+  <h1 id="PhiRobotics_UI_TreeDragOverEventArgs" data-uid="PhiRobotics.UI.TreeDragOverEventArgs" class="text-break">Class TreeDragOverEventArgs</h1>
+  <div class="markdown level0 summary"><p>Provides data for the <a class="xref" href="PhiRobotics.UI.ITreeEventHandlers.html#PhiRobotics_UI_ITreeEventHandlers_OnDragOver_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragOverEventArgs_">OnDragOver(ITree, TreeDragOverEventArgs)</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
+    <div class="level2"><span class="xref">TreeDragOverEventArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_TreeDragOverEventArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TreeDragOverEventArgs : EventArgs</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_TreeDragOverEventArgs_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This event is raised when dragged data enters or moves within the bounds
+of the <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> control.</p>
+<p>The subscriber should:</p>
+<ul><li>Validate the dragged <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html#PhiRobotics_UI_TreeDragOverEventArgs_Data">Data</a>.</li><li>Inspect the target location using <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html#PhiRobotics_UI_TreeDragOverEventArgs_TreeHitTestData">TreeHitTestData</a>.</li><li>Evaluate <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html#PhiRobotics_UI_TreeDragOverEventArgs_KeyState">KeyState</a> to determine user intent.</li><li>Assign an appropriate value to <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html#PhiRobotics_UI_TreeDragOverEventArgs_Effect">Effect</a>.</li></ul>
+<p>Setting <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html#PhiRobotics_UI_TreeDragOverEventArgs_Effect">Effect</a> to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dragdropeffects#system-windows-forms-dragdropeffects-none">None</a>
+prevents dropping.</p>
+</div>
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="PhiRobotics_UI_TreeDragOverEventArgs__ctor_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.#ctor*"></a>
+  <h4 id="PhiRobotics_UI_TreeDragOverEventArgs__ctor_System_Windows_Forms_IDataObject_System_Int32_PhiRobotics_UI_TreeHitTestData_System_Windows_Forms_DragDropEffects_System_Windows_Forms_DragDropEffects_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.#ctor(System.Windows.Forms.IDataObject,System.Int32,PhiRobotics.UI.TreeHitTestData,System.Windows.Forms.DragDropEffects,System.Windows.Forms.DragDropEffects)">TreeDragOverEventArgs(IDataObject, int, TreeHitTestData, DragDropEffects, DragDropEffects)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html">TreeDragOverEventArgs</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TreeDragOverEventArgs(IDataObject data, int keyState, TreeHitTestData hitTestData, DragDropEffects allowedEffects, DragDropEffects effect)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idataobject">IDataObject</a></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The data being dragged.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">keyState</span></td>
+        <td><p>The current state of SHIFT, CTRL, ALT keys and mouse buttons.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.TreeHitTestData.html">TreeHitTestData</a></td>
+        <td><span class="parametername">hitTestData</span></td>
+        <td><p>Information about the node and location under the cursor.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dragdropeffects">DragDropEffects</a></td>
+        <td><span class="parametername">allowedEffects</span></td>
+        <td><p>The drag-and-drop operations allowed by the source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dragdropeffects">DragDropEffects</a></td>
+        <td><span class="parametername">effect</span></td>
+        <td><p>The current target drop effect.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_TreeDragOverEventArgs_AllowedEffects_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.AllowedEffects*"></a>
+  <h4 id="PhiRobotics_UI_TreeDragOverEventArgs_AllowedEffects" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.AllowedEffects">AllowedEffects</h4>
+  <div class="markdown level1 summary"><p>Gets the drag-and-drop operations allowed by the source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DragDropEffects AllowedEffects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dragdropeffects">DragDropEffects</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_TreeDragOverEventArgs_Data_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.Data*"></a>
+  <h4 id="PhiRobotics_UI_TreeDragOverEventArgs_Data" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.Data">Data</h4>
+  <div class="markdown level1 summary"><p>Gets the data associated with the drag operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDataObject Data { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.idataobject">IDataObject</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_TreeDragOverEventArgs_Effect_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.Effect*"></a>
+  <h4 id="PhiRobotics_UI_TreeDragOverEventArgs_Effect" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.Effect">Effect</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the target drop effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DragDropEffects Effect { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dragdropeffects">DragDropEffects</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_TreeDragOverEventArgs_Effect_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The subscriber must assign a value from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dragdropeffects">DragDropEffects</a>
+to indicate the intended operation.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_TreeDragOverEventArgs_KeyState_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.KeyState*"></a>
+  <h4 id="PhiRobotics_UI_TreeDragOverEventArgs_KeyState" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.KeyState">KeyState</h4>
+  <div class="markdown level1 summary"><p>Gets the current state of the SHIFT, CTRL, ALT keys and mouse buttons.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int KeyState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_TreeDragOverEventArgs_TreeHitTestData_" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.TreeHitTestData*"></a>
+  <h4 id="PhiRobotics_UI_TreeDragOverEventArgs_TreeHitTestData" data-uid="PhiRobotics.UI.TreeDragOverEventArgs.TreeHitTestData">TreeHitTestData</h4>
+  <div class="markdown level1 summary"><p>Gets information about the node and location under the cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TreeHitTestData TreeHitTestData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.TreeHitTestData.html">TreeHitTestData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

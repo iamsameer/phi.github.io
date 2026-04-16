@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IWizardFactory </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IWizardFactory ">
+    
+    <meta name="description" content="Factory that provides methods to create instances of  used to discover and execute wizards, and to create instances of  used to display wizard dialogs.  The IWizardFactory interface is implemented by the PhiRobotics UI library and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Wizard.IWizardFactory">
+
+
+
+  <h1 id="PhiRobotics_UI_Wizard_IWizardFactory" data-uid="PhiRobotics.UI.Wizard.IWizardFactory" class="text-break">Interface IWizardFactory</h1>
+  <div class="markdown level0 summary"><p>Factory that provides methods to create instances of <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a>
+used to discover and execute wizards, and to create instances of
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a> used to display wizard dialogs.</p>
+<p>
+The <b>IWizardFactory</b> interface is implemented by the <b>PhiRobotics</b>
+UI library and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Wizard.html">Wizard</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardFactory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWizardFactory</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardFactory_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>The <a class="xref" href="PhiRobotics.UI.Wizard.IWizardFactory.html">IWizardFactory</a> interface provides a mechanism to create
+wizard infrastructure components used by the application.</p>
+<p>
+The created <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> is responsible for discovering wizard
+assemblies, registering available wizards, and executing wizard dialogs.
+</p>
+<p>
+Consumer code obtains an instance via the
+<a class="xref" href="PhiRobotics.UI.IUIFactoryService.html#PhiRobotics_UI_IUIFactoryService_WizardFactory">WizardFactory</a> property. The lifetime of the
+factory instance is managed by the framework.
+</p>
+<p>
+Instances of <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> and <a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a> created
+by this factory are owned by the consumer. The consumer is responsible for
+managing their lifetime and disposing them when they are no longer needed.
+</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardFactory_CreateHost_" data-uid="PhiRobotics.UI.Wizard.IWizardFactory.CreateHost*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardFactory_CreateHost_System_String_PhiRobotics_Services_ILoggingService_" data-uid="PhiRobotics.UI.Wizard.IWizardFactory.CreateHost(System.String,PhiRobotics.Services.ILoggingService)">CreateHost(string, ILoggingService)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWizardHost CreateHost(string wizardsDirectory, ILoggingService loggingService = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">wizardsDirectory</span></td>
+        <td><p>The directory containing wizard assemblies.
+The host scans this directory for assemblies that export wizard types using
+the <a class="xref" href="PhiRobotics.UI.Wizard.ExportedWizardAttribute.html">ExportedWizardAttribute</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILoggingService</span></td>
+        <td><span class="parametername">loggingService</span></td>
+        <td><p>An optional <span class="xref">PhiRobotics.Services.ILoggingService</span> used
+to record diagnostic information, such as wizard discovery results, loading
+errors, or runtime exceptions. If <code>null</code>, logging is disabled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a></td>
+        <td><p>An initialized <a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a> that can be used to
+execute wizards discovered in the specified directory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardFactory_CreateHost_System_String_PhiRobotics_Services_ILoggingService__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>During creation, the host scans the specified directory and registers all
+wizard types exported through the <a class="xref" href="PhiRobotics.UI.Wizard.ExportedWizardAttribute.html">ExportedWizardAttribute</a>
+assembly attribute.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if
+<code class="paramref">wizardsDirectory</code> is <code>null</code>, empty, or contains only
+whitespace characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardFactory_CreateWizardDialog_" data-uid="PhiRobotics.UI.Wizard.IWizardFactory.CreateWizardDialog*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardFactory_CreateWizardDialog_PhiRobotics_UI_Wizard_IWizard_System_String_System_Drawing_Image_" data-uid="PhiRobotics.UI.Wizard.IWizardFactory.CreateWizardDialog(PhiRobotics.UI.Wizard.IWizard,System.String,System.Drawing.Image)">CreateWizardDialog(IWizard, string, Image)</h4>
+  <div class="markdown level1 summary"><p>Creates a wizard dialog for the specified wizard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWizardDialog CreateWizardDialog(IWizard wizard, string dialogCaption, Image dialogIcon)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a></td>
+        <td><span class="parametername">wizard</span></td>
+        <td><p>The wizard instance whose pages will be displayed in
+the dialog.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">dialogCaption</span></td>
+        <td><p>The caption displayed in the wizard dialog title
+bar.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
+        <td><span class="parametername">dialogIcon</span></td>
+        <td><p>The icon displayed in the wizard dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a> instance used to display the wizard
+UI.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a></div>
+      <div><a class="xref" href="PhiRobotics.UI.Wizard.IWizardDialog.html">IWizardDialog</a></div>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

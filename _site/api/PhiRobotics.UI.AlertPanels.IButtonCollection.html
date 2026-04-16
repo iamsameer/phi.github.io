@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IButtonCollection </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IButtonCollection ">
+    
+    <meta name="description" content="Represents a collection of buttons displayed within alert windows.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection">
+
+
+
+  <h1 id="PhiRobotics_UI_AlertPanels_IButtonCollection" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection" class="text-break">Interface IButtonCollection</h1>
+  <div class="markdown level0 summary"><p>Represents a collection of buttons displayed within alert windows.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.AlertPanels.html">AlertPanels</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_AlertPanels_IButtonCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IButtonCollection</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_AlertPanels_IButtonCollection_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Alert windows can display custom buttons, typically shown at the bottom of the panel.
+To include custom buttons, create <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> instances using
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html#PhiRobotics_UI_AlertPanels_IAlertPanelFactory_CreateButton_System_String_">CreateButton(string)</a> and add them to the
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons">Buttons</a> collection.</p>
+<p>
+The buttons contained in this collection are applied only to newly created alert windows. 
+Modifying the collection does not affect buttons already displayed in existing alert windows.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_AlertPanels_IButtonCollection_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to create and add custom buttons to an
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html">IAlertPanel</a> and handle their interaction.</p>
+<pre><code class="lang-cs">// Create alert panel.
+IAlertPanel alertPanel = alertPanelFactory.CreatePanel();
+<!-- -->
+// Create a regular custom button.
+IButton button1 = alertPanelFactory.CreateButton("buttonOpen");
+button1.Hint = "Open file";
+button1.Image = Properties.Resources.Folder_16x16;
+<!-- -->
+// Create a check custom button.
+IButton button2 = alertPanelFactory.CreateButton("buttonAlert");
+button2.IsCheckStyle = true;
+button2.Down = true;
+button2.Hint = "Alert On";
+button2.Image = Properties.Resources.Timer_16x16;
+<!-- -->
+// Add buttons to the AlertControl
+alertPanel.Buttons.Add(button1);
+alertPanel.Buttons.Add(button2);
+<!-- -->
+// Subscribe to the events to process button clicks
+alertPanel.ButtonClicked += AlertPanel_ButtonClicked;
+alertPanel.ButtonDownChanged += AlertPanel_ButtonDownChanged;
+<!-- -->
+// Show a sample alert window.
+IAlertPanelInfo panelInfo = alertPanelFactory.CreatePanelInfo("New Window", "Text");
+alertPanel.Show(this, panelInfo);
+<!-- -->
+<!-- -->
+void alertControl1_ButtonDownChanged(object sender, AlertButtonDownChangedEventArgs e)
+{
+    if (e.ButtonName == "buttonOpen")
+    {
+        //...
+    }
+<!-- -->
+}
+<!-- -->
+void alertControl1_ButtonClick(object sender, AlertButtonClickEventArgs e)
+{
+    if (e.ButtonName == "buttonAlert")
+    {
+        //...
+    }
+}
+</code></pre>
+<p>The result is shown below:</p>
+<p><img src="../Images/AlertPanelButtons_Example.png" alt="AlertPanel Buttons Example"></p>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IButtonCollection_Item_" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection.Item*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IButtonCollection_Item_System_Int32_" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection.Item(System.Int32)">this[int]</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the button at the specified index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IButton this[int index] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Zero-based index of the button to retrieve or replace.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> instance at the specified index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IButtonCollection_Add_" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection.Add*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IButtonCollection_Add_PhiRobotics_UI_AlertPanels_IButton_" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection.Add(PhiRobotics.UI.AlertPanels.IButton)">Add(IButton)</h4>
+  <div class="markdown level1 summary"><p>Adds a button to the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Add(IButton button)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a></td>
+        <td><span class="parametername">button</span></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> instance to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>The zero-based index at which the button was added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Thrown if <code class="paramref">button</code>
+is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if <code class="paramref">button</code>
+was not created using <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html#PhiRobotics_UI_AlertPanels_IAlertPanelFactory_CreateButton_System_String_">CreateButton(string)</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_AlertPanels_IButtonCollection_Contains_" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection.Contains*"></a>
+  <h4 id="PhiRobotics_UI_AlertPanels_IButtonCollection_Contains_System_String_" data-uid="PhiRobotics.UI.AlertPanels.IButtonCollection.Contains(System.String)">Contains(string)</h4>
+  <div class="markdown level1 summary"><p>Determines whether the collection contains a button with the specified name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Contains(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the button to locate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if a button with the specified name exists in the
+collection; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

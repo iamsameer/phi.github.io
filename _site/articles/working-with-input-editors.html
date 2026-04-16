@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Working with Input Editors </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Working with Input Editors ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="working-with-input-editors">Working with Input Editors</h1>
+
+<p>Input editors provide a consistent way to view and edit values.<br>
+They support different data types such as text, numbers, boolean values,
+date-time, time span, and colors.</p>
+<hr>
+<h2 id="creating-editors">Creating Editors</h2>
+<p>Use the <code>IInputEditorFactory</code> to create editor instances.<br>
+You can either use a generic creation method or strongly-typed helper
+methods.</p>
+<h3 id="using-strongly-typed-methods">Using Strongly-Typed Methods</h3>
+<pre><code class="lang-csharp">ITextInputEditor textEditor = factory.CreateTextEdit();
+IDateTimeEditor dateTimeEditor = factory.CreateDateTimeEdit();
+ITimeSpanEditor timeSpanEditor = factory.CreateTimeSpanEdit();
+IBooleanEditor booleanEditor = factory.CreateBooleanEdit();
+IColourEditor colorEditor = factory.CreateColourEdit();
+</code></pre>
+<h3 id="using-generic-creation">Using Generic Creation</h3>
+<pre><code class="lang-csharp">IInputEditor editor = factory.Create(InputEditorId.TextEdit);
+</code></pre>
+<p>You can cast the returned editor to a specific type when needed:</p>
+<pre><code class="lang-csharp">ITextInputEditor textEditor = (ITextInputEditor)editor;
+</code></pre>
+<hr>
+<h2 id="common-features">Common Features</h2>
+<p>All input editors share common functionality defined by <a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a>.</p>
+<h3 id="value-handling">Value Handling</h3>
+<p>Editors expose their value through the <a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValue">EditValue</a> property:</p>
+<pre><code class="lang-csharp">editor.EditValue = &quot;Sample Text&quot;;
+var value = editor.EditValue;
+</code></pre>
+<h3 id="validation-and-events">Validation and Events</h3>
+<p>Editors provide events to track value changes:</p>
+<ul>
+<li><a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanging">ValueChanging</a> → Raised before the value changes\</li>
+<li><a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanged">ValueChanged</a> → Raised after the value changes</li>
+</ul>
+<hr>
+<h2 id="placeholder-text">Placeholder Text</h2>
+<pre><code class="lang-csharp">editor.NullValuePrompt = &quot;Enter value...&quot;;
+editor.NullValuePromptForeColor = Color.LightGray;
+</code></pre>
+<hr>
+<h2 id="working-with-masks">Working with Masks</h2>
+<h3 id="text-editor-mask">Text Editor Mask</h3>
+<pre><code class="lang-csharp">ITextInputEditor editor = factory.CreateTextEdit();
+editor.Configure(null, EditMaskType.RegEx);
+editor.MaskProperties.MaskExpression = &quot;\\d+&quot;;
+</code></pre>
+<h3 id="date-time-editor-mask">Date-Time Editor Mask</h3>
+<pre><code class="lang-csharp">IDateTimeEditor editor = factory.CreateDateTimeEdit();
+var mask = editor.MaskProperties;
+mask.UseAdvancingCaret = true;
+mask.SpinWithCarry = true;
+mask.MaskExpression = &quot;f&quot;;
+</code></pre>
+<h3 id="time-span-editor-mask">Time Span Editor Mask</h3>
+<pre><code class="lang-csharp">ITimeSpanEditor editor = factory.CreateTimeSpanEdit();
+var mask = editor.MaskProperties;
+mask.UseAdvancingCaret = true;
+mask.SpinWithCarry = true;
+mask.MaskExpression = &quot;c&quot;;
+</code></pre>
+<hr>
+<h2 id="numeric-editors">Numeric Editors</h2>
+<pre><code class="lang-csharp">INumericEditor intEditor = factory.CreateNumericEdit&lt;int&gt;();
+intEditor.EditValue = 10;
+</code></pre>
+<hr>
+<h2 id="boolean-editors">Boolean Editors</h2>
+<pre><code class="lang-csharp">IBooleanEditor editor = factory.CreateBooleanEdit();
+editor.EditValue = true;
+</code></pre>
+<hr>
+<h2 id="color-editors">Color Editors</h2>
+<pre><code class="lang-csharp">IColourEditor editor = factory.CreateColourEdit();
+editor.EditValue = Color.Red;
+</code></pre>
+<hr>
+<h2 id="lifetime-management">Lifetime Management</h2>
+<p>Each call to the factory creates a new editor instance.</p>
+<ul>
+<li>Editors are independent</li>
+<li>The consumer is responsible for disposing them</li>
+</ul>
+<hr>
+<h2 id="choosing-the-right-editor">Choosing the Right Editor</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Editor Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free text input</td>
+<td><a class="xref" href="../api/PhiRobotics.UI.Editors.ITextInputEditor.html">ITextInputEditor</a></td>
+</tr>
+<tr>
+<td>Numeric values</td>
+<td><a class="xref" href="../api/PhiRobotics.UI.Editors.INumericEditor.html">INumericEditor</a></td>
+</tr>
+<tr>
+<td>True/false values</td>
+<td><a class="xref" href="../api/PhiRobotics.UI.Editors.IBooleanEditor.html">IBooleanEditor</a></td>
+</tr>
+<tr>
+<td>Date and time</td>
+<td><a class="xref" href="../api/PhiRobotics.UI.Editors.IDateTimeEditor.html">IDateTimeEditor</a></td>
+</tr>
+<tr>
+<td>Time intervals</td>
+<td><a class="xref" href="../api/PhiRobotics.UI.Editors.ITimeSpanEditor.html">ITimeSpanEditor</a></td>
+</tr>
+<tr>
+<td>Color selection</td>
+<td><a class="xref" href="../api/PhiRobotics.UI.Editors.IColourEditor.html">IColourEditor</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Use <a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditorFactory.html">IInputEditorFactory</a> to create editors</li>
+<li>All editors implement <a class="xref" href="../api/PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a></li>
+<li>Use strongly-typed editors for better usability</li>
+<li>Configure masks for structured input</li>
+<li>Manage editor lifetime in your application</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

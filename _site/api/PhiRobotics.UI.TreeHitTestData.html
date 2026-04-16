@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class TreeHitTestData </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class TreeHitTestData ">
+    
+    <meta name="description" content="Contains information about which element of an  is located at a specific position.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.TreeHitTestData">
+
+
+
+  <h1 id="PhiRobotics_UI_TreeHitTestData" data-uid="PhiRobotics.UI.TreeHitTestData" class="text-break">Class TreeHitTestData</h1>
+  <div class="markdown level0 summary"><p>Contains information about which element of an <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a> is located
+at a specific position.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">TreeHitTestData</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_TreeHitTestData_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class TreeHitTestData</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_TreeHitTestData_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Instances of this class are returned by <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_HitTest_System_Drawing_Point_">HitTest(Point)</a> and represent
+the result of a hit test operation.</p>
+<p>
+A hit test identifies:
+</p>
+<ul><li>
+The <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> at the specified position, if a node exists.
+</li><li>
+The <a class="xref" href="PhiRobotics.UI.ITreeHitTestLocation.html">ITreeHitTestLocation</a> describing the exact region of the tree
+control (for example, node text, node image, expand button, indentation area,
+or free space).
+</li></ul>
+<p>
+If the pointer is positioned over an empty region of the tree, the 
+<a class="xref" href="PhiRobotics.UI.TreeHitTestData.html#PhiRobotics_UI_TreeHitTestData_Node">Node</a> property returns <code>null</code>, while the 
+<a class="xref" href="PhiRobotics.UI.TreeHitTestData.html#PhiRobotics_UI_TreeHitTestData_Location">Location</a> property still describes the region that was hit.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_TreeHitTestData_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to use <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_HitTest_System_Drawing_Point_">HitTest(Point)</a>
+to determine which part of the tree is located under the mouse pointer.</p>
+<pre><code class="lang-cs">TreeHitTestData hit = tree.HitTest(mousePoint);
+<!-- -->
+if (hit.Location.IsText)
+{
+    Console.WriteLine($"Node text clicked: {hit.Node.Text}");
+}
+<!-- -->
+if (hit.Location.IsExpandButton)
+{
+    Console.WriteLine("Expand/collapse button clicked.");
+}
+<!-- -->
+if (hit.Location.IsFreeArea)
+{
+    Console.WriteLine("Clicked on empty space.");
+}
+</code></pre>
+
+  <h3 id="constructors">Constructors
+</h3>
+
+
+  <a id="PhiRobotics_UI_TreeHitTestData__ctor_" data-uid="PhiRobotics.UI.TreeHitTestData.#ctor*"></a>
+  <h4 id="PhiRobotics_UI_TreeHitTestData__ctor_PhiRobotics_UI_ITreeHitTestLocation_PhiRobotics_UI_ITreeNode_" data-uid="PhiRobotics.UI.TreeHitTestData.#ctor(PhiRobotics.UI.ITreeHitTestLocation,PhiRobotics.UI.ITreeNode)">TreeHitTestData(ITreeHitTestLocation, ITreeNode)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.TreeHitTestData.html">TreeHitTestData</a> class
+with the specified hit test location and node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TreeHitTestData(ITreeHitTestLocation location, ITreeNode node)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeHitTestLocation.html">ITreeHitTestLocation</a></td>
+        <td><span class="parametername">location</span></td>
+        <td><p>The logical region of the tree that was hit.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td><span class="parametername">node</span></td>
+        <td><p>The node associated with the hit test location, or <code>null</code> if the hit
+occurred in a free area of the tree.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_TreeHitTestData_Location_" data-uid="PhiRobotics.UI.TreeHitTestData.Location*"></a>
+  <h4 id="PhiRobotics_UI_TreeHitTestData_Location" data-uid="PhiRobotics.UI.TreeHitTestData.Location">Location</h4>
+  <div class="markdown level1 summary"><p>Gets the logical region of the tree that was hit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITreeHitTestLocation Location { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeHitTestLocation.html">ITreeHitTestLocation</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_TreeHitTestData_Location_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Identifies the exact part of the tree control where the hit occurred,
+such as node text, image, expand button, indentation area, or free space.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_TreeHitTestData_Node_" data-uid="PhiRobotics.UI.TreeHitTestData.Node*"></a>
+  <h4 id="PhiRobotics_UI_TreeHitTestData_Node" data-uid="PhiRobotics.UI.TreeHitTestData.Node">Node</h4>
+  <div class="markdown level1 summary"><p>Gets the node associated with the hit test result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITreeNode Node { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_TreeHitTestData_Node_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns the <a class="xref" href="PhiRobotics.UI.ITreeNode.html">ITreeNode</a> located at the tested position.
+If the hit test occurred outside any node, this property returns <code>null</code>.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

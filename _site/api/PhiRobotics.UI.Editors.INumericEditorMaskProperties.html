@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface INumericEditorMaskProperties </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface INumericEditorMaskProperties ">
+    
+    <meta name="description" content="Defines properties that control numeric masking behavior for text-based editors.  The INumericEditorMaskProperties interface is implemented by the UI library  and is not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties">
+
+
+
+  <h1 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties" class="text-break">Interface INumericEditorMaskProperties</h1>
+  <div class="markdown level0 summary"><p>Defines properties that control numeric masking behavior for text-based editors.</p>
+<p>
+The <b>INumericEditorMaskProperties</b> interface is implemented by the UI library 
+and is not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ISupportCulture.html#PhiRobotics_UI_ISupportCulture_Culture">ISupportCulture.Culture</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_ValueType">ITextEditorMaskProperties.ValueType</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskType">ITextEditorMaskProperties.MaskType</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html#PhiRobotics_UI_Editors_ITextEditorMaskProperties_MaskExpression">ITextEditorMaskProperties.MaskExpression</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface INumericEditorMaskProperties : ISupportCulture, ITextEditorMaskProperties</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This interface extends <a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a> to provide 
+functionality specific to numeric input.
+</p>
+<p>
+It enables users to enter and edit numeric values such as integers and
+floating-point numbers.
+</p>
+<p>
+These properties control how numeric values are displayed and interpreted, 
+including handling of decimal separators, insignificant zeros, and value behavior 
+during editing operations.
+</p>
+<p>
+The <a class="xref" href="PhiRobotics.UI.Editors.INumericEditor.html">INumericEditor</a> uses this interface to expose numeric-specific 
+mask configuration through its mask properties.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Editors.INumericEditorMaskProperties.html">INumericEditorMaskProperties</a> instance is managed 
+by the associated editor. Consumers typically do not create or dispose this 
+object directly.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_examples"><strong>Examples</strong></h5>
+  <p>The following examples demonstrate configuring a numeric editor mask:</p>
+<pre><code class="lang-cs">// Using a text editor with a numeric mask
+ITextInputEditor editor = inputEditorFactory.CreateTextEdit();
+<!-- -->
+editor.Configure(typeof(Byte), EditMaskType.Numeric);
+INumericEditorMaskProperties maskProperties = 
+    (INumericEditorMaskProperties)editor.MaskProperties;
+<!-- -->
+maskProperties.AutoHideDecimalSeparator = true;
+maskProperties.HideInsignificantZeros = true;
+</code></pre>
+<pre><code class="lang-cs">// Using a dedicated numeric editor
+INumericEditor numericEditor = inputEditorFactory.CreateNumericEdit&lt;Byte&gt;();
+<!-- -->
+numericEditor.MaskProperties.MaskExpression = "d";
+numericEditor.MaskProperties.AutoHideDecimalSeparator = true;
+numericEditor.MaskProperties.HideInsignificantZeros = true;
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_AutoHideDecimalSeparator_" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties.AutoHideDecimalSeparator*"></a>
+  <h4 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_AutoHideDecimalSeparator" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties.AutoHideDecimalSeparator">AutoHideDecimalSeparator</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the decimal separator is hidden when the value is a
+whole number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AutoHideDecimalSeparator { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to hide the decimal separator for whole numbers; otherwise,
+<code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_AutoHideDecimalSeparator_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property improves readability by removing unnecessary decimal separators
+when no fractional part is present.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_HideInsignificantZeros_" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties.HideInsignificantZeros*"></a>
+  <h4 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_HideInsignificantZeros" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties.HideInsignificantZeros">HideInsignificantZeros</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether insignificant trailing zeros are hidden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HideInsignificantZeros { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to hide insignificant zeros; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_HideInsignificantZeros_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For example, a value such as <code>10.500</code> may be displayed as <code>10.5</code>
+when this property is enabled.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_IsValueAfterDeleteZeroThenNull_" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties.IsValueAfterDeleteZeroThenNull*"></a>
+  <h4 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_IsValueAfterDeleteZeroThenNull" data-uid="PhiRobotics.UI.Editors.INumericEditorMaskProperties.IsValueAfterDeleteZeroThenNull">IsValueAfterDeleteZeroThenNull</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the editor value becomes zero before becoming null
+when all digits are deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsValueAfterDeleteZeroThenNull { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> to set the value to <code>0</code> after the last digit is removed,
+and then to <code>null</code> on the next delete; otherwise, <code>false</code> to
+set the value directly to <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_INumericEditorMaskProperties_IsValueAfterDeleteZeroThenNull_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+When a user presses Backspace or Delete, this property determines the resulting 
+value after the last digit is removed.
+</p>
+<p>
+If enabled, the value transitions from a numeric value → <code>0</code> → <code>null</code>.
+If disabled, the value transitions directly from a numeric value → <code>null</code>.
+</p>
+<p>
+If the entire content is cleared at once (for example, using Ctrl+Delete or 
+selecting all text and deleting), the value becomes <code>null</code> immediately, 
+regardless of this setting.
+</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

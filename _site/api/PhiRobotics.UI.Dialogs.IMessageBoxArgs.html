@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IMessageBoxArgs </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IMessageBoxArgs ">
+    
+    <meta name="description" content="Represents configuration settings for an .">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs">
+
+
+
+  <h1 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs" class="text-break">Interface IMessageBoxArgs</h1>
+  <div class="markdown level0 summary"><p>Represents configuration settings for an <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBox.html">IMessageBox</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Dialogs.html">Dialogs</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IMessageBoxArgs</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Instances of <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html">IMessageBoxArgs</a> are created using 
+<a class="xref" href="PhiRobotics.UI.Dialogs.ICommonDialogFactory.html#PhiRobotics_UI_Dialogs_ICommonDialogFactory_CreateMessageBoxArguments">CreateMessageBoxArguments()</a>.
+</p>
+<p>
+This interface encapsulates all settings required to configure a message box, 
+including caption, content, buttons, icons, sounds, and optional behaviors.
+</p>
+<p>
+The configured arguments can be passed to <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBox.html#PhiRobotics_UI_Dialogs_IMessageBox_Show_PhiRobotics_UI_Dialogs_IMessageBoxArgs_">Show(IMessageBoxArgs)</a> 
+to display the dialog.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to create and configure message box arguments.</p>
+<pre><code class="lang-cs">// Obtain factory service
+IUIFactoryService uiFactoryService = new UIFactoryService();
+<!-- -->
+// Get common dialog factory
+ICommonDialogFactory commonDialogFactory = uiFactoryService.CommonDialogFactory;
+<!-- -->
+// Create arguments
+IMessageBoxArgs args = commonDialogFactory.CreateMessageBoxArguments();
+args.Caption = "Confirmation";
+args.Content = "Are you sure you want to continue?";
+args.Buttons = new[] 
+{ 
+    System.Windows.Forms.DialogResult.Yes, 
+    System.Windows.Forms.DialogResult.No 
+};
+args.DefaultButtonIndex = 0;
+args.MessageBoxIcon = System.Windows.Forms.MessageBoxIcon.Question;
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowHtmlText_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.AllowHtmlText*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowHtmlText" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.AllowHtmlText">AllowHtmlText</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether HTML tags can be used to format the caption
+and content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowHtmlText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowHtmlText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When enabled, basic HTML formatting can be applied to the message
+box text.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowTrimCaption_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.AllowTrimCaption*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowTrimCaption" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.AllowTrimCaption">AllowTrimCaption</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the caption is automatically trimmed to fit
+the available space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowTrimCaption { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Buttons_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Buttons*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Buttons" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Buttons">Buttons</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the buttons displayed in the message box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DialogResult[] Buttons { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Caption_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Caption*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Caption" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Caption">Caption</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the caption (title) of the message box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Caption { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Caption_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowHtmlText">AllowHtmlText</a> property is enabled, you can use
+HTML tags to format an message box’s caption and content.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Content_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Content*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Content" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Content">Content</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the content (message text) of the message box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Content { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Content_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_AllowHtmlText">AllowHtmlText</a> property is enabled, you can use
+HTML tags to format an message box’s caption and content.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DefaultButtonIndex_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.DefaultButtonIndex*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DefaultButtonIndex" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.DefaultButtonIndex">DefaultButtonIndex</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the index of the default button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DefaultButtonIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DefaultButtonIndex_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The default button receives focus and is triggered when the user
+presses ENTER.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DoNotShowAgainCheckBoxText_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.DoNotShowAgainCheckBoxText*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DoNotShowAgainCheckBoxText" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.DoNotShowAgainCheckBoxText">DoNotShowAgainCheckBoxText</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the text displayed next to the &quot;Do not show this message again&quot; checkbox.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DoNotShowAgainCheckBoxText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DoNotShowAgainCheckBoxVisible_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.DoNotShowAgainCheckBoxVisible*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_DoNotShowAgainCheckBoxVisible" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.DoNotShowAgainCheckBoxVisible">DoNotShowAgainCheckBoxVisible</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether the &quot;Do not show this message again&quot; checkbox is visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DoNotShowAgainCheckBoxVisible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Icon*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Icon">Icon</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a custom icon displayed in the message box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Icon Icon { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.icon">Icon</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If both <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon">Icon</a> and <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBoxIcon">MessageBoxIcon</a> are specified,
+<a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon">Icon</a> takes precedence.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBeepSound_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.MessageBeepSound*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBeepSound" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.MessageBeepSound">MessageBeepSound</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the system sound played when the message box is displayed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MessageBeepSound MessageBeepSound { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Dialogs.MessageBeepSound.html">MessageBeepSound</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBoxIcon_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.MessageBoxIcon*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBoxIcon" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.MessageBoxIcon">MessageBoxIcon</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a predefined system icon for the message box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">MessageBoxIcon MessageBoxIcon { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.messageboxicon">MessageBoxIcon</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBoxIcon_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If both <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon">Icon</a> and <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBoxIcon">MessageBoxIcon</a> are specified,
+<a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_Icon">Icon</a> takes precedence.</p>
+<p>
+If <b>MessageBoxIcon</b> property is in effect and <a class="xref" href="PhiRobotics.UI.Dialogs.IMessageBoxArgs.html#PhiRobotics_UI_Dialogs_IMessageBoxArgs_MessageBeepSound">MessageBeepSound</a> 
+is set to <a class="xref" href="PhiRobotics.UI.Dialogs.MessageBeepSound.html#PhiRobotics_UI_Dialogs_MessageBeepSound_None">None</a> then system sound played  when the 
+message box is displayed.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Owner_" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Owner*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_IMessageBoxArgs_Owner" data-uid="PhiRobotics.UI.Dialogs.IMessageBoxArgs.Owner">Owner</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the owner window of the message box.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWin32Window Owner { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window">IWin32Window</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

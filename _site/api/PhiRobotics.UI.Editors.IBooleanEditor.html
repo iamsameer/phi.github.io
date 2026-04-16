@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IBooleanEditor </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IBooleanEditor ">
+    
+    <meta name="description" content="Describes an interface which defines an editor that is used to view and edit boolean values.  The IBooleanEditor interface is implemented by the UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.IBooleanEditor">
+
+
+
+  <h1 id="PhiRobotics_UI_Editors_IBooleanEditor" data-uid="PhiRobotics.UI.Editors.IBooleanEditor" class="text-break">Interface IBooleanEditor</h1>
+  <div class="markdown level0 summary"><p>Describes an interface which defines an editor that is used to view and edit
+boolean values.</p>
+<p>
+The <b>IBooleanEditor</b> interface is implemented by the UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanged">IInputEditor.EditValueChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanging">IInputEditor.EditValueChanging</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValue">IInputEditor.EditValue</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ErrorText">IInputEditor.ErrorText</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ErrorIconAlignment">IInputEditor.ErrorIconAlignment</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_RichToolTip">IInputEditor.RichToolTip</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ShowToolTips">IInputEditor.ShowToolTips</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_ToolTipController">IInputEditor.ToolTipController</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.endinvoke">ISynchronizeInvoke.EndInvoke(IAsyncResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invoke">ISynchronizeInvoke.Invoke(Delegate, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.invokerequired">ISynchronizeInvoke.InvokeRequired</a>
+    </div>
+    <div>
+      <span class="xref">IDisposable.IsDisposed</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.site">IComponent.Site</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icomponent.disposed">IComponent.Disposed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IBooleanEditor : IInputEditor, ISynchronizeInvoke, IDisposable, IComponent, IDisposable, IWin32Window</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+<a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html">IBooleanEditor</a> provides functionality for editing values that
+represent logical states such as <code>true</code>, <code>false</code>, and optionally an
+intermediate (indeterminate) state.
+</p>
+<p>
+The visual representation of the editor can vary depending on the selected 
+<a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_Style">Style</a>. Common styles include a check box, radio button, or 
+other customized appearances.
+</p>
+<p>
+In addition to standard boolean behavior, this editor allows mapping between
+logical states and values via <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_TrueValue">TrueValue</a>, <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_FalseValue">FalseValue</a>, 
+and <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValue">IntermediateValue</a>.
+</p>
+<p>
+Use the <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_AllowIntermediate">AllowIntermediate</a> property to enable or disable the 
+indeterminate state.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html">IBooleanEditor</a> instance is managed by the
+consumer. The consumer is responsible for disposing the editor when it is
+no longer needed.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to configure a boolean editor:</p>
+<pre><code class="lang-cs">IBooleanEditor editor = factory.CreateBooleanEdit();
+<!-- -->
+editor.Caption = "Enable Feature";
+editor.AllowIntermediate = true;
+editor.Style = CheckBoxStyle.CheckBox;
+<!-- -->
+editor.TrueValue = "Yes";
+editor.FalseValue = "No";
+editor.IntermediateValue = "Unknown";
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_AllowIntermediate_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.AllowIntermediate*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_AllowIntermediate" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.AllowIntermediate">AllowIntermediate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the editor supports three states:
+<code>Unchecked</code>, <code>Checked</code>, and <code>Indeterminate</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowIntermediate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the editor supports an intermediate state; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_AllowIntermediate_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>When set to <code>false</code>, the editor behaves as a standard two-state boolean editor.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_Caption_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.Caption*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_Caption" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.Caption">Caption</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the caption text associated with the editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Caption { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents the text displayed alongside the editor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_FalseValue_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.FalseValue*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_FalseValue" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.FalseValue">FalseValue</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value that corresponds to the logical <code>false</code> state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object FalseValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the value associated with <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_FalseValueImage_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.FalseValueImage*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_FalseValueImage" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.FalseValueImage">FalseValueImage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image displayed instead of the default check box when the editor
+represents the <code>false</code> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Image FalseValueImage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> that replaces the default visual representation for the
+<code>false</code> state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValue_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.IntermediateValue*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValue" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.IntermediateValue">IntermediateValue</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value that corresponds to the intermediate (indeterminate) state.
+(i.e nor true neither false,).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object IntermediateValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the value associated with the intermediate state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property is only used when <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_AllowIntermediate">AllowIntermediate</a> is <code>true</code>.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValueImage_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.IntermediateValueImage*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValueImage" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.IntermediateValueImage">IntermediateValueImage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image displayed instead of the default check box when the editor
+represents the intermediate (indeterminate) value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Image IntermediateValueImage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> that replaces the default visual representation for the
+intermediate state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_IntermediateValueImage_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property is only relevant when <a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html#PhiRobotics_UI_Editors_IBooleanEditor_AllowIntermediate">AllowIntermediate</a> is <code>true</code>.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_Style_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.Style*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_Style" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.Style">Style</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the visual style used to represent the boolean editor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CheckBoxStyle Style { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Editors.CheckBoxStyle.html">CheckBoxStyle</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.Editors.CheckBoxStyle.html">CheckBoxStyle</a> value that determines how the editor
+is rendered.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_Style_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The style affects how users interact with the editor, such as whether it
+appears as a check box, radio button, or a custom style.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_TrueValue_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.TrueValue*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_TrueValue" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.TrueValue">TrueValue</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the value that corresponds to the logical <code>true</code> state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object TrueValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the value associated with <code>true</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Editors_IBooleanEditor_TrueValue_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This allows mapping the boolean state to domain-specific values (e.g., &quot;Yes&quot;, 1, etc.).</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Editors_IBooleanEditor_TrueValueImage_" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.TrueValueImage*"></a>
+  <h4 id="PhiRobotics_UI_Editors_IBooleanEditor_TrueValueImage" data-uid="PhiRobotics.UI.Editors.IBooleanEditor.TrueValueImage">TrueValueImage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image displayed instead of the default check box when the editor
+represents the <code>true</code> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Image TrueValueImage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> that replaces the default visual representation for the
+<code>true</code> state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IRichToolTipItem </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IRichToolTipItem ">
+    
+    <meta name="description" content="Represents a tooltip item that displays text and optional visual content (such as images or icons) within a rich tooltip.  This interface is implemented by the PhiRobotics UI library and is not  intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem">
+
+
+
+  <h1 id="PhiRobotics_UI_ToolTips_IRichToolTipItem" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem" class="text-break">Interface IRichToolTipItem</h1>
+  <div class="markdown level0 summary"><p>Represents a tooltip item that displays text and optional visual content
+(such as images or icons) within a rich tooltip.</p>
+<p>
+This interface is implemented by the PhiRobotics UI library and is not 
+intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html#PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_TypeId">IBaseRichToolTipItem.TypeId</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html#PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_Assign_PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_">IBaseRichToolTipItem.Assign(IBaseRichToolTipItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html#PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_Owner">IBaseRichToolTipItem.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html#PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_IsEmpty">IBaseRichToolTipItem.IsEmpty</a>
+    </div>
+    <div>
+      <a class="xref" href="PhiRobotics.UI.ToolTips.IBaseRichToolTipItem.html#PhiRobotics_UI_ToolTips_IBaseRichToolTipItem_MaxWidth">IBaseRichToolTipItem.MaxWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable.getobjectdata">ISerializable.GetObjectData(SerializationInfo, StreamingContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.ToolTips.html">ToolTips</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IRichToolTipItem : IBaseRichToolTipItem, ISerializable, IDisposable</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This item is used to divide content into logical sections for better readability.
+</p>
+<p>
+This item is typically used to display descriptive content in the tooltip body.
+</p>
+A rich tooltip item can include text, images, icons, or SVG content, and provides 
+layout customization options such as alignment, spacing, and indentation.
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_AllowHtmlText_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.AllowHtmlText*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_AllowHtmlText" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.AllowHtmlText">AllowHtmlText</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether HTML formatting is allowed for the item’s text
+(<a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipItem.html#PhiRobotics_UI_ToolTips_IRichToolTipItem_Text">Text</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowHtmlText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value that specifies whether HTML formatting is allowed in the
+tooltip.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Font_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Font*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Font" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Font">Font</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the font used to paint the item’s text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Font Font { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.font">Font</a></td>
+        <td><p>An instance of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.font">Font</a> used to display the toolTip ttem‘s
+text (specified in the <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTipItem.html#PhiRobotics_UI_ToolTips_IRichToolTipItem_Text">Text</a> property).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Icon_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Icon*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Icon" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Icon">Icon</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the icon displayed in the tooltip region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Icon Icon { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.icon">Icon</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.icon">Icon</a> that is displayed in the tooltip region.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Image_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Image*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Image" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Image">Image</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the image displayed in this tooltip region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Image Image { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a> object that specifies an image displayed in
+this tooltip region.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_ImageAlignment_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.ImageAlignment*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_ImageAlignment" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.ImageAlignment">ImageAlignment</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the alignment of the SVG image within the tooltip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ToolTipImageAlignment ImageAlignment { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipImageAlignment.html">ToolTipImageAlignment</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.ToolTips.ToolTipImageAlignment.html">ToolTipImageAlignment</a> specifying the alignment of the SVG image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_ImageToTextDistance_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.ImageToTextDistance*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_ImageToTextDistance" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.ImageToTextDistance">ImageToTextDistance</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the distance between the image and text in this tooltip region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ImageToTextDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value that specifies the distance, in pixels, between
+the image and text in this tooltip region.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_LeftIndent_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.LeftIndent*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_LeftIndent" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.LeftIndent">LeftIndent</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the indent from the left edge of a toolTip item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int LeftIndent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value that specifies the indent from the left edge of a
+toolTip item, in pixels.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_LeftIndent_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The <code>LeftIndent</code> property specifies the indent of the ToolTipItem content
+(image and text) from the left edge of the ToolTipItem.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_OwnerAllowHtmlText_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.OwnerAllowHtmlText*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_OwnerAllowHtmlText" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.OwnerAllowHtmlText">OwnerAllowHtmlText</h4>
+  <div class="markdown level1 summary"><p>Gets whether the rich tooltip that owns this item, allows using HTML tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool OwnerAllowHtmlText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the owner of this item allows HTML text formatting; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_SvgImage_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.SvgImage*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_SvgImage" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.SvgImage">SvgImage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the SVG image displayed in the tooltip region.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ISVGImage SvgImage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.ISVGImage.html">ISVGImage</a></td>
+        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the SVG image that is displayed in the tooltip region.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_SvgImageSize_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.SvgImageSize*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_SvgImageSize" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.SvgImageSize">SvgImageSize</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the size of the SVG image displayed by the tooltip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size SvgImageSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a> representing the size of the SVG image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Text_" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Text*"></a>
+  <h4 id="PhiRobotics_UI_ToolTips_IRichToolTipItem_Text" data-uid="PhiRobotics.UI.ToolTips.IRichToolTipItem.Text">Text</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the tooltip item text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Text { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents the text of tooltip item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></div>
+  </div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

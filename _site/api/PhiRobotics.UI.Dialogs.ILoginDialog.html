@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface ILoginDialog </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface ILoginDialog ">
+    
+    <meta name="description" content="Represents a user interface contract for a login dialog, providing support for credential input and dialog behavior.  The ILoginDialog interface is implemented by the UI library and is  not intended to be implemented by consumer code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog">
+
+
+
+  <h1 id="PhiRobotics_UI_Dialogs_ILoginDialog" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog" class="text-break">Interface ILoginDialog</h1>
+  <div class="markdown level0 summary"><p>Represents a user interface contract for a login dialog, providing support
+for credential input and dialog behavior.</p>
+<p>
+The <b>ILoginDialog</b> interface is implemented by the UI library and is 
+not intended to be implemented by consumer code.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Dialogs.html">Dialogs</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ILoginDialog</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Implementations of this interface are responsible for displaying the login 
+UI and interacting with the user.
+</p>
+<p>
+The dialog provides configurable options such as remembering user credentials 
+and enabling sign-up functionality. It also exposes events to handle user 
+actions like password recovery and account creation.
+</p>
+<p>
+Instances of <a class="xref" href="PhiRobotics.UI.Dialogs.ILoginDialog.html">ILoginDialog</a> are created using
+<a class="xref" href="PhiRobotics.UI.Dialogs.ICommonDialogFactory.html#PhiRobotics_UI_Dialogs_ICommonDialogFactory_CreateLoginDialog_PhiRobotics_ILoginHandler_">CreateLoginDialog(ILoginHandler)</a>.
+</p>
+<p>
+The lifetime of an <a class="xref" href="PhiRobotics.UI.Dialogs.ILoginDialog.html">ILoginDialog</a> instance is managed by the consumer.
+The consumer is responsible for disposing the dialog when it is no longer needed.
+</p>
+</div>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_examples"><strong>Examples</strong></h5>
+  <p>The following example demonstrates how to display a login dialog and handle user
+actions.</p>
+<pre><code class="lang-cs">ILoginDialog loginDialog = new LoginDialog();
+<!-- -->
+loginDialog.EnableSignUpButton = true;
+<!-- -->
+loginDialog.ForgotPasswordClick += (s, e) =&gt;
+{
+    // Open password recovery page
+};
+<!-- -->
+loginDialog.SignupButtonClick += (s, e) =&gt;
+{
+    // Open signup page
+};
+<!-- -->
+if (loginDialog.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+{
+    bool remember = loginDialog.Remember;
+    // Proceed with authentication
+}
+</code></pre>
+
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Dialogs_ILoginDialog_EnableSignUpButton_" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.EnableSignUpButton*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_ILoginDialog_EnableSignUpButton" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.EnableSignUpButton">EnableSignUpButton</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the &quot;Signup&quot; button is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool EnableSignUpButton { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_EnableSignUpButton_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property can be used to conditionally enable or disable the &quot;Signup&quot; button in the user
+interface. If set to <code>true</code>, the &quot;Signup&quot; button will allow interaction with the
+&quot;Signup&quot; button.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Dialogs_ILoginDialog_Remember_" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.Remember*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_ILoginDialog_Remember" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.Remember">Remember</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the system should remember the user's credentials.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Remember { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_Remember_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If set to <code>true</code>, the application may save the user's credentials for future sessions.
+This typically enables automatic login for the user in subsequent app launches.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Dialogs_ILoginDialog_ShowDialog_" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.ShowDialog*"></a>
+  <h4 id="PhiRobotics_UI_Dialogs_ILoginDialog_ShowDialog_System_Windows_Forms_Form_" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.ShowDialog(System.Windows.Forms.Form)">ShowDialog(Form)</h4>
+  <div class="markdown level1 summary"><p>Displays the login dialog as a modal dialog with the specified owner window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DialogResult ShowDialog(Form owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.form">Form</a></td>
+        <td><span class="parametername">owner</span></td>
+        <td><p>The parent form that owns this dialog.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult">DialogResult</a> value indicating how the dialog was closed by the user
+(e.g., <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult#system-windows-forms-dialogresult-ok">OK</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.dialogresult#system-windows-forms-dialogresult-cancel">Cancel</a>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+</h3>
+
+
+  <h4 id="PhiRobotics_UI_Dialogs_ILoginDialog_ForgotPasswordClick" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.ForgotPasswordClick">ForgotPasswordClick</h4>
+  <div class="markdown level1 summary"><p>Raised when the user clicks the &quot;Forgot Password?&quot; link.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler ForgotPasswordClick</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_ForgotPasswordClick_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This event should be raised when the user initiates a password recovery action.
+It allows external handlers to define what should happen (e.g., sending a
+recovery email with instructions, opening a password recovery page in the
+browser, or other relevant actions.).</p>
+</div>
+
+
+  <h4 id="PhiRobotics_UI_Dialogs_ILoginDialog_SignupButtonClick" data-uid="PhiRobotics.UI.Dialogs.ILoginDialog.SignupButtonClick">SignupButtonClick</h4>
+  <div class="markdown level1 summary"><p>Raised when the user clicks the &quot;Signup&quot; button.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler SignupButtonClick</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Dialogs_ILoginDialog_SignupButtonClick_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This event should be raised when the user initiates a sign up action.
+It allows external handlers to define what should happen (e.g., opening a
+sign up page in the browser, or other relevant actions.).</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

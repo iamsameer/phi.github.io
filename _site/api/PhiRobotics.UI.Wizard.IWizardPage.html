@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Interface IWizardPage </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Interface IWizardPage ">
+    
+    <meta name="description" content="Represents an interior page in a wizard, typically displayed between the  and .  The IWizardPage interface is intended to be implemented by consumer code. The lifetime of the page instance is managed by the consumer.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Wizard.IWizardPage">
+
+
+
+  <h1 id="PhiRobotics_UI_Wizard_IWizardPage" data-uid="PhiRobotics.UI.Wizard.IWizardPage" class="text-break">Interface IWizardPage</h1>
+  <div class="markdown level0 summary"><p>Represents an interior page in a wizard, typically displayed between the
+<a class="xref" href="PhiRobotics.UI.Wizard.WelcomePage.html">WelcomePage</a> and <a class="xref" href="PhiRobotics.UI.Wizard.CompletionPage.html">CompletionPage</a>.</p>
+<p>
+The <b>IWizardPage</b> interface is intended to be implemented by consumer code.
+The lifetime of the page instance is managed by the consumer.
+</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Wizard.html">Wizard</a></h6>
+  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWizardPage</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A wizard can display any number of interior pages to guide the user through
+a multi-step process. Each page provides its own user interface, validation
+logic, navigation rules, and optional help content.</p>
+<p>Implementations of this interface are responsible for:</p>
+<ul><li>Providing the UI control displayed in the wizard.</li><li>Validating user input before navigation.</li><li>Controlling navigation behavior using <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_GetNextPage">GetNextPage()</a> and 
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_GetPreviousPage">GetPreviousPage()</a>.</li><li>Enabling or disabling navigation buttons through <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowNext">AllowNext</a> 
+and <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowBack">AllowBack</a>.</li></ul>
+<p>The wizard framework monitors <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowBackChanged">AllowBackChanged</a> and
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowNextChanged">AllowNextChanged</a> events to update the state of the navigation
+buttons in the wizard dialog.</p>
+<p>
+The <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_Commit">Commit()</a> method is called when the user attempts to move to the
+next page or finish the wizard. If validation fails, the method should return
+<code>false</code> and provide an error message through <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_CurrentError">CurrentError</a>.
+</p>
+<example>
+The following example shows how to create a wizard page:
+<pre><code class="lang-cs">class RecipientDataPage : IWizardPage
+{
+    private bool allowBack = true;
+    private bool allowNext = true;
+    private RecipientDataPageControl control = null;
+    private BirthdayWish birthdayWish;
+<!-- -->
+    public RecipientDataPage(BirthdayWish birthdayWish)
+    {
+        this.birthdayWish = birthdayWish;
+        control = new RecipientDataPageControl(this);
+        control.CurrentErrorKind = ErrorKind.None;
+        control.CurrentError = string.Empty;
+    }
+<!-- -->
+    #region IWizardPage
+    public event EventHandler AllowBackChanged;
+    public event EventHandler AllowNextChanged;
+<!-- -->
+    public bool AllowBack
+    {
+        get { return allowBack; }
+        set
+        {
+            if (allowBack != value)
+            {
+                allowBack = value;
+                AllowBackChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+    public bool AllowNext
+    {
+        get { return allowNext; }
+        set
+        {
+            if (allowNext != value)
+            {
+                allowNext = value;
+                AllowNextChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+    public string HeaderText
+    {
+        get { return "Recipient"; }
+    }
+    public ErrorKind CurrentErrorKind
+    {
+        get { return control.CurrentErrorKind; }
+    }
+    public string CurrentError
+    {
+        get { return control.CurrentError; }
+    }
+    public string DescriptionText
+    {
+        get { return "Recipient Name and Address"; }
+    }
+    public Control Control
+    {
+        get { return control; }
+    }
+    public bool HasHelp
+    {
+        get { return true; }
+    }
+<!-- -->
+    public void Activating()
+    {
+        control.RecipientName = birthdayWish.RecipientName;
+        control.EmailAddress = birthdayWish.RecipientEmail;
+    }
+    public bool Commit()
+    {
+        if (string.IsNullOrWhiteSpace(control.RecipientName))
+        {
+            return false;
+        }
+        else if (string.IsNullOrWhiteSpace(control.EmailAddress))
+        {
+            return false;
+        }
+        birthdayWish.RecipientName = control.RecipientName;
+        birthdayWish.RecipientEmail = control.EmailAddress;
+        return true;
+    }
+    public string GetNextPage()
+    {
+        return "CardTemplatePage";
+    }
+    public string GetPreviousPage()
+    {
+        return null;
+    }
+    public void ShowHelp()
+    {
+        MessageBox.Show("This is recipient page of wizard.", "Wizard Page",
+            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+    }
+    #endregion
+}
+</code></pre>
+</example>
+</div>
+  <h3 id="properties">Properties
+</h3>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_AllowBack_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.AllowBack*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_AllowBack" data-uid="PhiRobotics.UI.Wizard.IWizardPage.AllowBack">AllowBack</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Back button is enabled on the
+wizard dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowBack { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_AllowNext_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.AllowNext*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_AllowNext" data-uid="PhiRobotics.UI.Wizard.IWizardPage.AllowNext">AllowNext</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the Next button is enabled on the
+wizard dialog.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AllowNext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_Control_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.Control*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_Control" data-uid="PhiRobotics.UI.Wizard.IWizardPage.Control">Control</h4>
+  <div class="markdown level1 summary"><p>Gets the user interface control displayed on this wizard page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Control Control { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
+        <td><p>A <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_Control">Control</a> instance representing the UI for the page.
+This control contains the content and interactive elements presented to the
+user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_Control_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The wizard framework adds this control to the dialog's content area when the
+page becomes active.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_CurrentError_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.CurrentError*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_CurrentError" data-uid="PhiRobotics.UI.Wizard.IWizardPage.CurrentError">CurrentError</h4>
+  <div class="markdown level1 summary"><p>Gets the current error message for the page, if any.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string CurrentError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> describing the current validation error on the page.
+Returns an empty string if no error exists.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_CurrentError_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property typically provides feedback to the user when the data entered
+on the page is invalid or incomplete. It is often displayed in the wizard
+dialog to guide the user in correcting the issue before proceeding.</p>
+<p>
+The value is typically updated during <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_Commit">Commit()</a> when validation 
+fails. Before validation occurs, this property may return an empty string or 
+an invalid error message.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_CurrentErrorKind_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.CurrentErrorKind*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_CurrentErrorKind" data-uid="PhiRobotics.UI.Wizard.IWizardPage.CurrentErrorKind">CurrentErrorKind</h4>
+  <div class="markdown level1 summary"><p>Gets the kind or severity of the current error for the page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ErrorKind CurrentErrorKind { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PhiRobotics.UI.Wizard.ErrorKind.html">ErrorKind</a></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.Wizard.ErrorKind.html">ErrorKind</a> value that indicates whether the current
+state represents an informational message, warning, error, or no issue
+at all.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_CurrentErrorKind_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This property typically works in conjunction with <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_CurrentError">CurrentError</a>
+to provide additional context about the nature of the problem or message.</p>
+<p>
+If <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_CurrentError">CurrentError</a> is an empty string, this property will 
+typically return <a class="xref" href="PhiRobotics.UI.Wizard.ErrorKind.html#PhiRobotics_UI_Wizard_ErrorKind_None">None</a>.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_DescriptionText_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.DescriptionText*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_DescriptionText" data-uid="PhiRobotics.UI.Wizard.IWizardPage.DescriptionText">DescriptionText</h4>
+  <div class="markdown level1 summary"><p>Gets the description text displayed below the header text on the wizard page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DescriptionText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> containing the page description. This text typically
+provides guidance or instructions relevant to the current step in the wizard.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_DescriptionText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The description text helps users understand the purpose of the page or what
+information is required before proceeding to the next step.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_HasHelp_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.HasHelp*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_HasHelp" data-uid="PhiRobotics.UI.Wizard.IWizardPage.HasHelp">HasHelp</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this page provides help content.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasHelp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if help is available for this page; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_HasHelp_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The wizard will only show the Help button for a wizard page if this property returns
+<code>true</code>. When the Help button is clicked, the wizard calls the <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_ShowHelp">ShowHelp()</a>
+method.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_HeaderText_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.HeaderText*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_HeaderText" data-uid="PhiRobotics.UI.Wizard.IWizardPage.HeaderText">HeaderText</h4>
+  <div class="markdown level1 summary"><p>Gets the header text displayed at the top of the wizard page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string HeaderText { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_HeaderText_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This text is typically shown in the wizard dialog's header section to
+indicate the current
+page's purpose.</p>
+</div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_Activating_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.Activating*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_Activating" data-uid="PhiRobotics.UI.Wizard.IWizardPage.Activating">Activating()</h4>
+  <div class="markdown level1 summary"><p>Called when the wizard is about to activate this page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Activating()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_Activating_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is called by the wizard control immediately before the page becomes active.
+Use this method to initialize or refresh UI state, load data into the page controls,
+or reset validation state before the page becomes visible.</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_Commit_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.Commit*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_Commit" data-uid="PhiRobotics.UI.Wizard.IWizardPage.Commit">Commit()</h4>
+  <div class="markdown level1 summary"><p>Validates user input and persists any changes made on the page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Commit()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if changes are successfully committed and the page is valid;
+otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_Commit_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is called when the user presses the Next or Finish button.
+Implement this method to save user input, perform validation, or execute
+any finalization logic required before moving to the next page.</p>
+<p>
+If validation fails or changes cannot be committed, return <code>false</code> 
+and set the <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_CurrentError">CurrentError</a> property with an appropriate error message. 
+This message will typically be displayed to the user in the wizard dialog.
+</p>
+</div>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_GetNextPage_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.GetNextPage*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_GetNextPage" data-uid="PhiRobotics.UI.Wizard.IWizardPage.GetNextPage">GetNextPage()</h4>
+  <div class="markdown level1 summary"><p>Returns the next wizard page to navigate to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetNextPage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The name of the next page to display. This must match the key of a page in the
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a> dictionary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_GetNextPage_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The returned value must match the key of a page in the wizard's
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a> collection.</p>
+<p>Returning <code>null</code> or an empty string indicates that the wizard should
+navigate to the completion page.</p>
+<p>
+If a non-empty value is returned, it must correspond to an existing page key 
+in <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a>; otherwise, navigation may fail.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>Thrown if <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowNext">AllowNext</a> returns <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_GetPreviousPage_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.GetPreviousPage*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_GetPreviousPage" data-uid="PhiRobotics.UI.Wizard.IWizardPage.GetPreviousPage">GetPreviousPage()</h4>
+  <div class="markdown level1 summary"><p>Returns the previous wizard page to navigate to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string GetPreviousPage()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The name of the previous page to display. This must match the key of a page in the
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a> dictionary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_GetPreviousPage_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The returned value must match the key of a page in the wizard's
+<a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a> collection.</p>
+<p>Returning <code>null</code> or an empty string indicates that the wizard should
+navigate to the <a class="xref" href="PhiRobotics.UI.Wizard.WelcomePage.html">WelcomePage</a>.</p>
+<p>
+If a non-empty value is returned, it must correspond to an existing page key 
+in <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html#PhiRobotics_UI_Wizard_IWizard_Pages">Pages</a>; otherwise, navigation may fail.
+</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>Thrown if <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowBack">AllowBack</a> returns <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="PhiRobotics_UI_Wizard_IWizardPage_ShowHelp_" data-uid="PhiRobotics.UI.Wizard.IWizardPage.ShowHelp*"></a>
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_ShowHelp" data-uid="PhiRobotics.UI.Wizard.IWizardPage.ShowHelp">ShowHelp()</h4>
+  <div class="markdown level1 summary"><p>Displays help information related to this page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ShowHelp()</code></pre>
+  </div>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_ShowHelp_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method is called when the user requests help (e.g., by clicking a Help button).
+The behavior of this method depends on the specific page implementation. It may open
+a help URL in a browser, display an additional dialog, or present context-sensitive
+help content. The wizard only calls this method if <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_HasHelp">HasHelp</a> returns
+<code>true</code>.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>Thrown if this method is called when <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_HasHelp">HasHelp</a> returns <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+</h3>
+
+
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_AllowBackChanged" data-uid="PhiRobotics.UI.Wizard.IWizardPage.AllowBackChanged">AllowBackChanged</h4>
+  <div class="markdown level1 summary"><p>Raised when the value of <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowBack">AllowBack</a> changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler AllowBackChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_AllowBackChanged_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This event is used by the wizard framework to update the enabled
+state of the Back button in the wizard dialog.</p>
+</div>
+
+
+  <h4 id="PhiRobotics_UI_Wizard_IWizardPage_AllowNextChanged" data-uid="PhiRobotics.UI.Wizard.IWizardPage.AllowNextChanged">AllowNextChanged</h4>
+  <div class="markdown level1 summary"><p>Raised when the value of <a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html#PhiRobotics_UI_Wizard_IWizardPage_AllowNext">AllowNext</a> changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler AllowNextChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PhiRobotics_UI_Wizard_IWizardPage_AllowNextChanged_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This event is used by the wizard framework to update the enabled
+state of the Next button in the wizard dialog.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

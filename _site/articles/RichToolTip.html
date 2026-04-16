@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>IRichToolTip </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="IRichToolTip ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="irichtooltip">IRichToolTip</h1>
+
+<p>Represents a rich, structured tooltip that can display multiple types of content such as titles, text, images, and separators. Unlike standard tooltips, a rich tooltip allows you to compose visually organized and more informative content.</p>
+<hr>
+<h2 id="overview">Overview</h2>
+<p>An <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> is composed of a collection of items exposed through its <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTip.html#PhiRobotics_UI_ToolTips_IRichToolTip_Items">Items</a> property. Each item represents a specific type of content, allowing you to build a tooltip in a structured and flexible way.</p>
+<p>Use <code>IRichToolTip</code> when you need:</p>
+<ul>
+<li>Multiple sections within a tooltip</li>
+<li>Visual elements such as images or icons</li>
+<li>Clear separation and hierarchy of content</li>
+</ul>
+<hr>
+<h2 id="items-collection">Items Collection</h2>
+<p>The <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTip.html#PhiRobotics_UI_ToolTips_IRichToolTip_Items">Items</a> collection provides methods to add different types of elements to the tooltip.</p>
+<hr>
+<h3 id="title-item">Title Item</h3>
+<p>Represents a header or emphasized text within the tooltip.</p>
+<ul>
+<li>Created using: <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipItemCollection.html#PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddTitle_System_String_">Items.AddTitle(string text)</a></li>
+<li>Interface: <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.html">IRichToolTipTitleItem</a></li>
+</ul>
+<p><strong>Usage:</strong></p>
+<ul>
+<li>Main heading of the tooltip</li>
+<li>Section headers</li>
+<li>Footer highlights</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">IRichToolTipTitleItem title = toolTip.Items.AddTitle(&quot;Open File&quot;);
+</code></pre>
+<hr>
+<h3 id="content-item">Content Item</h3>
+<p>Represents the main descriptive text of the tooltip. It can optionally include an image.</p>
+<ul>
+<li>Created using: <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipItemCollection.html#PhiRobotics_UI_ToolTips_IToolTipItemCollection_Add_System_String_">Items.Add(string text)</a></li>
+<li>Interface: <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTipItem.html">IRichToolTipItem</a></li>
+</ul>
+<p><strong>Properties:</strong></p>
+<ul>
+<li>Text – The content text</li>
+<li>Image – Optional image displayed alongside the text</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">IRichToolTipItem content = toolTip.Items.Add(&quot;Open an existing file from disk.&quot;);
+content.Image = Resources.OpenFile;
+</code></pre>
+<hr>
+<h3 id="separator-item">Separator Item</h3>
+<p>Represents a visual divider used to separate sections within the tooltip.</p>
+<ul>
+<li>Created using: <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IToolTipItemCollection.html#PhiRobotics_UI_ToolTips_IToolTipItemCollection_AddSeparator">Items.AddSeparator()</a></li>
+<li>Interface: <a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.html">IRichToolTipSeparatorItem</a></li>
+</ul>
+<p><strong>Usage:</strong></p>
+<ul>
+<li>Improve readability</li>
+<li>Group related content</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">toolTip.Items.AddSeparator();
+</code></pre>
+<hr>
+<h3 id="example">Example</h3>
+<pre><code class="lang-csharp">IRichToolTip toolTip = factory.CreateToolTip();
+
+// Title
+toolTip.Items.AddTitle(&quot;Open File&quot;);
+
+// Content with image
+var content = toolTip.Items.Add(&quot;Open an existing file from disk.&quot;);
+content.Image = Resources.OpenFile;
+
+// Separator
+toolTip.Items.AddSeparator();
+
+// Footer
+var footer = toolTip.Items.AddTitle(&quot;Press Ctrl+O&quot;);
+footer.Image = Resources.HelpIcon;
+</code></pre>
+<hr>
+<h3 id="output-of-example">Output of Example</h3>
+<p><img src="../Images/RichToolTip_Example.png" alt="RichToolTip Output"></p>
+<hr>
+<h3 id="item-order">Item Order</h3>
+<p>Items are displayed in the order they are added. This allows you to control the layout and grouping of content.</p>
+<hr>
+<h3 id="when-to-use-irichtooltip">When to Use IRichToolTip</h3>
+<p>Use IRichToolTip instead of standard tooltips when:</p>
+<ul>
+<li>You need structured or multi-line content</li>
+<li>You want to include images or icons</li>
+<li>You need better visual hierarchy (headers, sections)</li>
+</ul>
+<hr>
+<h3 id="summary">Summary</h3>
+<p>Summary
+<a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> provides a flexible way to create visually rich and structured tooltips by combining multiple item types:</p>
+<ul>
+<li><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTipTitleItem.html">IRichToolTipTitleItem</a> for headings</li>
+<li><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTipItem.html">IRichToolTipItem</a> for descriptive content</li>
+<li><a class="xref" href="../api/PhiRobotics.UI.ToolTips.IRichToolTipSeparatorItem.html">IRichToolTipSeparatorItem</a> for layout organization</li>
+</ul>
+<p>This makes it ideal for delivering enhanced contextual information in a clean and user-friendly format.</p>
+<hr>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
