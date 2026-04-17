@@ -73,14 +73,13 @@
 PhiRobotics UI library.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"><p>The wizard framework enables applications to extend functionality through modular
-wizard plugins. A wizard guides users through a sequence of steps using a structured
-user interface consisting of a welcome page, one or more intermediate pages, and a
-completion page.</p>
+  <div class="markdown level0 remarks"><p>The wizard enables applications to extend functionality through modular wizard plugins.
+A wizard guides users through a sequence of steps using a structured user interface
+consisting of a welcome page, one or more intermediate pages, and a completion page.</p>
 <p>
 Wizards are implemented by consumer code through the <a class="xref" href="PhiRobotics.UI.Wizard.IWizard.html">IWizard</a> interface
 and are packaged in external assemblies. These assemblies are discovered and loaded
-at runtime by the framework.
+at runtime.
 </p>
 <p>
 Each wizard must be exported using the <a class="xref" href="PhiRobotics.UI.Wizard.ExportedWizardAttribute.html">ExportedWizardAttribute</a> assembly
@@ -157,8 +156,8 @@ UI library and is not intended to be implemented by consumer code.
       <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizardHost.html">IWizardHost</a></h4>
       <section><p>Provides functionality to execute wizards discovered from wizard assemblies.</p>
 <p>
-The <b>IWizardHost</b> interface is implemented by the <b>PhiRobotics</b> UI
-framework and is not intended to be implemented by consumer code.
+The <b>IWizardHost</b> interface is implemented by the UI library and is not 
+intended to be implemented by consumer code.
 </p>
 </section>
       <h4><a class="xref" href="PhiRobotics.UI.Wizard.IWizardPage.html">IWizardPage</a></h4>

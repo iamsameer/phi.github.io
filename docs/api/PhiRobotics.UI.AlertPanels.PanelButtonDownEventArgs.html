@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class PanelButtonDownEventArgs ">
     
-    <meta name="description" content="Provides data for the .">
+    <meta name="description" content="Provides data for the  event.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -71,7 +71,7 @@
 
 
   <h1 id="PhiRobotics_UI_AlertPanels_PanelButtonDownEventArgs" data-uid="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs" class="text-break">Class PanelButtonDownEventArgs</h1>
-  <div class="markdown level0 summary"><p>Provides data for the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged">ButtonDownChanged</a>.</p>
+  <div class="markdown level0 summary"><p>Provides data for the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged">ButtonDownChanged</a> event.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -130,13 +130,19 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class PanelButtonDownEventArgs : PanelButtonEventArgs</code></pre>
   </div>
+  <h5 id="PhiRobotics_UI_AlertPanels_PanelButtonDownEventArgs_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This event data is used when a check-style <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> changes its state
+(pressed or released). It allows you to determine which button triggered the event
+and whether it is currently in the &quot;down&quot; (pressed) state.</p>
+</div>
   <h3 id="constructors">Constructors
 </h3>
 
 
   <a id="PhiRobotics_UI_AlertPanels_PanelButtonDownEventArgs__ctor_" data-uid="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.#ctor*"></a>
   <h4 id="PhiRobotics_UI_AlertPanels_PanelButtonDownEventArgs__ctor_PhiRobotics_UI_AlertPanels_IAlertPanelInfo_PhiRobotics_UI_AlertPanels_IAlertForm_PhiRobotics_UI_AlertPanels_IButton_System_String_System_Boolean_" data-uid="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.#ctor(PhiRobotics.UI.AlertPanels.IAlertPanelInfo,PhiRobotics.UI.AlertPanels.IAlertForm,PhiRobotics.UI.AlertPanels.IButton,System.String,System.Boolean)">PanelButtonDownEventArgs(IAlertPanelInfo, IAlertForm, IButton, string, bool)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.html">PanelButtonDownEventArgs</a> class with the specified settings.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.html">PanelButtonDownEventArgs</a> class with
+the specified settings.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -156,31 +162,33 @@
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a></td>
         <td><span class="parametername">info</span></td>
-        <td><p>A <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a> object used to initialize the <a class="xref" href="PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs.html#PhiRobotics_UI_AlertPanels_AlertPanelTextClickEventArgs_Info">Info</a> property.</p>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelInfo.html">IAlertPanelInfo</a> associated with the alert panel.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a></td>
         <td><span class="parametername">form</span></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a> object used to initialize the <a class="xref" href="PhiRobotics.UI.AlertPanels.AlertPanelTextClickEventArgs.html#PhiRobotics_UI_AlertPanels_AlertPanelTextClickEventArgs_Form">Form</a> property.</p>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a> that raised the event.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a></td>
         <td><span class="parametername">button</span></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> object used to initialize the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelButtonEventArgs.html#PhiRobotics_UI_AlertPanels_PanelButtonEventArgs_Button">Button</a> property.</p>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> that triggered the event.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
         <td><span class="parametername">buttonName</span></td>
-        <td><p>String used to initialize the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelButtonEventArgs.html#PhiRobotics_UI_AlertPanels_PanelButtonEventArgs_ButtonName">ButtonName</a> property.</p>
+        <td><p>The name of the button that triggered the event.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">down</span></td>
-        <td></td>
+        <td><p><code>true</code> if the button is in the pressed (down) state;
+otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -190,7 +198,8 @@
 
   <a id="PhiRobotics_UI_AlertPanels_PanelButtonDownEventArgs_Down_" data-uid="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.Down*"></a>
   <h4 id="PhiRobotics_UI_AlertPanels_PanelButtonDownEventArgs_Down" data-uid="PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.Down">Down</h4>
-  <div class="markdown level1 summary"><p>Gets whether the button associated with the event is currently in a &quot;down&quot; state.</p>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the associated button is currently in the &quot;down&quot;
+(pressed) state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -208,7 +217,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
+        <td><p><code>true</code> if the button is pressed; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>

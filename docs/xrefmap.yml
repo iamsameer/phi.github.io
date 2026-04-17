@@ -4268,40 +4268,40 @@ references:
   isSpec: "True"
   fullName: PhiRobotics.UI.ISupportCulture.Culture
   nameWithType: ISupportCulture.Culture
-- uid: PhiRobotics.UI.ISVGFactory
-  name: ISVGFactory
+- uid: PhiRobotics.UI.ISvgFactory
+  name: ISvgFactory
   href: api/PhiRobotics.UI.ISVGFactory.html
-  commentId: T:PhiRobotics.UI.ISVGFactory
-  fullName: PhiRobotics.UI.ISVGFactory
-  nameWithType: ISVGFactory
-- uid: PhiRobotics.UI.ISVGFactory.Create(System.IO.Stream)
+  commentId: T:PhiRobotics.UI.ISvgFactory
+  fullName: PhiRobotics.UI.ISvgFactory
+  nameWithType: ISvgFactory
+- uid: PhiRobotics.UI.ISvgFactory.Create(System.IO.Stream)
   name: Create(Stream)
-  href: api/PhiRobotics.UI.ISVGFactory.html#PhiRobotics_UI_ISVGFactory_Create_System_IO_Stream_
-  commentId: M:PhiRobotics.UI.ISVGFactory.Create(System.IO.Stream)
-  fullName: PhiRobotics.UI.ISVGFactory.Create(System.IO.Stream)
-  nameWithType: ISVGFactory.Create(Stream)
-- uid: PhiRobotics.UI.ISVGFactory.Create(System.String)
+  href: api/PhiRobotics.UI.ISVGFactory.html#PhiRobotics_UI_ISvgFactory_Create_System_IO_Stream_
+  commentId: M:PhiRobotics.UI.ISvgFactory.Create(System.IO.Stream)
+  fullName: PhiRobotics.UI.ISvgFactory.Create(System.IO.Stream)
+  nameWithType: ISvgFactory.Create(Stream)
+- uid: PhiRobotics.UI.ISvgFactory.Create(System.String)
   name: Create(string)
-  href: api/PhiRobotics.UI.ISVGFactory.html#PhiRobotics_UI_ISVGFactory_Create_System_String_
-  commentId: M:PhiRobotics.UI.ISVGFactory.Create(System.String)
+  href: api/PhiRobotics.UI.ISVGFactory.html#PhiRobotics_UI_ISvgFactory_Create_System_String_
+  commentId: M:PhiRobotics.UI.ISvgFactory.Create(System.String)
   name.vb: Create(String)
-  fullName: PhiRobotics.UI.ISVGFactory.Create(string)
-  fullName.vb: PhiRobotics.UI.ISVGFactory.Create(String)
-  nameWithType: ISVGFactory.Create(string)
-  nameWithType.vb: ISVGFactory.Create(String)
-- uid: PhiRobotics.UI.ISVGFactory.Create*
+  fullName: PhiRobotics.UI.ISvgFactory.Create(string)
+  fullName.vb: PhiRobotics.UI.ISvgFactory.Create(String)
+  nameWithType: ISvgFactory.Create(string)
+  nameWithType.vb: ISvgFactory.Create(String)
+- uid: PhiRobotics.UI.ISvgFactory.Create*
   name: Create
-  href: api/PhiRobotics.UI.ISVGFactory.html#PhiRobotics_UI_ISVGFactory_Create_
-  commentId: Overload:PhiRobotics.UI.ISVGFactory.Create
+  href: api/PhiRobotics.UI.ISVGFactory.html#PhiRobotics_UI_ISvgFactory_Create_
+  commentId: Overload:PhiRobotics.UI.ISvgFactory.Create
   isSpec: "True"
-  fullName: PhiRobotics.UI.ISVGFactory.Create
-  nameWithType: ISVGFactory.Create
-- uid: PhiRobotics.UI.ISVGImage
-  name: ISVGImage
+  fullName: PhiRobotics.UI.ISvgFactory.Create
+  nameWithType: ISvgFactory.Create
+- uid: PhiRobotics.UI.ISvgImage
+  name: ISvgImage
   href: api/PhiRobotics.UI.ISVGImage.html
-  commentId: T:PhiRobotics.UI.ISVGImage
-  fullName: PhiRobotics.UI.ISVGImage
-  nameWithType: ISVGImage
+  commentId: T:PhiRobotics.UI.ISvgImage
+  fullName: PhiRobotics.UI.ISvgImage
+  nameWithType: ISvgImage
 - uid: PhiRobotics.UI.ITree
   name: ITree
   href: api/PhiRobotics.UI.ITree.html

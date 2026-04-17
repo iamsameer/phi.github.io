@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Interface IUIFactoryService ">
     
-    <meta name="description" content="Defines a service for accessing UI-related factories.  The IUIFactoryService interface is implemented by the PhiRobotics ui framework  and is not intended for consumer implementation.">
+    <meta name="description" content="Provides access to UI-related factory instances.  The IUIFactoryService interface is implemented by the UI library and  is not intended for consumer implementation.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -71,10 +71,10 @@
 
 
   <h1 id="PhiRobotics_UI_IUIFactoryService" data-uid="PhiRobotics.UI.IUIFactoryService" class="text-break">Interface IUIFactoryService</h1>
-  <div class="markdown level0 summary"><p>Defines a service for accessing UI-related factories.</p>
+  <div class="markdown level0 summary"><p>Provides access to UI-related factory instances.</p>
 <p>
-The <b>IUIFactoryService</b> interface is implemented by the <b>PhiRobotics</b> ui framework 
-and is not intended for consumer implementation.
+The <b>IUIFactoryService</b> interface is implemented by the UI library and 
+is not intended for consumer implementation.
 </p>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -85,8 +85,14 @@ and is not intended for consumer implementation.
     <pre><code class="lang-csharp hljs">public interface IUIFactoryService</code></pre>
   </div>
   <h5 id="PhiRobotics_UI_IUIFactoryService_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>This service acts as a centralized entry point for obtaining factory instances used to
-create UI components and resources, such as alert panels and SVG images.</p>
+  <div class="markdown level0 remarks"><p>
+This service acts as a centralized entry point for obtaining factory instances
+used to create UI components and resources.
+</p>
+<p>
+Use this service to access factories for creating alert panels, dialogs,
+editors, tooltips, tree controls, wizards, and other UI elements.
+</p>
 </div>
   <h3 id="properties">Properties
 </h3>
@@ -94,7 +100,7 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_AlertPanelFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.AlertPanelFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_AlertPanelFactory" data-uid="PhiRobotics.UI.IUIFactoryService.AlertPanelFactory">AlertPanelFactory</h4>
-  <div class="markdown level1 summary"><p>Gets the factory for creating alert panels.</p>
+  <div class="markdown level1 summary"><p>Gets the factory used to create alert panels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -120,7 +126,8 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_CommonDialogFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.CommonDialogFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_CommonDialogFactory" data-uid="PhiRobotics.UI.IUIFactoryService.CommonDialogFactory">CommonDialogFactory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the factory used to create common dialogs.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -145,7 +152,7 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_FlyOutPanelFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.FlyOutPanelFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_FlyOutPanelFactory" data-uid="PhiRobotics.UI.IUIFactoryService.FlyOutPanelFactory">FlyOutPanelFactory</h4>
-  <div class="markdown level1 summary"><p>Gets the factory for ctrating flyout panels.</p>
+  <div class="markdown level1 summary"><p>Gets the factory used to create flyout panels.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -171,7 +178,8 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_InputEditorFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.InputEditorFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_InputEditorFactory" data-uid="PhiRobotics.UI.IUIFactoryService.InputEditorFactory">InputEditorFactory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the factory used to create input editors.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -196,12 +204,12 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_SVGFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.SVGFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_SVGFactory" data-uid="PhiRobotics.UI.IUIFactoryService.SVGFactory">SVGFactory</h4>
-  <div class="markdown level1 summary"><p>Gets the factory for creating SVG images.</p>
+  <div class="markdown level1 summary"><p>Gets the factory used to create SVG images.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ISVGFactory SVGFactory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">ISvgFactory SVGFactory { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -213,7 +221,7 @@ create UI components and resources, such as alert panels and SVG images.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ISVGFactory.html">ISVGFactory</a></td>
+        <td><a class="xref" href="PhiRobotics.UI.ISVGFactory.html">ISvgFactory</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -222,7 +230,8 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_SplashScreenFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.SplashScreenFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_SplashScreenFactory" data-uid="PhiRobotics.UI.IUIFactoryService.SplashScreenFactory">SplashScreenFactory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the factory used to create splash screens.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -247,7 +256,7 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_ToolTipFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.ToolTipFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_ToolTipFactory" data-uid="PhiRobotics.UI.IUIFactoryService.ToolTipFactory">ToolTipFactory</h4>
-  <div class="markdown level1 summary"><p>Gets the manager which gives a factory to create Tooltips.</p>
+  <div class="markdown level1 summary"><p>Gets the factory used to create tooltips.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -273,7 +282,8 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_TreeFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.TreeFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_TreeFactory" data-uid="PhiRobotics.UI.IUIFactoryService.TreeFactory">TreeFactory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the factory used to create tree controls.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -298,7 +308,8 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_WaitFormFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.WaitFormFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_WaitFormFactory" data-uid="PhiRobotics.UI.IUIFactoryService.WaitFormFactory">WaitFormFactory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the factory used to create wait forms.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -323,7 +334,8 @@ create UI components and resources, such as alert panels and SVG images.</p>
 
   <a id="PhiRobotics_UI_IUIFactoryService_WizardFactory_" data-uid="PhiRobotics.UI.IUIFactoryService.WizardFactory*"></a>
   <h4 id="PhiRobotics_UI_IUIFactoryService_WizardFactory" data-uid="PhiRobotics.UI.IUIFactoryService.WizardFactory">WizardFactory</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the factory used to create wizard interfaces.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">

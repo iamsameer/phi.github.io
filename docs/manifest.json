@@ -3,6 +3,16 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/PhiRobotics.UI.AlertPanels.AlertPanelEventArgs.yml",
       "output": {
@@ -140,7 +150,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PhiRobotics.UI.AlertPanels.IAlertPanelFactory",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IAlertPanelFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating alert panels and related components.</p>\n<p>\nThe <b>IAlertPanelFactory</b> interface is implemented by the <b>PhiRobotics</b> \nui framework and is not intended for consumer implementation.\n</p>\n"
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.IAlertPanelFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating alert panels and related components.</p>\n<p>\nThe <b>IAlertPanelFactory</b> interface is implemented by the UI library \nand is not intended for consumer implementation.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -196,7 +206,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.ButtonDownChanged\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelButtonDownEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.ButtonDownChanged\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -252,7 +262,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.PanelFormLoad\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.yml\" sourcestartlinenumber=\"1\">Provides data for the <xref href=\"PhiRobotics.UI.AlertPanels.IAlertPanel.PanelFormLoad\" data-throw-if-not-resolved=\"false\"></xref> event.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1007,8 +1017,8 @@
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "PhiRobotics.UI.ISVGFactory",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISVGFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating instances of <xref href=\"PhiRobotics.UI.ISVGImage\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>\nThe <b>ISVGFactory</b> interface is implemented by the <b>PhiRobotics</b> ui \nframework and is not intended for consumer implementation.\n</p>\n"
+      "Title": "PhiRobotics.UI.ISvgFactory",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISVGFactory.yml\" sourcestartlinenumber=\"1\">Defines a factory for creating instances of <xref href=\"PhiRobotics.UI.ISvgImage\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>\nThe <b>ISVGFactory</b> interface is implemented by the UI library and \nis not intended for consumer implementation.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1021,8 +1031,8 @@
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "PhiRobotics.UI.ISVGImage",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISVGImage.yml\" sourcestartlinenumber=\"1\">Defines a contract for Scalable Vector Graphics (SVG) images.</p>\n<p>\nThe <b>ISVGImage</b> interface is implemented by the <b>PhiRobotics</b> ui framework \nand is not intended for consumer implementation.\n</p>\n"
+      "Title": "PhiRobotics.UI.ISvgImage",
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ISVGImage.yml\" sourcestartlinenumber=\"1\">Defines a contract for Scalable Vector Graphics (SVG) images.</p>\n<p>\nThe <b>ISVGImage</b> interface is implemented by the UI library\nand is not intended for consumer implementation.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1064,7 +1074,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PhiRobotics.UI.ITreeFactory",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeFactory.yml\" sourcestartlinenumber=\"1\">Provides a factory for creating <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n<p>\nThe <b>ITreeFactory</b> interface is implemented by the ui framework and \nis not intended for consumer implementation.\n</p>\n"
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.ITreeFactory.yml\" sourcestartlinenumber=\"1\">Provides a factory for creating <xref href=\"PhiRobotics.UI.ITree\" data-throw-if-not-resolved=\"false\"></xref> instances.</p>\n<p>\nThe <b>ITreeFactory</b> interface is implemented by the UI library and \nis not intended for consumer implementation.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1148,7 +1158,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PhiRobotics.UI.IUIFactoryService",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IUIFactoryService.yml\" sourcestartlinenumber=\"1\">Defines a service for accessing UI-related factories.</p>\n<p>\nThe <b>IUIFactoryService</b> interface is implemented by the <b>PhiRobotics</b> ui framework \nand is not intended for consumer implementation.\n</p>\n"
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.IUIFactoryService.yml\" sourcestartlinenumber=\"1\">Provides access to UI-related factory instances.</p>\n<p>\nThe <b>IUIFactoryService</b> interface is implemented by the UI library and \nis not intended for consumer implementation.\n</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1736,7 +1746,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "PhiRobotics.UI.Wizard.IWizardHost",
-      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizardHost.yml\" sourcestartlinenumber=\"1\">Provides functionality to execute wizards discovered from wizard assemblies.</p>\n<p>\nThe <b>IWizardHost</b> interface is implemented by the <b>PhiRobotics</b> UI\nframework and is not intended to be implemented by consumer code.\n</p>\n"
+      "Summary": "<p sourcefile=\"api/PhiRobotics.UI.Wizard.IWizardHost.yml\" sourcestartlinenumber=\"1\">Provides functionality to execute wizards discovered from wizard assemblies.</p>\n<p>\nThe <b>IWizardHost</b> interface is implemented by the UI library and is not \nintended to be implemented by consumer code.\n</p>\n"
     },
     {
       "type": "ManagedReference",

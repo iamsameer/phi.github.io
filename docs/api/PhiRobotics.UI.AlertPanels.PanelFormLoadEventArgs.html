@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Class PanelFormLoadEventArgs ">
     
-    <meta name="description" content="Provides data for the .">
+    <meta name="description" content="Provides data for the  event.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -71,7 +71,7 @@
 
 
   <h1 id="PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs" data-uid="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs" class="text-break">Class PanelFormLoadEventArgs</h1>
-  <div class="markdown level0 summary"><p>Provides data for the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_PanelFormLoad">PanelFormLoad</a>.</p>
+  <div class="markdown level0 summary"><p>Provides data for the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_PanelFormLoad">PanelFormLoad</a> event.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -113,14 +113,19 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class PanelFormLoadEventArgs : EventArgs</code></pre>
   </div>
+  <h5 id="PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This event occurs when an alert form is being initialized. It allows you to
+customize the alert window before it is displayed, including modifying the
+associated button collection or configuring the form.</p>
+</div>
   <h3 id="constructors">Constructors
 </h3>
 
 
   <a id="PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs__ctor_" data-uid="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.#ctor*"></a>
   <h4 id="PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs__ctor_PhiRobotics_UI_AlertPanels_IButtonCollection_PhiRobotics_UI_AlertPanels_IAlertForm_" data-uid="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.#ctor(PhiRobotics.UI.AlertPanels.IButtonCollection,PhiRobotics.UI.AlertPanels.IAlertForm)">PanelFormLoadEventArgs(IButtonCollection, IAlertForm)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html">PanelFormLoadEventArgs</a> class with the specified button
-collection and form.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html">PanelFormLoadEventArgs</a> class
+with the specified button collection and form.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -140,13 +145,15 @@ collection and form.</p>
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a></td>
         <td><span class="parametername">collection</span></td>
-        <td><p>Am <a class="xref" href="PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a> object used to initialize the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html#PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_Buttons">Buttons</a> property.</p>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a> used to initialize the
+<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html#PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_Buttons">Buttons</a> property.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a></td>
         <td><span class="parametername">form</span></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a> object used to initialize the <a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html#PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_Form">Form</a> property.</p>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a> used to initialize the
+<a class="xref" href="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.html#PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_Form">Form</a> property.</p>
 </td>
       </tr>
     </tbody>
@@ -175,7 +182,8 @@ collection and form.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a></td>
-        <td></td>
+        <td><p>An <a class="xref" href="PhiRobotics.UI.AlertPanels.IButtonCollection.html">IButtonCollection</a> containing the buttons displayed in the alert.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,7 +191,7 @@ collection and form.</p>
 
   <a id="PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_Form_" data-uid="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.Form*"></a>
   <h4 id="PhiRobotics_UI_AlertPanels_PanelFormLoadEventArgs_Form" data-uid="PhiRobotics.UI.AlertPanels.PanelFormLoadEventArgs.Form">Form</h4>
-  <div class="markdown level1 summary"><p>Gets the alert form being loaded.</p>
+  <div class="markdown level1 summary"><p>Gets the alert form that is being loaded.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -201,7 +209,8 @@ collection and form.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a></td>
-        <td></td>
+        <td><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertForm.html">IAlertForm</a> instance associated with the current alert.</p>
+</td>
       </tr>
     </tbody>
   </table>
