@@ -326,18 +326,73 @@ tree.ClearSelection();
 </ul>
 <hr>
 <h3 id="dynamic-loading-lazy-loading">Dynamic Loading (Lazy Loading)</h3>
-<p>Used when loading large datasets.</p>
+<p>When your tree contains a large number of nodes (for example, files, database records, or hierarchical data), loading everything at once can slow down the UI.</p>
+<p>Instead, you can load nodes only when the user expands them.</p>
+<hr>
+<h4 id="how-it-works-concept">How It Works (Concept)</h4>
+<ol>
+<li>Initially, a node is shown as expandable (even if its children are not loaded yet)</li>
+<li>When the user expands the node:
+. You fetch or generate its children
+. Add them to the node</li>
+<li>This happens only once per node</li>
+</ol>
+<hr>
+<h4 id="step-by-step-implementation">Step-by-Step Implementation</h4>
+<ol>
+<li>Mark Node as Having Children</li>
+</ol>
 <pre><code class="lang-csharp">node.HasChildren = true;
 </code></pre>
-<h4 id="load-on-demand">Load on Demand</h4>
+<p>This tells the UI:</p>
+<p>“Show expand arrow, even if children are not loaded yet”</p>
+<hr>
+<ol>
+<li>Handle Expand Event
+You need to load children when the node is expanded:</li>
+</ol>
 <pre><code class="lang-csharp">void OnBeforeExpandNode(ITreeNode node)
 {
-    if (!node.Nodes.Any())
-    {
-        node.Nodes.Append(&quot;Loaded dynamically&quot;);
-    }
+	// Prevent reloading if already loaded
+    if (node.Nodes.Count &gt; 0)
+        return;
+
+    // Load children dynamically
+    node.Nodes.Append(&quot;Child 1&quot;);
+    node.Nodes.Append(&quot;Child 2&quot;);
 }
 </code></pre>
+<hr>
+<h4 id="real-example">Real Example</h4>
+<p>Imagine a file explorer:
+. Root shows: C:<br>
+. You don’t load all folders inside it immediately
+. When user expands C:\ → then load folders like:
+. Program Files
+. Users
+. Windows</p>
+<hr>
+<h4 id="why-this-matters">Why This Matters</h4>
+<p>Without lazy loading:
+. Tree becomes slow
+. High memory usage
+. UI freezes during load</p>
+<p>With lazy loading:
+. Faster startup
+. Smooth user experience
+. Scales to large datasets</p>
+<hr>
+<h4 id="common-mistake">Common Mistake</h4>
+<p>❌ Reloading children every time node expands
+✔ Always check:</p>
+<pre><code class="lang-csharp">if (node.Nodes.Count == 0)
+</code></pre>
+<hr>
+<h4 id="when-to-use">When to Use</h4>
+<p>Use lazy loading when:
+. Data comes from database / API
+. Tree has thousands of nodes
+. Data is expensive to compute</p>
 <hr>
 <h3 id="drag-and-drop">Drag and Drop</h3>
 <p>Selection plays a key role in drag-and-drop operations.</p>
