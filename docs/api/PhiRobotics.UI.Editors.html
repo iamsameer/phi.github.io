@@ -1,272 +1,327 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Namespace PhiRobotics.UI.Editors </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Namespace PhiRobotics.UI.Editors ">
-    
-    
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors">
+
+        <article data-uid="PhiRobotics.UI.Editors">
 
   <h1 id="PhiRobotics_UI_Editors" data-uid="PhiRobotics.UI.Editors" class="text-break">Namespace PhiRobotics.UI.Editors</h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
+
     <h3 id="classes">
 Classes
 </h3>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.InputChangingEventArgs.html">InputChangingEventArgs</a></h4>
-      <section><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanging">EditValueChanging</a> event.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.html">InputConvertEditValueEventArgs</a></h4>
-      <section><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_ParseEditValue">ParseEditValue</a> event.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.html">InputCustomDisplayTextEventArgs</a></h4>
-      <section><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_CustomDisplayText">CustomDisplayText</a> event.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.html">InvalidInputExceptionEventArgs</a></h4>
-      <section><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_InvalidValue">InvalidValue</a> event.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.html">QueryInputProcessKeyEventArgs</a></h4>
-      <section><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_QueryProcessKey">QueryProcessKey</a> event.</p>
-</section>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.InputChangingEventArgs.html">InputChangingEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanging">EditValueChanging</a> event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.InputConvertEditValueEventArgs.html">InputConvertEditValueEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_ParseEditValue">ParseEditValue</a> event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.InputCustomDisplayTextEventArgs.html">InputCustomDisplayTextEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_CustomDisplayText">CustomDisplayText</a> event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.InvalidInputExceptionEventArgs.html">InvalidInputExceptionEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_InvalidValue">InvalidValue</a> event.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.QueryInputProcessKeyEventArgs.html">QueryInputProcessKeyEventArgs</a></dt>
+      <dd><p>Provides data for the <a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html#PhiRobotics_UI_Editors_ITextInputEditor_QueryProcessKey">QueryProcessKey</a> event.</p>
+</dd>
+    </dl>
     <h3 id="structs">
 Structs
 </h3>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.InputEditorId.html">InputEditorId</a></h4>
-      <section><p>Represents a logical identifier for an input editor type.</p>
-</section>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.InputEditorId.html">InputEditorId</a></dt>
+      <dd><p>Represents a logical identifier for an input editor type.</p>
+</dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html">IBooleanEditor</a></h4>
-      <section><p>Describes an interface which defines an editor that is used to view and edit
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IBooleanEditor.html">IBooleanEditor</a></dt>
+      <dd><p>Describes an interface which defines an editor that is used to view and edit
 boolean values.</p>
 <p>
 The <b>IBooleanEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IColourEditor.html">IColourEditor</a></h4>
-      <section><p>Represents an editor used to view and modify <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IColourEditor.html">IColourEditor</a></dt>
+      <dd><p>Represents an editor used to view and modify <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.color">Color</a>
 values.</p>
 <p>
 The <b>IColourEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IDateTimeEditor.html">IDateTimeEditor</a></h4>
-      <section><p>Describes an interface for a date-time input editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IDateTimeEditor.html">IDateTimeEditor</a></dt>
+      <dd><p>Describes an interface for a date-time input editor.</p>
 <p>
 The <b>IDateTimeEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.html">IDateTimeEditorMaskProperties</a></h4>
-      <section><p>Defines properties that control date-time masking behavior for text-based editors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IDateTimeEditorMaskProperties.html">IDateTimeEditorMaskProperties</a></dt>
+      <dd><p>Defines properties that control date-time masking behavior for text-based editors.</p>
 <p>
 The <b>IDateTimeEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a></h4>
-      <section><p>Describes a base interface for input editors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html">IInputEditor</a></dt>
+      <dd><p>Describes a base interface for input editors.</p>
 <p>
 The <b>IInputEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IInputEditorFactory.html">IInputEditorFactory</a></h4>
-      <section><p>Defines a factory responsible for creating input editor instances.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IInputEditorFactory.html">IInputEditorFactory</a></dt>
+      <dd><p>Defines a factory responsible for creating input editor instances.</p>
 <p>
 The <b>IInputEditorFactory</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.INumericEditor.html">INumericEditor</a></h4>
-      <section><p>Describes an interface which defines an editor that is used to view and edit
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.INumericEditor.html">INumericEditor</a></dt>
+      <dd><p>Describes an interface which defines an editor that is used to view and edit
 numeric values.</p>
 <p>
 The <b>INumericEditor</b> interface is implemented by the <b>PhiRobotics</b>
 UI library and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.INumericEditorMaskProperties.html">INumericEditorMaskProperties</a></h4>
-      <section><p>Defines properties that control numeric masking behavior for text-based editors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.INumericEditorMaskProperties.html">INumericEditorMaskProperties</a></dt>
+      <dd><p>Defines properties that control numeric masking behavior for text-based editors.</p>
 <p>
 The <b>INumericEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IRegexEditorMaskProperties.html">IRegexEditorMaskProperties</a></h4>
-      <section><p>Defines properties that control regular expression-based masking behavior
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IRegexEditorMaskProperties.html">IRegexEditorMaskProperties</a></dt>
+      <dd><p>Defines properties that control regular expression-based masking behavior
 for text-based editors.</p>
 <p>
 The <b>IRegexEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.IRegularEditorMaskProperties.html">IRegularEditorMaskProperties</a></h4>
-      <section><p>Defines properties that control simplified regular expression masking behavior
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.IRegularEditorMaskProperties.html">IRegularEditorMaskProperties</a></dt>
+      <dd><p>Defines properties that control simplified regular expression masking behavior
 for text-based editors.</p>
 <p>
 The <b>IRegularEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ISimpleEditorMaskProperties.html">ISimpleEditorMaskProperties</a></h4>
-      <section><p>Defines properties that control simple masking behavior for text-based editors.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ISimpleEditorMaskProperties.html">ISimpleEditorMaskProperties</a></dt>
+      <dd><p>Defines properties that control simple masking behavior for text-based editors.</p>
 <p>
 The <b>ISimpleEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a></h4>
-      <section><p>Defines properties that control input masking and formatting behavior
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ITextEditorMaskProperties.html">ITextEditorMaskProperties</a></dt>
+      <dd><p>Defines properties that control input masking and formatting behavior
 for a text-based editor.</p>
 <p>
 The <b>ITextEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html">ITextInputEditor</a></h4>
-      <section><p>Describes an interface for a text input editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ITextInputEditor.html">ITextInputEditor</a></dt>
+      <dd><p>Describes an interface for a text input editor.</p>
 <p>
 The <b>ITextInputEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ITimeSpanEditor.html">ITimeSpanEditor</a></h4>
-      <section><p>Describes an interface for a time span input editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ITimeSpanEditor.html">ITimeSpanEditor</a></dt>
+      <dd><p>Describes an interface for a time span input editor.</p>
 <p>
 The <b>ITimeSpanEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.html">ITimeSpanEditorMaskProperties</a></h4>
-      <section><p>Describes properties of a time span editor mask that allows users to enter time intervals.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ITimeSpanEditorMaskProperties.html">ITimeSpanEditorMaskProperties</a></dt>
+      <dd><p>Describes properties of a time span editor mask that allows users to enter time intervals.</p>
 <p>
 The <b>ITimeSpanEditorMaskProperties</b> interface is implemented by the UI library 
 and is not intended to be implemented by consumer code.
 </p>
-</section>
+</dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.CheckBoxStyle.html">CheckBoxStyle</a></h4>
-      <section><p>Specifies the visual style used to render a boolean editor.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.EditMaskType.html">EditMaskType</a></h4>
-      <section><p>Specifies the type of input mask applied to an editor.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ExceptionMode.html">ExceptionMode</a></h4>
-      <section><p>Specifies how an exception should be handled.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.ImageLayoutMode.html">ImageLayoutMode</a></h4>
-      <section><p>Specifies how an image can be aligned within another object.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskInputMode.html">TimeSpanMaskInputMode</a></h4>
-      <section><p>Lists the input modes of time span edit mask.</p>
-</section>
-      <h4><a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskPart.html">TimeSpanMaskPart</a></h4>
-      <section><p>Lists the parts/segments of time span mask.</p>
-</section>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.CheckBoxStyle.html">CheckBoxStyle</a></dt>
+      <dd><p>Specifies the visual style used to render a boolean editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.EditMaskType.html">EditMaskType</a></dt>
+      <dd><p>Specifies the type of input mask applied to an editor.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ExceptionMode.html">ExceptionMode</a></dt>
+      <dd><p>Specifies how an exception should be handled.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.ImageLayoutMode.html">ImageLayoutMode</a></dt>
+      <dd><p>Specifies how an image can be aligned within another object.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskInputMode.html">TimeSpanMaskInputMode</a></dt>
+      <dd><p>Lists the input modes of time span edit mask.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="PhiRobotics.UI.Editors.TimeSpanMaskPart.html">TimeSpanMaskPart</a></dt>
+      <dd><p>Lists the parts/segments of time span mask.</p>
+</dd>
+    </dl>
 
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,128 +1,160 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Interface ITreeEventHandlers </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface ITreeEventHandlers ">
-    
-    <meta name="description" content="Defines handlers for tree-related events raised by an .">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      <meta name="description" content="Defines handlers for tree-related events raised by an .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.ITreeEventHandlers">
+
+        <article data-uid="PhiRobotics.UI.ITreeEventHandlers">
 
 
 
-  <h1 id="PhiRobotics_UI_ITreeEventHandlers" data-uid="PhiRobotics.UI.ITreeEventHandlers" class="text-break">Interface ITreeEventHandlers</h1>
-  <div class="markdown level0 summary"><p>Defines handlers for tree-related events raised by an <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>.</p>
+  <h1 id="PhiRobotics_UI_ITreeEventHandlers" data-uid="PhiRobotics.UI.ITreeEventHandlers" class="text-break">
+Interface ITreeEventHandlers  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PhiRobotics.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Defines handlers for tree-related events raised by an <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a>.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a></h6>
-  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_syntax">Syntax</h5>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface ITreeEventHandlers</code></pre>
   </div>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_remarks"><strong>Remarks</strong></h5>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="PhiRobotics_UI_ITreeEventHandlers_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Implement this interface to receive notifications about user interactions
 and state changes in the tree, such as node selection changes, expansion,
 editing, and drag-and-drop operations.</p>
 </div>
-  <h3 id="methods">Methods
-</h3>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
 
 
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnBeforeExpandNode_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnBeforeExpandNode*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnBeforeExpandNode_PhiRobotics_UI_ITree_PhiRobotics_UI_BeforeExpandNodeEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnBeforeExpandNode(PhiRobotics.UI.ITree,PhiRobotics.UI.BeforeExpandNodeEventArgs)">OnBeforeExpandNode(ITree, BeforeExpandNodeEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnBeforeExpandNode_PhiRobotics_UI_ITree_PhiRobotics_UI_BeforeExpandNodeEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnBeforeExpandNode(PhiRobotics.UI.ITree,PhiRobotics.UI.BeforeExpandNodeEventArgs)">
+  OnBeforeExpandNode(ITree, BeforeExpandNodeEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called before a node is expanded.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnBeforeExpandNode(ITree tree, BeforeExpandNodeEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.BeforeExpandNodeEventArgs.html">BeforeExpandNodeEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides information about the node being expanded.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnBeforeExpandNode_PhiRobotics_UI_ITree_PhiRobotics_UI_BeforeExpandNodeEventArgs__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.BeforeExpandNodeEventArgs.html">BeforeExpandNodeEventArgs</a></dt>
+    <dd><p>Provides information about the node being expanded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnBeforeExpandNode_PhiRobotics_UI_ITree_PhiRobotics_UI_BeforeExpandNodeEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method allows you to implement dynamic (lazy) loading of child nodes.</p>
 <p>The method is called even if the node does not currently contain child nodes,
 provided that its <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_HasChildren">HasChildren</a> property is set to <code>true</code>.</p>
@@ -131,40 +163,41 @@ provided that its <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotic
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnDragCompleted_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragCompleted*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnDragCompleted_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragCompletedEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragCompleted(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragCompletedEventArgs)">OnDragCompleted(ITree, TreeDragCompletedEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnDragCompleted_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragCompletedEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragCompleted(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragCompletedEventArgs)">
+  OnDragCompleted(ITree, TreeDragCompletedEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when a drag operation initiated from the tree has completed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnDragCompleted(ITree tree, TreeDragCompletedEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.TreeDragCompletedEventArgs.html">TreeDragCompletedEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides information about the completed drag operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnDragCompleted_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragCompletedEventArgs__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.TreeDragCompletedEventArgs.html">TreeDragCompletedEventArgs</a></dt>
+    <dd><p>Provides information about the completed drag operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnDragCompleted_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragCompletedEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <b>OnDragCompleted</b> method is called when a drag-and-drop
 operation finishes.</p>
 <p>You can use this method to perform actions after the operation
@@ -176,41 +209,42 @@ If the <a class="xref" href="PhiRobotics.UI.TreeDragCompletedEventArgs.html#PhiR
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnDragDrop_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragDrop*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnDragDrop_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragDropEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragDrop(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragDropEventArgs)">OnDragDrop(ITree, TreeDragDropEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnDragDrop_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragDropEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragDrop(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragDropEventArgs)">
+  OnDragDrop(ITree, TreeDragDropEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when a drag-and-drop operation is performed on the tree.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnDragDrop(ITree tree, TreeDragDropEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.TreeDragDropEventArgs.html">TreeDragDropEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides information about the dragged data and the target node
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.TreeDragDropEventArgs.html">TreeDragDropEventArgs</a></dt>
+    <dd><p>Provides information about the dragged data and the target node
 where the drop occurred.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnDragDrop_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragDropEventArgs__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnDragDrop_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragDropEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <b>OnDragDrop</b> method is called when a drag-and-drop operation
 completes inside the tree.</p>
 <p>The drop location and target node are provided through
@@ -220,41 +254,42 @@ intended operation and set <a class="xref" href="PhiRobotics.UI.TreeDragDropEven
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnDragOver_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragOver*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnDragOver_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragOverEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragOver(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragOverEventArgs)">OnDragOver(ITree, TreeDragOverEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnDragOver_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragOverEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragOver(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragOverEventArgs)">
+  OnDragOver(ITree, TreeDragOverEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when a dragged item is moved over the tree.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnDragOver(ITree tree, TreeDragOverEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html">TreeDragOverEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides information about the current drag location and allows
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.TreeDragOverEventArgs.html">TreeDragOverEventArgs</a></dt>
+    <dd><p>Provides information about the current drag location and allows
 the handler to control whether dropping is allowed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnDragOver_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragOverEventArgs__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnDragOver_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragOverEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <b>OnDragOver</b> method is called when the mouse cursor moves within the
 bounds of the tree during a drag-and-drop operation.</p>
 <p>Consumers can evaluate the keyboard state to determine the intended
@@ -266,41 +301,42 @@ drag operation based on the state of the SHIFT, CTRL, ALT, or CTRL+ALT keys.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnDragStarting_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragStarting*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnDragStarting_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragStartedEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragStarting(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragStartedEventArgs)">OnDragStarting(ITree, TreeDragStartedEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnDragStarting_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragStartedEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnDragStarting(PhiRobotics.UI.ITree,PhiRobotics.UI.TreeDragStartedEventArgs)">
+  OnDragStarting(ITree, TreeDragStartedEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when a drag operation starts from the tree.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnDragStarting(ITree tree, TreeDragStartedEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.TreeDragStartedEventArgs.html">TreeDragStartedEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides information about the nodes being dragged and allows
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.TreeDragStartedEventArgs.html">TreeDragStartedEventArgs</a></dt>
+    <dd><p>Provides information about the nodes being dragged and allows
 customization of the drag operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnDragStarting_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragStartedEventArgs__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnDragStarting_PhiRobotics_UI_ITree_PhiRobotics_UI_TreeDragStartedEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <b>OnDragStarting</b> method is called each time an attempt is made
 to start dragging one or more nodes.</p>
 <p>
@@ -320,40 +356,41 @@ handle the <a class="xref" href="PhiRobotics.UI.ITreeEventHandlers.html#PhiRobot
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnFocusNodeChanged_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnFocusNodeChanged*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnFocusNodeChanged_PhiRobotics_UI_ITree_PhiRobotics_UI_FocusedNodeChangedEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnFocusNodeChanged(PhiRobotics.UI.ITree,PhiRobotics.UI.FocusedNodeChangedEventArgs)">OnFocusNodeChanged(ITree, FocusedNodeChangedEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnFocusNodeChanged_PhiRobotics_UI_ITree_PhiRobotics_UI_FocusedNodeChangedEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnFocusNodeChanged(PhiRobotics.UI.ITree,PhiRobotics.UI.FocusedNodeChangedEventArgs)">
+  OnFocusNodeChanged(ITree, FocusedNodeChangedEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when the focused node in the tree changes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnFocusNodeChanged(ITree tree, FocusedNodeChangedEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FocusedNodeChangedEventArgs.html">FocusedNodeChangedEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides information about the previous and new focused nodes.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnFocusNodeChanged_PhiRobotics_UI_ITree_PhiRobotics_UI_FocusedNodeChangedEventArgs__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.FocusedNodeChangedEventArgs.html">FocusedNodeChangedEventArgs</a></dt>
+    <dd><p>Provides information about the previous and new focused nodes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnFocusNodeChanged_PhiRobotics_UI_ITree_PhiRobotics_UI_FocusedNodeChangedEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <b>OnFocusNodeChanged</b> method is called when focus moves from one node to another for
 the following reasons:</p>
 <ul><li>A user moves focus to a node.</li><li>The <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_FocusedNode">FocusedNode</a> property is changed programmatically.</li><li>Focus moves to the newly added node when the 
@@ -361,114 +398,109 @@ the following reasons:</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnSelectionChanged_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnSelectionChanged*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnSelectionChanged_PhiRobotics_UI_ITree_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnSelectionChanged(PhiRobotics.UI.ITree)">OnSelectionChanged(ITree)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnSelectionChanged_PhiRobotics_UI_ITree_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnSelectionChanged(PhiRobotics.UI.ITree)">
+  OnSelectionChanged(ITree)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when the selection in the tree changes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnSelectionChanged(ITree tree)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnSelectionChanged_PhiRobotics_UI_ITree__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnSelectionChanged_PhiRobotics_UI_ITree__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <b>OnSelectionChanged</b> method is called whenever a node is selected or deselected.
 Use the <a class="xref" href="PhiRobotics.UI.ITree.html#PhiRobotics_UI_ITree_NodeSelection">NodeSelection</a> property to identify the currently selected nodes.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_ITreeEventHandlers_OnValidateNodeText_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnValidateNodeText*"></a>
-  <h4 id="PhiRobotics_UI_ITreeEventHandlers_OnValidateNodeText_PhiRobotics_UI_ITree_PhiRobotics_UI_ValidateNodeTextEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnValidateNodeText(PhiRobotics.UI.ITree,PhiRobotics.UI.ValidateNodeTextEventArgs)">OnValidateNodeText(ITree, ValidateNodeTextEventArgs)</h4>
+
+  <h3 id="PhiRobotics_UI_ITreeEventHandlers_OnValidateNodeText_PhiRobotics_UI_ITree_PhiRobotics_UI_ValidateNodeTextEventArgs_" data-uid="PhiRobotics.UI.ITreeEventHandlers.OnValidateNodeText(PhiRobotics.UI.ITree,PhiRobotics.UI.ValidateNodeTextEventArgs)">
+  OnValidateNodeText(ITree, ValidateNodeTextEventArgs)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Called when the text of a node is being validated after editing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void OnValidateNodeText(ITree tree, ValidateNodeTextEventArgs args)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></td>
-        <td><span class="parametername">tree</span></td>
-        <td><p>The tree that raised the event.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ValidateNodeTextEventArgs.html">ValidateNodeTextEventArgs</a></td>
-        <td><span class="parametername">args</span></td>
-        <td><p>Provides the edited text and allows validation logic to accept
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tree</code> <a class="xref" href="PhiRobotics.UI.ITree.html">ITree</a></dt>
+    <dd><p>The tree that raised the event.</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="PhiRobotics.UI.ValidateNodeTextEventArgs.html">ValidateNodeTextEventArgs</a></dt>
+    <dd><p>Provides the edited text and allows validation logic to accept
 or reject the change.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_ITreeEventHandlers_OnValidateNodeText_PhiRobotics_UI_ITree_PhiRobotics_UI_ValidateNodeTextEventArgs__remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_ITreeEventHandlers_OnValidateNodeText_PhiRobotics_UI_ITree_PhiRobotics_UI_ValidateNodeTextEventArgs__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This method is called when a text-edit operation is about to update
 <a class="xref" href="PhiRobotics.UI.ITreeNode.html#PhiRobotics_UI_ITreeNode_Text">Text</a>.</p>
 <p>If the associated <a class="xref" href="PhiRobotics.UI.ValidateNodeTextEventArgs.html#PhiRobotics_UI_ValidateNodeTextEventArgs_IsValid">IsValid</a> property is set
 to <code>false</code>, the text change is cancelled.</p>
 </div>
 
-</article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

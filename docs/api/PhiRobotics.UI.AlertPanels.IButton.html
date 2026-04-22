@@ -1,119 +1,126 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Interface IButton </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IButton ">
-    
-    <meta name="description" content="Represents a button within an alert window.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      <meta name="description" content="Represents a button within an alert window.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.AlertPanels.IButton">
+
+        <article data-uid="PhiRobotics.UI.AlertPanels.IButton">
 
 
 
-  <h1 id="PhiRobotics_UI_AlertPanels_IButton" data-uid="PhiRobotics.UI.AlertPanels.IButton" class="text-break">Interface IButton</h1>
-  <div class="markdown level0 summary"><p>Represents a button within an alert window.</p>
+  <h1 id="PhiRobotics_UI_AlertPanels_IButton" data-uid="PhiRobotics.UI.AlertPanels.IButton" class="text-break">
+Interface IButton  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.AlertPanels.html">AlertPanels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PhiRobotics.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a button within an alert window.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IButton : IDisposable, IEquatable&lt;IButton&gt;</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals">IEquatable&lt;IButton&gt;.Equals(IButton)</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.AlertPanels.html">AlertPanels</a></h6>
-  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IButton : IDisposable, IEquatable&lt;IButton&gt;</code></pre>
-  </div>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>Alert windows can display buttons that implement custom functionality. The <b>IButton</b>
-interface represents a custom button that can be shown within an alert window.</p>
-<p>
-To add custom buttons, create <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> instances using 
-<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html#PhiRobotics_UI_AlertPanels_IAlertPanelFactory_CreateButton_System_String_">CreateButton(string)</a> and add them to the 
-<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons">Buttons</a> collection. Buttons in this collection are applied only 
-to newly created alert windows. Modifying the collection does not affect buttons already 
-displayed in existing alert windows.
-</p>
-<p>
-An <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> can function either as a regular button or as a check (toggle) button. 
-To enable check behavior, set the <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle">IsCheckStyle</a> property to <code>true</code>. 
-When enabled, the button maintains a pressed (<a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Down">Down</a>) state.
-</p>
-<p>
-You can customize button appearance and behavior using properties such as 
-<a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Name">Name</a>, <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Hint">Hint</a>, <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Image">Image</a>, and <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_ImageDown">ImageDown</a>.
-</p>
-<p>
-To handle user interaction, subscribe to the following events:
-<ul><li><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonClicked">ButtonClicked</a> — occurs when a regular button is clicked.</li><li><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged">ButtonDownChanged</a> — occurs when a check button’s state changes.</li></ul>
+  </dd></dl>
 
-</div>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_examples"><strong>Examples</strong></h5>
+
+
+  <h2 id="PhiRobotics_UI_AlertPanels_IButton_examples">Examples</h2>
   <p>The following example shows how to add custom buttons to an <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html">IAlertPanel</a>.
 In the example, two custom buttons are added to the panel’s <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons">Buttons</a>
 collection. The first button is a regular button, which when clicked, produces the
@@ -167,126 +174,175 @@ void alertControl1_ButtonClick(object sender, AlertButtonClickEventArgs e)
 <p>The result is shown below:</p>
 <p><img src="../Images/AlertPanelButtons_Example.png" alt="AlertPanel Buttons Example"></p>
 
-  <h3 id="properties">Properties
-</h3>
+
+  <h2 id="PhiRobotics_UI_AlertPanels_IButton_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Alert windows can display buttons that implement custom functionality. The <b>IButton</b>
+interface represents a custom button that can be shown within an alert window.</p>
+<p>
+To add custom buttons, create <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> instances using 
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanelFactory.html#PhiRobotics_UI_AlertPanels_IAlertPanelFactory_CreateButton_System_String_">CreateButton(string)</a> and add them to the 
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_Buttons">Buttons</a> collection. Buttons in this collection are applied only 
+to newly created alert windows. Modifying the collection does not affect buttons already 
+displayed in existing alert windows.
+</p>
+<p>
+An <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html">IButton</a> can function either as a regular button or as a check (toggle) button. 
+To enable check behavior, set the <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle">IsCheckStyle</a> property to <code>true</code>. 
+When enabled, the button maintains a pressed (<a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Down">Down</a>) state.
+</p>
+<p>
+You can customize button appearance and behavior using properties such as 
+<a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Name">Name</a>, <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Hint">Hint</a>, <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Image">Image</a>, and <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_ImageDown">ImageDown</a>.
+</p>
+<p>
+To handle user interaction, subscribe to the following events:
+<ul><li><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonClicked">ButtonClicked</a> — occurs when a regular button is clicked.</li><li><a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged">ButtonDownChanged</a> — occurs when a check button’s state changes.</li></ul>
+
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
 
 
   <a id="PhiRobotics_UI_AlertPanels_IButton_Down_" data-uid="PhiRobotics.UI.AlertPanels.IButton.Down*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_Down" data-uid="PhiRobotics.UI.AlertPanels.IButton.Down">Down</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_Down" data-uid="PhiRobotics.UI.AlertPanels.IButton.Down">
+  Down
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets whether the button is in the pressed (checked) state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Down { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_Down_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_Down_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property is effective only when <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle">IsCheckStyle</a> is set to <code>true</code>.
 When enabled, the button behaves as a toggle (check) button and maintains its pressed state.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_Hint_" data-uid="PhiRobotics.UI.AlertPanels.IButton.Hint*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_Hint" data-uid="PhiRobotics.UI.AlertPanels.IButton.Hint">Hint</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_Hint" data-uid="PhiRobotics.UI.AlertPanels.IButton.Hint">
+  Hint
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the tooltip text displayed for the button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">string Hint { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_Hint_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_Hint_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Tooltips are displayed when the user hovers over the button. To disable tooltips,
 set the <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ShowToolTips">ShowToolTips</a> property to <code>false</code>.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_Image_" data-uid="PhiRobotics.UI.AlertPanels.IButton.Image*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_Image" data-uid="PhiRobotics.UI.AlertPanels.IButton.Image">Image</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_Image" data-uid="PhiRobotics.UI.AlertPanels.IButton.Image">
+  Image
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the image displayed within the button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Image Image { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_Image_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_Image_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If the button functions as a check button (<a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle">IsCheckStyle</a> is <code>true</code>),
 this image is also used for the pressed state unless a separate image is specified via
 the <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_ImageDown">ImageDown</a> property.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_ImageDown_" data-uid="PhiRobotics.UI.AlertPanels.IButton.ImageDown*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_ImageDown" data-uid="PhiRobotics.UI.AlertPanels.IButton.ImageDown">ImageDown</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_ImageDown" data-uid="PhiRobotics.UI.AlertPanels.IButton.ImageDown">
+  ImageDown
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the image displayed when the button is in the pressed (checked) state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Image ImageDown { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_ImageDown_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.image">Image</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_ImageDown_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>This property is applicable only when the button functions as a check button
 (<a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle">IsCheckStyle</a> is <code>true</code>).</p>
 <p>
@@ -296,118 +352,142 @@ for both normal and pressed states.
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle_" data-uid="PhiRobotics.UI.AlertPanels.IButton.IsCheckStyle*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle" data-uid="PhiRobotics.UI.AlertPanels.IButton.IsCheckStyle">IsCheckStyle</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle" data-uid="PhiRobotics.UI.AlertPanels.IButton.IsCheckStyle">
+  IsCheckStyle
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets whether the button behaves as a check (toggle) button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool IsCheckStyle { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_IsCheckStyle_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>When set to <code>true</code>, the button maintains a pressed state and toggles its
 <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Down">Down</a> property when clicked.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_IsDisposed_" data-uid="PhiRobotics.UI.AlertPanels.IButton.IsDisposed*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_IsDisposed" data-uid="PhiRobotics.UI.AlertPanels.IButton.IsDisposed">IsDisposed</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_IsDisposed" data-uid="PhiRobotics.UI.AlertPanels.IButton.IsDisposed">
+  IsDisposed
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a value indicating whether this button instance has been disposed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool IsDisposed { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_AlertPanels_IButton_Name_" data-uid="PhiRobotics.UI.AlertPanels.IButton.Name*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_Name" data-uid="PhiRobotics.UI.AlertPanels.IButton.Name">Name</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_Name" data-uid="PhiRobotics.UI.AlertPanels.IButton.Name">
+  Name
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the name of the button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">string Name { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_Name_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_Name_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_Name">Name</a> property is used to uniquely identify the button,
 especially when handling events such as <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonClicked">ButtonClicked</a>
 and <a class="xref" href="PhiRobotics.UI.AlertPanels.IAlertPanel.html#PhiRobotics_UI_AlertPanels_IAlertPanel_ButtonDownChanged">ButtonDownChanged</a>.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_Predefined_" data-uid="PhiRobotics.UI.AlertPanels.IButton.Predefined*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_Predefined" data-uid="PhiRobotics.UI.AlertPanels.IButton.Predefined">Predefined</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_Predefined" data-uid="PhiRobotics.UI.AlertPanels.IButton.Predefined">
+  Predefined
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets a value indicating whether this button is a predefined button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Predefined { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_Predefined_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_Predefined_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Alert panels can display both predefined buttons (such as Close and Pin) and
 custom buttons. If this property is <code>true</code>, the button is one of the
 predefined buttons; otherwise, it is a custom button.</p>
@@ -422,95 +502,97 @@ To add custom buttons, use the <a class="xref" href="PhiRobotics.UI.AlertPanels.
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_State_" data-uid="PhiRobotics.UI.AlertPanels.IButton.State*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_State" data-uid="PhiRobotics.UI.AlertPanels.IButton.State">State</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_State" data-uid="PhiRobotics.UI.AlertPanels.IButton.State">
+  State
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the visual state of the button.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ButtonState State { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.AlertPanels.ButtonState.html">ButtonState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_AlertPanels_IButton_State_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.AlertPanels.ButtonState.html">ButtonState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_AlertPanels_IButton_State_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The <a class="xref" href="PhiRobotics.UI.AlertPanels.IButton.html#PhiRobotics_UI_AlertPanels_IButton_State">State</a> property reflects the current interaction state of the button,
 such as normal, hovered, or pressed. See <a class="xref" href="PhiRobotics.UI.AlertPanels.ButtonState.html">ButtonState</a> for available values.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_AlertPanels_IButton_Visible_" data-uid="PhiRobotics.UI.AlertPanels.IButton.Visible*"></a>
-  <h4 id="PhiRobotics_UI_AlertPanels_IButton_Visible" data-uid="PhiRobotics.UI.AlertPanels.IButton.Visible">Visible</h4>
+
+  <h3 id="PhiRobotics_UI_AlertPanels_IButton_Visible" data-uid="PhiRobotics.UI.AlertPanels.IButton.Visible">
+  Visible
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the button is visible.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool Visible { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

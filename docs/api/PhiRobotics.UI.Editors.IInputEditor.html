@@ -1,85 +1,119 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Interface IInputEditor </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IInputEditor ">
-    
-    <meta name="description" content="Describes a base interface for input editors.  The IInputEditor interface is implemented by the UI library and is not  intended to be implemented by consumer code.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      <meta name="description" content="Describes a base interface for input editors.  The IInputEditor interface is implemented by the UI library and is not  intended to be implemented by consumer code.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.Editors.IInputEditor">
+
+        <article data-uid="PhiRobotics.UI.Editors.IInputEditor">
 
 
 
-  <h1 id="PhiRobotics_UI_Editors_IInputEditor" data-uid="PhiRobotics.UI.Editors.IInputEditor" class="text-break">Interface IInputEditor</h1>
-  <div class="markdown level0 summary"><p>Describes a base interface for input editors.</p>
+  <h1 id="PhiRobotics_UI_Editors_IInputEditor" data-uid="PhiRobotics.UI.Editors.IInputEditor" class="text-break">
+Interface IInputEditor  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PhiRobotics.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Describes a base interface for input editors.</p>
 <p>
 The <b>IInputEditor</b> interface is implemented by the UI library and is not 
 intended to be implemented by consumer code.
 </p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IInputEditor : ISynchronizeInvoke, IDisposable, IComponent, IDisposable, IWin32Window</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.isynchronizeinvoke.begininvoke">ISynchronizeInvoke.BeginInvoke(Delegate, object[])</a>
     </div>
@@ -107,14 +141,18 @@ intended to be implemented by consumer code.
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.iwin32window.handle">IWin32Window.Handle</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.Editors.html">Editors</a></h6>
-  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IInputEditor : ISynchronizeInvoke, IDisposable, IComponent, IDisposable, IWin32Window</code></pre>
-  </div>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_remarks"><strong>Remarks</strong></h5>
+  </dd></dl>
+
+
+
+  <h2 id="PhiRobotics_UI_Editors_IInputEditor_examples">Examples</h2>
+  <p>The following example demonstrates how to create a text editor:</p>
+<pre><code class="lang-cs">IInputEditor editor = inputEditorFactory.Create(InputEditorId.TextEdit);
+ITextInputEditor textEditor = (ITextInputEditor)editor;
+</code></pre>
+
+
+  <h2 id="PhiRobotics_UI_Editors_IInputEditor_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>
 The <b>IInputEditor</b> interface defines common functionality for all editor 
 controls that allow users to view and modify values.
@@ -138,244 +176,288 @@ consumer. Consumers are responsible for disposing the editor when it is no
 longer needed.
 </p>
 </div>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_examples"><strong>Examples</strong></h5>
-  <p>The following example demonstrates how to create a text editor:</p>
-<pre><code class="lang-cs">IInputEditor editor = inputEditorFactory.Create(InputEditorId.TextEdit);
-ITextInputEditor textEditor = (ITextInputEditor)editor;
-</code></pre>
 
-  <h3 id="properties">Properties
-</h3>
+
+  <h2 class="section" id="properties">Properties
+</h2>
 
 
   <a id="PhiRobotics_UI_Editors_IInputEditor_EditValue_" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValue*"></a>
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_EditValue" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValue">EditValue</h4>
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_EditValue" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValue">
+  EditValue
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the editor’s value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">object EditValue { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
-        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the editor’s value.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_EditValue_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> representing the editor’s value.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_Editors_IInputEditor_EditValue_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Setting this property raises the <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanging">EditValueChanging</a> event.
 After the value has been updated, the <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValueChanged">EditValueChanged</a>
 event is raised.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_Editors_IInputEditor_ErrorIconAlignment_" data-uid="PhiRobotics.UI.Editors.IInputEditor.ErrorIconAlignment*"></a>
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_ErrorIconAlignment" data-uid="PhiRobotics.UI.Editors.IInputEditor.ErrorIconAlignment">ErrorIconAlignment</h4>
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_ErrorIconAlignment" data-uid="PhiRobotics.UI.Editors.IInputEditor.ErrorIconAlignment">
+  ErrorIconAlignment
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the alignment of the error icon displayed for the editor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ErrorIconAlignment ErrorIconAlignment { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.erroriconalignment">ErrorIconAlignment</a></td>
-        <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.erroriconalignment">ErrorIconAlignment</a> value that specifies
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.erroriconalignment">ErrorIconAlignment</a></dt>
+    <dd><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.erroriconalignment">ErrorIconAlignment</a> value that specifies
 the error icon alignment.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+</dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_Editors_IInputEditor_ErrorText_" data-uid="PhiRobotics.UI.Editors.IInputEditor.ErrorText*"></a>
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_ErrorText" data-uid="PhiRobotics.UI.Editors.IInputEditor.ErrorText">ErrorText</h4>
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_ErrorText" data-uid="PhiRobotics.UI.Editors.IInputEditor.ErrorText">
+  ErrorText
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the tooltip displayed when the mouse pointer hovers over
 the error icon.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">string ErrorText { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value that specifies the error tooltip text.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value that specifies the error tooltip text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_Editors_IInputEditor_RichToolTip_" data-uid="PhiRobotics.UI.Editors.IInputEditor.RichToolTip*"></a>
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_RichToolTip" data-uid="PhiRobotics.UI.Editors.IInputEditor.RichToolTip">RichToolTip</h4>
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_RichToolTip" data-uid="PhiRobotics.UI.Editors.IInputEditor.RichToolTip">
+  RichToolTip
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets a rich tooltip associated with the editor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IRichToolTip RichToolTip { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> instance that defines the tooltip content.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_RichToolTip_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a></dt>
+    <dd><p>An <a class="xref" href="PhiRobotics.UI.ToolTips.IRichToolTip.html">IRichToolTip</a> instance that defines the tooltip content.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_Editors_IInputEditor_RichToolTip_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Use the <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipFactory.html#PhiRobotics_UI_ToolTips_IToolTipFactory_CreateToolTip">CreateToolTip()</a> method to create
 a rich tooltip instance.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_Editors_IInputEditor_ShowToolTips_" data-uid="PhiRobotics.UI.Editors.IInputEditor.ShowToolTips*"></a>
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_ShowToolTips" data-uid="PhiRobotics.UI.Editors.IInputEditor.ShowToolTips">ShowToolTips</h4>
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_ShowToolTips" data-uid="PhiRobotics.UI.Editors.IInputEditor.ShowToolTips">
+  ShowToolTips
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets whether tooltips are displayed for the editor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool ShowToolTips { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><p><code>true</code> to display tooltips; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> to display tooltips; otherwise, <code>false</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_Editors_IInputEditor_ToolTipController_" data-uid="PhiRobotics.UI.Editors.IInputEditor.ToolTipController*"></a>
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_ToolTipController" data-uid="PhiRobotics.UI.Editors.IInputEditor.ToolTipController">ToolTipController</h4>
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_ToolTipController" data-uid="PhiRobotics.UI.Editors.IInputEditor.ToolTipController">
+  ToolTipController
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets the tooltip controller that manages tooltip behavior for the editor.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IToolTipController ToolTipController { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a> instance that controls tooltip appearance and
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a></dt>
+    <dd><p>An <a class="xref" href="PhiRobotics.UI.ToolTips.IToolTipController.html">IToolTipController</a> instance that controls tooltip appearance and
 behavior.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_ToolTipController_remarks">Remarks</h5>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_Editors_IInputEditor_ToolTipController_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Use the <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_RichToolTip">RichToolTip</a> property to assign tooltip content.</p>
 </div>
-  <h3 id="events">Events
-</h3>
 
 
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_EditValueChanged" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValueChanged">EditValueChanged</h4>
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_EditValueChanged" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValueChanged">
+  EditValueChanged
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Raised immediately after the <a class="xref" href="PhiRobotics.UI.Editors.IInputEditor.html#PhiRobotics_UI_Editors_IInputEditor_EditValue">EditValue</a> has changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">event EventHandler EditValueChanged</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 
 
-  <h4 id="PhiRobotics_UI_Editors_IInputEditor_EditValueChanging" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValueChanging">EditValueChanging</h4>
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="PhiRobotics_UI_Editors_IInputEditor_EditValueChanging" data-uid="PhiRobotics.UI.Editors.IInputEditor.EditValueChanging">
+  EditValueChanging
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Raised when the editor’s value is about to change.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">event EventHandler&lt;InputChangingEventArgs&gt; EditValueChanging</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.Editors.InputChangingEventArgs.html">InputChangingEventArgs</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_Editors_IInputEditor_EditValueChanging_remarks">Remarks</h5>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="PhiRobotics.UI.Editors.InputChangingEventArgs.html">InputChangingEventArgs</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_Editors_IInputEditor_EditValueChanging_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>
 The event data is provided by <a class="xref" href="PhiRobotics.UI.Editors.InputChangingEventArgs.html">InputChangingEventArgs</a>, which 
 exposes the following properties:
@@ -390,40 +472,30 @@ as it may cause the editor to lose its current value.
 </p></div>
 </div>
 
-</article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,81 +1,115 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Struct FlyOutPanelOptions </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct FlyOutPanelOptions ">
-    
-    <meta name="description" content="Represents a set of configuration options used to initialize an .">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      <meta name="description" content="Represents a set of configuration options used to initialize an .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions">
+
+        <article data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions">
 
 
 
-  <h1 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions" class="text-break">Struct FlyOutPanelOptions</h1>
-  <div class="markdown level0 summary"><p>Represents a set of configuration options used to initialize an <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a>.</p>
+  <h1 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions" class="text-break">
+Struct FlyOutPanelOptions  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.FlyOutPanels.html">FlyOutPanels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PhiRobotics.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a set of configuration options used to initialize an <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a>.</p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct FlyOutPanelOptions</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
     </div>
@@ -94,381 +128,425 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.FlyOutPanels.html">FlyOutPanels</a></h6>
-  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct FlyOutPanelOptions</code></pre>
-  </div>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_remarks"><strong>Remarks</strong></h5>
+  </dd></dl>
+
+
+
+
+  <h2 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>This structure provides a convenient way to configure positioning, resizing behavior,
 and lifecycle management of the fly-out panel content.</p>
 </div>
-  <h3 id="constructors">Constructors
-</h3>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions__ctor_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.#ctor*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions__ctor_PhiRobotics_UI_FlyOutPanels_AnchorStyles_PhiRobotics_UI_FlyOutPanels_ResizeMode_System_Boolean_System_Boolean_System_Boolean_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.#ctor(PhiRobotics.UI.FlyOutPanels.AnchorStyles,PhiRobotics.UI.FlyOutPanels.ResizeMode,System.Boolean,System.Boolean,System.Boolean)">FlyOutPanelOptions(AnchorStyles, ResizeMode, bool, bool, bool)</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions__ctor_PhiRobotics_UI_FlyOutPanels_AnchorStyles_PhiRobotics_UI_FlyOutPanels_ResizeMode_System_Boolean_System_Boolean_System_Boolean_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.#ctor(PhiRobotics.UI.FlyOutPanels.AnchorStyles,PhiRobotics.UI.FlyOutPanels.ResizeMode,System.Boolean,System.Boolean,System.Boolean)">
+  FlyOutPanelOptions(AnchorStyles, ResizeMode, bool, bool, bool)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html">FlyOutPanelOptions</a> struct with
 the specified anchor style, resize mode, and other optional parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public FlyOutPanelOptions(AnchorStyles anchorStyle, ResizeMode resizeMode = ResizeMode.None, bool disposeContent = true, bool disposeContentOnChange = true, bool enableIndent = true)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></td>
-        <td><span class="parametername">anchorStyle</span></td>
-        <td><p>Specifies how the panel is positioned relative to its
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>anchorStyle</code> <a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></dt>
+    <dd><p>Specifies how the panel is positioned relative to its
 host.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></td>
-        <td><span class="parametername">resizeMode</span></td>
-        <td><p>Specifies how the panel can be resized.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">disposeContent</span></td>
-        <td><p>Indicates whether the panel content is disposed
+</dd>
+    <dt><code>resizeMode</code> <a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></dt>
+    <dd><p>Specifies how the panel can be resized.</p>
+</dd>
+    <dt><code>disposeContent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the panel content is disposed
 when the panel is closed.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">disposeContentOnChange</span></td>
-        <td><p>Indicates whether the panel content is
+</dd>
+    <dt><code>disposeContentOnChange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the panel content is
 disposed when replaced.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td><span class="parametername">enableIndent</span></td>
-        <td><p>Indicates whether the panel can be repositioned
+</dd>
+    <dt><code>enableIndent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the panel can be repositioned
 using indentation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="fields">Fields
-</h3>
+</dd>
+  </dl>
 
 
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultAnchorStyle" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultAnchorStyle">DefaultAnchorStyle</h4>
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultAnchorStyle" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultAnchorStyle">
+  DefaultAnchorStyle
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>The default value for <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_AnchorStyle">AnchorStyle</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const AnchorStyles DefaultAnchorStyle = TopRight</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 
 
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultDisposeContent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultDisposeContent">DefaultDisposeContent</h4>
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultDisposeContent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultDisposeContent">
+  DefaultDisposeContent
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>The default value for <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContent">DisposeContent</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const bool DefaultDisposeContent = true</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 
 
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultDisposeContentOnChange" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultDisposeContentOnChange">DefaultDisposeContentOnChange</h4>
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultDisposeContentOnChange" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultDisposeContentOnChange">
+  DefaultDisposeContentOnChange
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>The default value for <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContentOnChange">DisposeContentOnChange</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const bool DefaultDisposeContentOnChange = true</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 
 
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultEnableIndent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultEnableIndent">DefaultEnableIndent</h4>
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultEnableIndent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultEnableIndent">
+  DefaultEnableIndent
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>The default value for <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_EnableIndent">EnableIndent</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const bool DefaultEnableIndent = true</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 
 
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultResizeMode" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultResizeMode">DefaultResizeMode</h4>
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DefaultResizeMode" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DefaultResizeMode">
+  DefaultResizeMode
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>The default value for <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html#PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_ResizeMode">ResizeMode</a> property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public const ResizeMode DefaultResizeMode = None</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_AnchorStyle_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.AnchorStyle*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_AnchorStyle" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.AnchorStyle">AnchorStyle</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_AnchorStyle" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.AnchorStyle">
+  AnchorStyle
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets how the panel is positioned relative to its host.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AnchorStyles AnchorStyle { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.FlyOutPanels.AnchorStyles.html">AnchorStyles</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContent_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DisposeContent*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DisposeContent">DisposeContent</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DisposeContent">
+  DisposeContent
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the panel content is disposed when
 the panel is closed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool DisposeContent { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContentOnChange_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DisposeContentOnChange*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContentOnChange" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DisposeContentOnChange">DisposeContentOnChange</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_DisposeContentOnChange" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.DisposeContentOnChange">
+  DisposeContentOnChange
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the panel content is disposed when
 replaced.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool DisposeContentOnChange { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_EnableIndent_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.EnableIndent*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_EnableIndent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.EnableIndent">EnableIndent</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_EnableIndent" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.EnableIndent">
+  EnableIndent
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the panel supports indentation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool EnableIndent { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_EnableIndent_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_EnableIndent_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Panel can be indented by <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_IndentPanel_System_Int32_System_Int32_">IndentPanel(int, int)</a>
 method.</p>
 </div>
 
 
+
+
   <a id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_ResizeMode_" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.ResizeMode*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_ResizeMode" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.ResizeMode">ResizeMode</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_ResizeMode" data-uid="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.ResizeMode">
+  ResizeMode
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets or sets how the panel can be resized.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ResizeMode ResizeMode { get; set; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_ResizeMode_remarks">Remarks</h5>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.FlyOutPanels.ResizeMode.html">ResizeMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_ResizeMode_remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>Panel can be resized by <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html#PhiRobotics_UI_FlyOutPanels_IFlyOutPanel_ResizePanel_System_Int32_System_Int32_">ResizePanel(int, int)</a>
 method.</p>
 </div>
 
-</article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

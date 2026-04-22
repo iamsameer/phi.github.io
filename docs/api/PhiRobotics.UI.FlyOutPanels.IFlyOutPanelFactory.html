@@ -1,90 +1,121 @@
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Interface IFlyOutPanelFactory </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IFlyOutPanelFactory ">
-    
-    <meta name="description" content="Provides factory methods for creating  instances.  The IFlyOutPanelFactory interface is implemented by the PhiRobotics UI library and is not intended for consumer implementation.">
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    
-    
+      
+      <meta name="description" content="Provides factory methods for creating  instances.  The IFlyOutPanelFactory interface is implemented by the PhiRobotics UI library and is not intended for consumer implementation.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
-              </form>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
             </div>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
           </div>
         </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
+      </div>
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory">
+
+        <article data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory">
 
 
 
-  <h1 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory" class="text-break">Interface IFlyOutPanelFactory</h1>
-  <div class="markdown level0 summary"><p>Provides factory methods for creating <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instances.</p>
+  <h1 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory" class="text-break">
+Interface IFlyOutPanelFactory  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.FlyOutPanels.html">FlyOutPanels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>PhiRobotics.UI.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides factory methods for creating <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instances.</p>
 <p>
 The <b>IFlyOutPanelFactory</b> interface is implemented by the <b>PhiRobotics</b>
 UI library and is not intended for consumer implementation.
 </p>
 </div>
-  <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="PhiRobotics.html">PhiRobotics</a>.<a class="xref" href="PhiRobotics.UI.html">UI</a>.<a class="xref" href="PhiRobotics.UI.FlyOutPanels.html">FlyOutPanels</a></h6>
-  <h6><strong>Assembly</strong>: PhiRobotics.UI.dll</h6>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_syntax">Syntax</h5>
+  <div class="markdown conceptual"></div>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IFlyOutPanelFactory</code></pre>
   </div>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_remarks"><strong>Remarks</strong></h5>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>
 Use this interface to create instances of <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a>.
 </p>
@@ -96,180 +127,135 @@ An instance of <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFac
 The lifetime of the factory instance is managed by the library.
 </p>
 </div>
-  <h3 id="methods">Methods
-</h3>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.CreatePanel*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.CreatePanel(System.Windows.Forms.Control)">CreatePanel(Control)</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.CreatePanel(System.Windows.Forms.Control)">
+  CreatePanel(Control)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Creates a fly-out panel using default options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IFlyOutPanel CreatePanel(Control content)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
-        <td><span class="parametername">content</span></td>
-        <td><p>The content control.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></dt>
+    <dd><p>The content control.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a></dt>
+    <dd><p>An <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If <code class="paramref">content</code> is <code>null</code>, no exception is thrown.</p>
 </div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>Thrown if the control already has a
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the control already has a
 parent or is disposed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+</dd>
+  </dl>
+
 
 
   <a id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.CreatePanel*"></a>
-  <h4 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.CreatePanel(System.Windows.Forms.Control,PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions)">CreatePanel(Control, FlyOutPanelOptions)</h4>
+
+  <h3 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions_" data-uid="PhiRobotics.UI.FlyOutPanels.IFlyOutPanelFactory.CreatePanel(System.Windows.Forms.Control,PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions)">
+  CreatePanel(Control, FlyOutPanelOptions)
+  
+  </h3>
+
   <div class="markdown level1 summary"><p>Creates a fly-out panel with custom options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IFlyOutPanel CreatePanel(Control content, FlyOutPanelOptions options)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></td>
-        <td><span class="parametername">content</span></td>
-        <td><p>The content control.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html">FlyOutPanelOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p>Configuration options.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a></td>
-        <td><p>An <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions__remarks">Remarks</h5>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>content</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.windows.forms.control">Control</a></dt>
+    <dd><p>The content control.</p>
+</dd>
+    <dt><code>options</code> <a class="xref" href="PhiRobotics.UI.FlyOutPanels.FlyOutPanelOptions.html">FlyOutPanelOptions</a></dt>
+    <dd><p>Configuration options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a></dt>
+    <dd><p>An <a class="xref" href="PhiRobotics.UI.FlyOutPanels.IFlyOutPanel.html">IFlyOutPanel</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="PhiRobotics_UI_FlyOutPanels_IFlyOutPanelFactory_CreatePanel_System_Windows_Forms_Control_PhiRobotics_UI_FlyOutPanels_FlyOutPanelOptions__remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>If <code class="paramref">content</code> is <code>null</code>, no exception is
 thrown.</p>
 </div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>Thrown if the control already has a
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if the control already has a
 parent or is disposed.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+</dd>
+  </dl>
+
+
+
 
 </article>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In this article</h5>
-                <div></div>
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
